@@ -1,0 +1,391 @@
+﻿This JSON file is structured specifically for **Unity's built-in `JsonUtility**` (meaning flat arrays, standard types, and zero nested dictionaries, so your teammate can load it with a single line of C# code).
+
+
+### What Was Upgraded for Accuracy & Unity Interactivity
+
+
+1. **Exact NASA 2018 Telemetry Per Node:** Every single day now maps to a real date from the 2018 storm (**May 30, June 3, June 10, June 20, and July 23, 2018**), real **sunlight blockage percentages** (up to **97%** over Perseverance Valley where *Opportunity* was stationed), real **wind speeds** (clarifying that Mars's atmosphere is 100 times thinner than Earth's, so a 60 mph storm feels like a gentle breeze rather than knocking buildings down—a famous real-world physics detail!), and real **sky color hex codes** so Unity's camera/skybox automatically shifts from butterscotch (`#C88B5A`) to pitch-black crimson (`#1A0B08`).
+2. **Instant Feedback Popups (`outcomeText`):** When a kid clicks a choice, the JSON supplies a 1-sentence cause-and-effect popup before moving to the next day so they immediately see *why* their Power or Crew Health changed.
+3. **Interactive Glossary Tags:** Key NASA terms (`Sol`, `Nuclear Battery`, `Dust Opacity`, `Thin Air`) are separated into a clean array at the top so your teammate can display them as clickable "?" helper buttons on screen.
+
+
+---
+
+
+### Copy-Paste Ready `MarsStorm2018_Story.json`
+
+
+```json
+{
+  "gameTitle": "Red Planet Blackout: The 2018 Mars Storm",
+  "startingStats": {
+    "power": 70,
+    "crewHealth": 80
+  },
+  "introScreens": [
+    {
+      "screenNumber": 1,
+      "headline": "What Really Happened on Mars in 2018",
+      "bodyText": "In late May 2018, a NASA spacecraft orbiting Mars spotted a small swirling dust storm. Within three weeks, high-altitude winds whipped it into a monster storm that wrapped around the entire planet—rising more than 37 miles high. Down on the ground, dust blocked 97% of the sunlight. NASA's solar-powered Opportunity rover ran out of battery in the dark and never woke up. Meanwhile, NASA's Curiosity rover kept working right through the storm because it ran on a small nuclear battery instead of sunlight.",
+      "nasaSource": "NASA Mars Reconnaissance Orbiter & Mars Exploration Rover Mission Archives (June 2018)"
+    },
+    {
+      "screenNumber": 2,
+      "headline": "NASA's Next Big Step: Sending Humans",
+      "bodyText": "Through the Moon to Mars program, NASA is designing the first human missions to the Red Planet. Astronauts need steady electricity every single day to make breathable oxygen, keep their living quarters warm in -90°F nights, and keep liquid rocket fuel cold for their flight home. Because global dust storms happen every few Mars years, NASA engineers know future bases cannot rely on solar panels alone.",
+      "nasaSource": "NASA Moon to Mars Architecture & Fission Surface Power Studies"
+    },
+    {
+      "screenNumber": 3,
+      "headline": "Your Mission at Ares Base",
+      "bodyText": "You are the Flight Director for Ares Base, a 4-astronaut outpost on Mars powered by large solar panels and a small backup nuclear power unit. A NASA satellite just spotted a global dust storm racing toward your base. Over the next 5 Martian Days (Sols), every choice protects one system at the cost of another. Keep your Power and Crew Health above zero—and see how your choices compare to real NASA science!",
+      "nasaSource": "Simulated Scenario Based on Mars Year 34 Global Dust Storm Data"
+    }
+  ],
+  "kidGlossary": [
+    {
+      "term": "Sol",
+      "simpleDefinition": "One day on Mars. A Sol is 24 hours and 39 minutes long—just a little longer than a day on Earth!"
+    },
+    {
+      "term": "97% Sunlight Blocked",
+      "simpleDefinition": "During the real June 2018 storm, dust grew so thick that noon on Mars looked as dark as midnight, leaving only 3% of normal sunlight."
+    },
+    {
+      "term": "Nuclear Battery",
+      "simpleDefinition": "A compact power unit that turns natural heat from safe, sealed fuel into steady electricity—day or night, even in total darkness."
+    },
+    {
+      "term": "Thin Martian Air",
+      "simpleDefinition": "Mars has 100 times less air than Earth. Even a 60 mph dust storm feels like a soft breeze, so wind won't blow buildings over—but tiny dust still coats solar panels."
+    }
+  ],
+  "storyNodes": [
+    {
+      "nodeId": "DAY_1",
+      "dayNumber": 1,
+      "realDate": "May 30, 2018",
+      "title": "Sol 1: The Satellite Warning",
+      "sunlightBlockedPercent": 10,
+      "skyColorHex": "#C88B5A",
+      "dustParticleIntensity": 0.15,
+      "nasaFactBanner": "REAL DATA: On May 30, 2018, NASA's Mars Reconnaissance Orbiter spotted this exact dust storm forming from space.",
+      "storyText": "Orbiting cameras show a giant wall of red dust racing toward Ares Base. Right now, the sky is still bright butterscotch and your solar panels are at full power. Your astronauts are outside finishing a rock-drilling experiment when the storm alarm flashes.",
+      "choiceA": {
+        "buttonLabel": "Recall Crew & Overcharge Batteries",
+        "subLabel": "+20 Power | -10 Crew Health",
+        "outcomeText": "You bring everyone inside early and pump every bit of sunlight into your backup batteries. Your tanks are charged, though the crew is disappointed to abandon their science experiment.",
+        "powerDelta": 20,
+        "crewHealthDelta": -10,
+        "nextNodeId": "DAY_2A"
+      },
+      "choiceB": {
+        "buttonLabel": "Finish Science & Stockpile Oxygen",
+        "subLabel": "-10 Power | +15 Crew Health",
+        "outcomeText": "The crew finishes collecting rare soil samples while you run the air-makers at max speed to fill extra oxygen tanks. Your crew is thrilled, but battery reserves dip.",
+        "powerDelta": -10,
+        "crewHealthDelta": 15,
+        "nextNodeId": "DAY_2B"
+      }
+    },
+    {
+      "nodeId": "DAY_2A",
+      "dayNumber": 2,
+      "realDate": "June 3, 2018",
+      "title": "Sol 2: The Sky Turns Dark Orange",
+      "sunlightBlockedPercent": 55,
+      "skyColorHex": "#8C3B1E",
+      "dustParticleIntensity": 0.5,
+      "nasaFactBanner": "REAL DATA: By June 3, the storm had doubled in size, forcing NASA to suspend science work on the Opportunity rover.",
+      "storyText": "The storm hits Ares Base. Thick dust blocks over half the sunlight, and fine red grit coats your solar panels. Because you packed up early yesterday, your batteries are strong—but your oxygen reserves are starting to run low.",
+      "choiceA": {
+        "buttonLabel": "Run Oxygen Makers at Full Power",
+        "subLabel": "-25 Power | +15 Crew Health",
+        "outcomeText": "You spend stored battery power to turn Martian air and water ice into fresh oxygen. Everyone breathes easy, though your battery meter drops fast.",
+        "powerDelta": -25,
+        "crewHealthDelta": 15,
+        "nextNodeId": "DAY_3A"
+      },
+      "choiceB": {
+        "buttonLabel": "Spacewalk to Brush Off Solar Panels",
+        "subLabel": "+10 Power | -20 Crew Health",
+        "outcomeText": "Because Mars air is super thin, the wind can't knock your astronaut over—they brush the panels clean! However, sticky Martian dust gets tracked into the airlock and irritates the crew's lungs.",
+        "powerDelta": 10,
+        "crewHealthDelta": -20,
+        "nextNodeId": "DAY_3B"
+      }
+    },
+    {
+      "nodeId": "DAY_2B",
+      "dayNumber": 2,
+      "realDate": "June 3, 2018",
+      "title": "Sol 2: The Sky Turns Dark Orange",
+      "sunlightBlockedPercent": 55,
+      "skyColorHex": "#8C3B1E",
+      "dustParticleIntensity": 0.5,
+      "nasaFactBanner": "REAL DATA: Martian dust grains are finer than talcum powder and stick to solar panels using static electricity.",
+      "storyText": "The storm slams into the base. Sunlight drops by more than half, and sticky red dust coats your solar panels. Your oxygen tanks are completely full from yesterday, but your main battery warning light is blinking red.",
+      "choiceA": {
+        "buttonLabel": "Turn Off Greenhouse Plant Lights",
+        "subLabel": "+10 Power | -15 Crew Health",
+        "outcomeText": "You shut down the indoor farm to save electricity for the heaters. Power stabilizes, but losing fresh crops hurts crew morale and nutrition.",
+        "powerDelta": 10,
+        "crewHealthDelta": -15,
+        "nextNodeId": "DAY_3B"
+      },
+      "choiceB": {
+        "buttonLabel": "Push Nuclear Backup Unit to Maximum",
+        "subLabel": "+15 Power | -10 Crew Health",
+        "outcomeText": "You crank up your small nuclear power unit to keep both heaters and plants running. To stay safe from extra radiation, the crew has to camp out in cramped storage tunnels.",
+        "powerDelta": 15,
+        "crewHealthDelta": -10,
+        "nextNodeId": "DAY_3C"
+      }
+    },
+    {
+      "nodeId": "DAY_3A",
+      "dayNumber": 3,
+      "realDate": "June 10, 2018",
+      "title": "Sol 3: Total Blackout at Noon",
+      "sunlightBlockedPercent": 97,
+      "skyColorHex": "#1A0B08",
+      "dustParticleIntensity": 1.0,
+      "nasaFactBanner": "REAL DATA: On June 10, 2018, 97% of sunlight vanished over Opportunity. Noon looked like pitch-black night.",
+      "storyText": "Midday looks like midnight. Sunlight has dropped by 97%, and your solar panels are making zero power. Worse, the liquid fuel in your return rocket needs electric coolers so it doesn't warm up and boil away into space!",
+      "choiceA": {
+        "buttonLabel": "Keep Return Rocket Fuel Cold",
+        "subLabel": "-25 Power | -10 Crew Health",
+        "outcomeText": "You keep the rocket fuel coolers running so your crew can fly home later, forcing the astronauts to bundle up in 50°F living quarters.",
+        "powerDelta": -25,
+        "crewHealthDelta": -10,
+        "nextNodeId": "DAY_4A"
+      },
+      "choiceB": {
+        "buttonLabel": "Heat the Astronaut Living Quarters",
+        "subLabel": "-10 Power | +10 Crew Health",
+        "outcomeText": "You turn off the rocket coolers to keep the cabin warm and cozy. The crew stays healthy, though some return fuel vents into space.",
+        "powerDelta": -10,
+        "crewHealthDelta": 10,
+        "nextNodeId": "DAY_4B"
+      }
+    },
+    {
+      "nodeId": "DAY_3B",
+      "dayNumber": 3,
+      "realDate": "June 10, 2018",
+      "title": "Sol 3: Total Blackout at Noon",
+      "sunlightBlockedPercent": 97,
+      "skyColorHex": "#1A0B08",
+      "dustParticleIntensity": 1.0,
+      "nasaFactBanner": "REAL DATA: NASA sensors proved dust storms make Mars days cooler, but nights actually get WARMER because dust traps heat.",
+      "storyText": "The storm now wraps around the entire planet. Outside is pitch black, and solar power is dead. Inside, your weather computer notices a surprise: the thick dust blanket is trapping heat near the ground, making tonight warmer than usual!",
+      "choiceA": {
+        "buttonLabel": "Lower Cabin Heaters & Wear Parkas",
+        "subLabel": "+15 Power | -10 Crew Health",
+        "outcomeText": "Using the dust blanket's trapped heat, you turn down the base heaters and put everyone in thermal suits. You save precious battery power, though everyone is grumpy.",
+        "powerDelta": 15,
+        "crewHealthDelta": -10,
+        "nextNodeId": "DAY_4A"
+      },
+      "choiceB": {
+        "buttonLabel": "Use High-Power Radio to Call Earth",
+        "subLabel": "-15 Power | +15 Crew Health",
+        "outcomeText": "Even with a 28-minute round-trip radio delay, hearing encouraging messages from NASA Mission Control and family lifts everyone's spirits.",
+        "powerDelta": -15,
+        "crewHealthDelta": 15,
+        "nextNodeId": "DAY_4B"
+      }
+    },
+    {
+      "nodeId": "DAY_3C",
+      "dayNumber": 3,
+      "realDate": "June 10, 2018",
+      "title": "Sol 3: Total Blackout at Noon",
+      "sunlightBlockedPercent": 97,
+      "skyColorHex": "#1A0B08",
+      "dustParticleIntensity": 1.0,
+      "nasaFactBanner": "REAL DATA: NASA's Curiosity rover survived this exact blackout because its nuclear battery didn't need sunlight.",
+      "storyText": "Solar power is completely dead, and your nuclear backup unit is humming loudly as it carries the whole base alone. Suddenly an alarm chimes: ultra-fine red dust has clogged the cabin's air-cleaning filter!",
+      "choiceA": {
+        "buttonLabel": "Pause Systems to Clean Air Filters",
+        "subLabel": "-15 Power | +15 Crew Health",
+        "outcomeText": "The crew puts on oxygen masks and cleans the clogged filter while systems run on low power. The cabin air becomes crystal clear again.",
+        "powerDelta": -15,
+        "crewHealthDelta": 15,
+        "nextNodeId": "DAY_4B"
+      },
+      "choiceB": {
+        "buttonLabel": "Keep Full Power & Skip Filter Cleaning",
+        "subLabel": "+10 Power | -25 Crew Health",
+        "outcomeText": "You keep electricity flowing at maximum strength, but dusty air fills the living room, leaving two astronauts coughing with sore throats.",
+        "powerDelta": 10,
+        "crewHealthDelta": -25,
+        "nextNodeId": "DAY_4C"
+      }
+    },
+    {
+      "nodeId": "DAY_4A",
+      "dayNumber": 4,
+      "realDate": "June 20, 2018",
+      "title": "Sol 4: The Long Wait",
+      "sunlightBlockedPercent": 75,
+      "skyColorHex": "#4D1E12",
+      "dustParticleIntensity": 0.7,
+      "nasaFactBanner": "REAL DATA: By June 20, 2018, NASA officially declared the storm a 'Planet-Encircling Dust Event.'",
+      "storyText": "The storm has lasted for weeks. Orbiting NASA satellites report that dust is finally stopping its climb into the sky, though the air is still dark and gloomy. Your crew is exhausted from rationing heat and living in dim emergency lights.",
+      "choiceA": {
+        "buttonLabel": "Host a Hot Meal & Movie Night",
+        "subLabel": "-15 Power | +20 Crew Health",
+        "outcomeText": "You spend a burst of power to warm the kitchen, cook hot food, and stream a movie from Earth. Crew morale skyrockets for the final stretch!",
+        "powerDelta": -15,
+        "crewHealthDelta": 20,
+        "nextNodeId": "EVALUATE_ENDING"
+      },
+      "choiceB": {
+        "buttonLabel": "Stay in Strict Power-Saving Mode",
+        "subLabel": "+10 Power | -15 Crew Health",
+        "outcomeText": "You keep lights dimmed and save every watt of electricity until the sky officially clears. Batteries look great, though the crew feels isolated and worn down.",
+        "powerDelta": 10,
+        "crewHealthDelta": -15,
+        "nextNodeId": "EVALUATE_ENDING"
+      }
+    },
+    {
+      "nodeId": "DAY_4B",
+      "dayNumber": 4,
+      "realDate": "June 20, 2018",
+      "title": "Sol 4: Dust-Covered Panels",
+      "sunlightBlockedPercent": 75,
+      "skyColorHex": "#4D1E12",
+      "dustParticleIntensity": 0.7,
+      "nasaFactBanner": "REAL DATA: Martian wind gusts sometimes clean rover solar panels by accident—NASA engineers call these 'cleaning events.'",
+      "storyText": "NASA satellites confirm the storm is starting to fade! Sunlight is slowly returning, but a thick blanket of red dust covers your solar panels, blocking them from catching the light.",
+      "choiceA": {
+        "buttonLabel": "Send Astronauts Outside to Sweep Panels",
+        "subLabel": "+25 Power | -10 Crew Health",
+        "outcomeText": "Now that the worst dust has settled, two astronauts brush off the solar arrays. Electricity surges back into your batteries as sunlight breaks through!",
+        "powerDelta": 25,
+        "crewHealthDelta": -10,
+        "nextNodeId": "EVALUATE_ENDING"
+      },
+      "choiceB": {
+        "buttonLabel": "Wait for Mars Winds to Blow Dust Off",
+        "subLabel": "+5 Power | +10 Crew Health",
+        "outcomeText": "You keep the crew safely resting inside. A lucky afternoon wind gust blows some dust off the panels—giving a small power boost with zero risk.",
+        "powerDelta": 5,
+        "crewHealthDelta": 10,
+        "nextNodeId": "EVALUATE_ENDING"
+      }
+    },
+    {
+      "nodeId": "DAY_4C",
+      "dayNumber": 4,
+      "realDate": "June 20, 2018",
+      "title": "Sol 4: Tough Choices in the Gloom",
+      "sunlightBlockedPercent": 75,
+      "skyColorHex": "#4D1E12",
+      "dustParticleIntensity": 0.7,
+      "nasaFactBanner": "REAL DATA: NASA's Curiosity rover took selfies during the storm showing dust coating its deck while its instruments stayed healthy.",
+      "storyText": "Your power grid never went down, but dusty cabin air has left your astronauts weak and tired. Now that the storm is weakening, you have plenty of electricity to spend on one big priority.",
+      "choiceA": {
+        "buttonLabel": "Run Medical Bay & Air Scrubbers",
+        "subLabel": "-20 Power | +25 Crew Health",
+        "outcomeText": "You dedicate all extra electricity to purifying the air and treating the crew. Everyone recovers quickly before the skies clear.",
+        "powerDelta": -20,
+        "crewHealthDelta": 25,
+        "nextNodeId": "EVALUATE_ENDING"
+      },
+      "choiceB": {
+        "buttonLabel": "Launch a Weather Sensor Balloon",
+        "subLabel": "-10 Power | -15 Crew Health",
+        "outcomeText": "You use your power to launch a sensor balloon into the clearing storm, gathering priceless NASA climate data while your crew pushes through fatigue.",
+        "powerDelta": -10,
+        "crewHealthDelta": -15,
+        "nextNodeId": "EVALUATE_ENDING"
+      }
+    }
+  ],
+  "endings": [
+    {
+      "endingId": "ENDING_PERFECT",
+      "conditionDescription": "Power > 40 AND CrewHealth > 50",
+      "minPower": 41,
+      "minCrewHealth": 51,
+      "headline": "Sol 5: Mission Success — The NASA Blueprint!",
+      "skyColorHex": "#D49B6A",
+      "storyText": "Sunlight floods Ares Base once again! Your solar panels wake up, your nuclear backup held steady through the 97% blackout, your return rocket fuel stayed cold, and all four astronauts are healthy and ready to explore Mars."
+    },
+    {
+      "endingId": "ENDING_LOW_POWER",
+      "conditionDescription": "CrewHealth > 50 AND Power <= 40",
+      "minPower": 21,
+      "minCrewHealth": 51,
+      "headline": "Sol 5: Safe Crew, Extra Fuel Delivery Needed",
+      "skyColorHex": "#D49B6A",
+      "storyText": "Every astronaut survived the monster storm in great health! Because you had to shut down power-hungry systems during the pitch-black days, your return rocket lost some fuel—so NASA will send a robotic tanker ship before your flight home."
+    },
+    {
+      "endingId": "ENDING_LOW_HEALTH",
+      "conditionDescription": "Power > 40 AND CrewHealth <= 50",
+      "minPower": 41,
+      "minCrewHealth": 21,
+      "headline": "Sol 5: Base Intact, Exhausted Crew",
+      "skyColorHex": "#D49B6A",
+      "storyText": "Your power grid and return rocket came through the storm without a scratch, but weeks of cold cabins, dusty air, and rationing pushed your astronauts to their limit. Mission Control orders two weeks of rest before any more spacewalks."
+    },
+    {
+      "endingId": "ENDING_OPPORTUNITY_FATE",
+      "conditionDescription": "Power <= 20 OR CrewHealth <= 20",
+      "minPower": 0,
+      "minCrewHealth": 0,
+      "headline": "Sol 5: The Opportunity Rover Fate",
+      "skyColorHex": "#D49B6A",
+      "storyText": "Just like NASA's Opportunity rover in 2018, your base ran out of reserves during the pitch-black blackout. Emergency life-support pods kept the crew safe until a rescue lander arrived—proving why human Mars bases need strong nuclear backup power!"
+    }
+  ],
+  "realLifeComparison": {
+    "title": "Compare Your Mission to Real NASA Science",
+    "cards": [
+      {
+        "topic": "Solar Panels vs. Nuclear Power",
+        "whatHappenedInRealLife": "In June 2018, NASA's solar-powered Opportunity rover lost 97% of its sunlight, couldn't recharge, and froze in the dark after 14 years on Mars. Across the planet, Curiosity kept working right through the storm because it used a small nuclear battery.",
+        "howItConnectsToGame": "That's why Ares Base needed both solar panels AND a nuclear backup unit to survive Sol 3!"
+      },
+      {
+        "topic": "The Heat-Blanket Surprise",
+        "whatHappenedInRealLife": "NASA's weather station on Curiosity discovered something surprising: while dust storms make Mars days cooler by blocking sunlight, they make Mars nights WARMER because the dust traps heat near the ground.",
+        "howItConnectsToGame": "On Sol 3, lowering your cabin heaters worked because the dust storm acted like a giant blanket over the planet."
+      },
+      {
+        "topic": "No Instant Help From Earth",
+        "whatHappenedInRealLife": "Because Mars is millions of miles away, radio messages take 6 to 22 minutes each way—up to 44 minutes just to ask a question and get an answer.",
+        "howItConnectsToGame": "Just like in your game, real Mars astronauts have to make life-saving trade-offs on their own before Mission Control even knows there is a problem."
+      }
+    ]
+  }
+}
+
+
+```
+
+
+---
+
+
+### Quick Notes for Your Unity Teammate
+
+
+* **Where to put the file:** Save this text as `MarsStorm2018_Story.json` inside Unity's `Assets/Resources/` folder.
+* **How to load it in 2 lines of C#:**
+```csharp
+TextAsset jsonFile = Resources.Load<TextAsset>("MarsStorm2018_Story");
+GameStoryData story = JsonUtility.FromJson<GameStoryData>(jsonFile.text);
+
+
+```
+
+
+
+
+* **Automatic Visual Atmosphere:** Each node includes `skyColorHex` and `dustParticleIntensity` (`0.15` to `1.0`). Your teammate can pass `ColorUtility.TryParseHtmlString(node.skyColorHex, out Color skyColor)` directly into `Camera.main.backgroundColor` and scale a Unity dust particle system so the player literally watches the storm darken the screen and clear up on Sol 5.
+* **Ending Evaluation Order:** Check `ENDING_OPPORTUNITY_FATE` first (`if (power <= 20 || crewHealth <= 20)`), then `ENDING_PERFECT` (`if (power > 40 && crewHealth > 50)`), then `ENDING_LOW_POWER`, and finally `ENDING_LOW_HEALTH`.

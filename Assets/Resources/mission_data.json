@@ -1,0 +1,142 @@
+{
+  "startNodeId": "sol1_storm_onset",
+  "nodes": [
+    {
+      "id": "sol1_storm_onset",
+      "sol": 1,
+      "title": "Sol 1: Wall of Dust Approaching",
+      "dustTau": 1.8,
+      "prompt": "Orbital reconnaissance detects a rapidly expanding regional dust plume over Perseverance Valley. Atmospheric opacity (tau) has jumped to 1.8, cutting solar array output in half. How should Mission Control configure the rover for Sol 1?",
+      "isEnding": false,
+      "endingType": "",
+      "choices": [
+        {
+          "label": "Deploy Atmospheric Spectrometer & Calibrate High-Gain Antenna",
+          "nextNodeId": "sol2_deep_tau",
+          "powerDelta": -25,
+          "integrityDelta": -5,
+          "scienceDelta": 30,
+          "requiredFlag": "",
+          "minPower": 20,
+          "setFlag": "calibrated_antenna",
+          "outcome": "The spectrometer captures rare vertical dust profiles as the storm wall hits, and the high-gain antenna locks onto the Mars Odyssey orbiter. However, running the instruments and survival heaters drains battery reserves heavily.",
+          "nasaNote": "During the 2018 Mars global dust storm, scientists measured atmospheric optical depth ('tau') to track how much sunlight dust blocked—rising from a clear-sky 0.6 to over 10.8!"
+        },
+        {
+          "label": "Conserve Energy: Stow Mast & Enter Deep Thermal Sleep",
+          "nextNodeId": "sol2_deep_tau",
+          "powerDelta": 10,
+          "integrityDelta": 0,
+          "scienceDelta": 10,
+          "requiredFlag": "",
+          "minPower": 0,
+          "setFlag": "thermal_conserved",
+          "outcome": "You shut down non-essential avionics before sunset. Diffused skylight trickle-charges the battery, and internal survival heaters keep the electronics warm with minimal drain.",
+          "nasaNote": "Solar-powered rovers like Opportunity used survival heaters and deep-sleep modes to keep batteries above -40°C during freezing Martian nights."
+        },
+        {
+          "label": "Overdrive Rock Drill & Full-Power Radar Sweep (Extreme Power Drain)",
+          "nextNodeId": "sol2_hazard_ridge",
+          "powerDelta": -85,
+          "integrityDelta": -20,
+          "scienceDelta": 45,
+          "requiredFlag": "",
+          "minPower": 0,
+          "setFlag": "core_sampled",
+          "outcome": "The drill extracts a sulfate vein sample amidst howling dust gusts, but the massive current draw plunges the rover's battery into critical depletion!",
+          "nasaNote": "Rock grinding and drilling tools draw several times more electrical power than cameras, making them dangerous to run when dust coats the solar panels."
+        }
+      ]
+    },
+    {
+      "id": "sol2_deep_tau",
+      "sol": 2,
+      "title": "Sol 2: Twilight at Local Noon",
+      "dustTau": 4.5,
+      "prompt": "The dust storm has encircled the crater rim. At local noon, tau has reached 4.5—turning the Martian sky into a dark rust-brown twilight as fine iron-oxide dust settles on the solar decks. What is your Sol 2 command?",
+      "isEnding": false,
+      "endingType": "",
+      "choices": [
+        {
+          "label": "[Antenna Calibrated] Transmit High-Priority Storm Telemetry to Earth",
+          "nextNodeId": "ending_breakthrough",
+          "powerDelta": -20,
+          "integrityDelta": -5,
+          "scienceDelta": 40,
+          "requiredFlag": "calibrated_antenna",
+          "minPower": 30,
+          "setFlag": "telemetry_sent",
+          "outcome": "Because you calibrated the high-gain antenna on Sol 1, the rover pierces the dust storm interference and beams a complete vertical profile of the storm back to NASA's Deep Space Network!",
+          "nasaNote": "NASA's Mars Reconnaissance Orbiter and Mars Odyssey spacecraft act as communications relays, beaming rover data across millions of kilometers to Earth."
+        },
+        {
+          "label": "[Requires 65+ Power] Run High-Voltage Tilt Actuator to Shake Off Panel Dust",
+          "nextNodeId": "ending_survival",
+          "powerDelta": -20,
+          "integrityDelta": 10,
+          "scienceDelta": 25,
+          "requiredFlag": "",
+          "minPower": 65,
+          "setFlag": "panels_cleared",
+          "outcome": "Using the extra battery reserves saved on Sol 1, you angle the deck into the crosswind to shed accumulated dust grains and image the storm front.",
+          "nasaNote": "On Mars, sudden wind gusts ('cleaning events') sometimes swept dust off Opportunity's solar panels, helping a 90-Sol mission last over 14 years!"
+        },
+        {
+          "label": "Hold Low-Power Wake Window & Log Barometric Pressure",
+          "nextNodeId": "ending_survival",
+          "powerDelta": -10,
+          "integrityDelta": -5,
+          "scienceDelta": 15,
+          "requiredFlag": "",
+          "minPower": 0,
+          "setFlag": "pressure_logged",
+          "outcome": "You record crucial atmospheric pressure waves from the passing thermal tide while keeping power and structural integrity within safe survival margins.",
+          "nasaNote": "Sun-blocking dust clouds absorb solar heat high in the air, warming the upper Martian atmosphere by over 30°C and driving planet-wide wind tides."
+        }
+      ]
+    },
+    {
+      "id": "sol2_hazard_ridge",
+      "sol": 2,
+      "title": "Sol 2: Emergency on Hazard Ridge",
+      "dustTau": 5.2,
+      "prompt": "Visibility is near zero at tau 5.2. Thermal stress from yesterday's overdrive operations is straining the chassis. How do you respond?",
+      "isEnding": false,
+      "endingType": "",
+      "choices": [
+        {
+          "label": "Execute Autonomous Safe-Mode Stabilization",
+          "nextNodeId": "ending_survival",
+          "powerDelta": -5,
+          "integrityDelta": 5,
+          "scienceDelta": 10,
+          "requiredFlag": "",
+          "minPower": 0,
+          "setFlag": "safe_mode_recovered",
+          "outcome": "Emergency fault-protection routines isolate non-essential circuits and stabilize the rover through Sol 2.",
+          "nasaNote": "Mars rovers are programmed to enter 'Safe Mode' automatically when onboard sensors detect unexpected voltage drops or temperature extremes."
+        }
+      ]
+    },
+    {
+      "id": "ending_breakthrough",
+      "sol": 2,
+      "title": "Mission Complete: Storm Science Pioneer",
+      "dustTau": 4.5,
+      "prompt": "Your 2-Sol proof-of-concept mission succeeded with a major scientific breakthrough! You balanced power reserves and antenna calibration to transmit priceless 2018 Mars dust storm telemetry back to Mission Control.",
+      "isEnding": true,
+      "endingType": "SCIENTIFIC BREAKTHROUGH",
+      "choices": []
+    },
+    {
+      "id": "ending_survival",
+      "sol": 2,
+      "title": "Mission Complete: Weathered the Storm",
+      "dustTau": 4.5,
+      "prompt": "Your rover survived the opening 2 Sols of the 2018 global dust storm with vital systems intact! Mission Control is ready for the full 5-Sol story.",
+      "isEnding": true,
+      "endingType": "ROVER SURVIVED",
+      "choices": []
+    }
+  ]
+}
