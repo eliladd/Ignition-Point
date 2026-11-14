@@ -1,0 +1,652 @@
+{
+ "nodes": [
+  {
+   "nodeId": "DAY_8A",
+   "title": "Sol 8: Sweeping the Solar Farm",
+   "nasaFactBanner": "2018 LESSON: Opportunity had to wait for wind, but crews can sweep panels themselves.",
+   "storyText": "Dust is finally settling! <b><color=#5CE1E6><u><link=\\\"2018_opportunity_panels\\\">Opportunity rover</link></u></color></b> had to wait for <b><color=#5CE1E6><u><link=\\\"2018_cleaning_events\\\">dust devils</link></u></color></b> to clean it. Your crew can put on <b><color=#5CE1E6><u><link=\\\"2018_airlock_suits\\\">dustproof suits</link></u></color></b> and sweep panels!",
+   "guideTip": "Solar panels need clean glass. Dust blocks the light, just like a dirty window!",
+   "novaHint": "Sunlight is coming back. Think about what helps you use it best.",
+   "consequences": [
+    {
+     "checkFlag": "SOL4_SAVED_FUEL",
+     "text": "Cold rocket fuel from Sol 4 uses steady power (-5% Power), but morale is up (+3% Crew Health)."
+    },
+    {
+     "checkFlag": "SOL7_RATIONED_FOOD",
+     "text": "Cold ration bars from Sol 7 saved power (0% Electricity Conserved!), but tired the crew (-5% Crew Health)."
+    },
+    {
+     "checkFlag": "SOL7_ORBITAL_SCAN",
+     "text": "Your Sol 7 orbital scan found sunny gaps in the haze (0% Electricity Conserved!)."
+    },
+    {
+     "checkFlag": "SOL7B_WATER_CLEAN",
+     "text": "Clean water loops help everyone feel good (+4% Crew Health), but pumps use power (-3% Power)."
+    },
+    {
+     "checkFlag": "SOL7D_DOCK_ROVERS",
+     "text": "Clean rover plugs help power flow (0% Electricity Conserved!), but dusty suits tire the crew (-3% Crew Health)."
+    }
+   ],
+   "choiceA": {
+    "buttonLabel": "Send a sweeping team",
+    "description": "Two astronauts go outside with dust shields to clean Wing Array 1.",
+    "outcomeText": "Sunlight pours onto clean solar glass! Your spacewalkers return proud, sore, and dusty.",
+    "nasaComparisonTitle": "Clearing Dust Off Solar Panels",
+    "nasaRealDecision": "Mars storms fade slowly. Sunlight returns, but dust can still cling to panels.",
+    "nasaFactEmphasis": "Panels make power only when sunlight gets through and the glass is clean.",
+    "guideReaction": "Whoa, clean panels! More power, but sore astronauts. Great trade!"
+   },
+   "choiceB": {
+    "buttonLabel": "Rest and balance batteries",
+    "description": "Tired astronauts sleep indoors while batteries are balanced.",
+    "outcomeText": "Rest heals aching backs. The dusty panels waste some of the returning sun.",
+    "nasaComparisonTitle": "Dust Keeps Mars Nights Warmer",
+    "nasaRealDecision": "In 2018, dust in the air held in heat at night. Crews could use less heater power.",
+    "nasaFactEmphasis": "Mars air is very thin, and nights can drop to -90°F.",
+    "guideReaction": "Hmm, rest feels great! Dusty panels still miss that sunshine, though."
+   },
+   "choiceC": {
+    "buttonLabel": "Fix radiators and wires",
+    "description": "A quick shift clears frost from radiator pipes and fixes loose wires.",
+    "outcomeText": "Tighter wires waste less power. The cold dust chills the repair team.",
+    "nasaComparisonTitle": "Nuclear Power Works in the Dark",
+    "nasaRealDecision": "Opportunity ran on solar power and went quiet. Curiosity kept going on nuclear power.",
+    "nasaFactEmphasis": "A nuclear core can make electricity even when the sky is dark.",
+    "guideReaction": "Nice fix! Less wasted power, but brrr, the crew is chilly."
+   }
+  },
+  {
+   "nodeId": "DAY_8B",
+   "title": "Sol 8: Sunlight Returns",
+   "nasaFactBanner": "2018 LESSON: Cleaning sticky dust off panels is the fastest way to get power back.",
+   "storyText": "Sunlight is back, but <b><color=#5CE1E6><u><link=\\\"2018_static_dust\\\">sticky red dust</link></u></color></b> covers your panels and <b><color=#5CE1E6><u><link=\\\"2018_greenhouse_crops\\\">greenhouse</link></u></color></b> glass. Opportunity waited for <b><color=#5CE1E6><u><link=\\\"2018_cleaning_events\\\">wind to clean</link></u></color></b> it. You can choose how to clean up or rest.",
+   "guideTip": "Mars dust is sticky like a balloon rubbed on hair. Static makes it cling!",
+   "novaHint": "Cleaning costs effort and rest costs power. Which matters more right now?",
+   "consequences": [
+    {
+     "checkFlag": "SOL7_DUST_WALK",
+     "text": "Sol 7 skylight sweeping brings extra daylight power (+3% Electricity), but sore muscles slow the crew (-4% Crew Health)."
+    },
+    {
+     "checkFlag": "SOL1_OXYGEN_STOCK",
+     "text": "Backup oxygen from Sol 1 keeps the air fresh during cleanup (+4% Crew Health)."
+    },
+    {
+     "checkFlag": "SOL5_PORTABLE_SCRUB",
+     "text": "Portable scrubbers use steady power (-3% Power) but protect lungs (+4% Crew Health)."
+    },
+    {
+     "checkFlag": "SOL7A_HOT_SOUP",
+     "text": "Hot meals from Sol 7 gave the crew energy (+4% Crew Health), but used power (-3% Power)."
+    },
+    {
+     "checkFlag": "SOL7C_MED_PURGE",
+     "text": "Your Sol 7 air purge cleared lungs (+5% Crew Health), but left batteries lower (-4% Power)."
+    }
+   ],
+   "choiceA": {
+    "buttonLabel": "Shake the panels clean",
+    "description": "Shaker frames rattle the solar farm and knock the dust off.",
+    "outcomeText": "Sheets of dust slide off the panels! The buzzing noise makes sleeping hard.",
+    "nasaComparisonTitle": "Clearing Dust Off Solar Panels",
+    "nasaRealDecision": "Mars storms fade slowly. Sunlight returns, but dust can still cling to panels.",
+    "nasaFactEmphasis": "Panels make power only when sunlight gets through and the glass is clean.",
+    "guideReaction": "Rattle, rattle! Clean panels, but the noise is tiring."
+   },
+   "choiceB": {
+    "buttonLabel": "Rest and add humidity",
+    "description": "Use steady power to moisten dry air and let everyone sleep.",
+    "outcomeText": "Deep sleep and moist air help the crew. Battery power drops a bit.",
+    "nasaComparisonTitle": "Keeping Mars Dust Outside",
+    "nasaRealDecision": "NASA is testing dust shields and suit doors that keep sticky Mars dust outside.",
+    "nasaFactEmphasis": "Mars dust clings like static and can harm lungs indoors.",
+    "guideReaction": "Aah, sleepy time! The crew feels great, and power dips."
+   },
+   "choiceC": {
+    "buttonLabel": "Use Chariot power and dust shields",
+    "description": "Link the Chariot Rover and zap dust off the panels.",
+    "outcomeText": "Dust shields clear the panels with no spacewalk. Watching the power link tires everyone.",
+    "nasaComparisonTitle": "Clearing Dust Off Solar Panels",
+    "nasaRealDecision": "Mars storms fade slowly. Sunlight returns, but dust can still cling to panels.",
+    "nasaFactEmphasis": "Panels make power only when sunlight gets through and the glass is clean.",
+    "guideReaction": "Zap! Power is up, and nobody had to spacewalk. Cool!"
+   }
+  },
+  {
+   "nodeId": "DAY_8C",
+   "title": "Sol 8: Cooling Pump Trouble",
+   "nasaFactBanner": "2018 LESSON: Real power machines need safety room, not nonstop top speed.",
+   "storyText": "<b><color=#5CE1E6><u><link=\\\"2018_curiosity_mmrtg\\\">Curiosity's nuclear power</link></u></color></b> has no moving parts. Your <b><color=#5CE1E6><u><link=\\\"2018_fission_power\\\">reactor cooling pump</link></u></color></b> just broke! Overhead, dust once <b><color=#5CE1E6><u><link=\\\"2018_storm_height\\\">over 37 miles high</link></u></color></b> is finally sinking.",
+   "guideTip": "Pumps move cool liquid past the hot reactor. When a pump breaks, we need a plan!",
+   "novaHint": "A broken part is a problem, but your crew still needs care too.",
+   "consequences": [
+    {
+     "checkFlag": "SOL6_REDLINE_CORE",
+     "text": "Pushing the core hard on Sol 6 hurt a cooling seal (-6% Power)."
+    },
+    {
+     "checkFlag": "SOL7_SHAKER_PULSE",
+     "text": "Shaken panels add fresh power (+3% Electricity), but the noise stressed the crew (-4% Crew Health)."
+    },
+    {
+     "checkFlag": "SOL7_MASK_PROTOCOL",
+     "text": "Wearing helmets indoors since Sol 7 left the crew sore and thirsty (-6% Crew Health)."
+    },
+    {
+     "checkFlag": "SOL7D_RADAR_HEAT",
+     "text": "Heated radar kept gears ice-free (0% Electricity Conserved!), but cold rooms chilled the crew (-3% Crew Health)."
+    }
+   ],
+   "choiceA": {
+    "buttonLabel": "Visit the sick bay",
+    "description": "Use stored power for oxygen, warm water, and rest.",
+    "outcomeText": "Sick-bay mist revives the crew fast. Your power reserves fall very low.",
+    "nasaComparisonTitle": "Never Waste Water on Mars",
+    "nasaRealDecision": "In 2018, the storm lifted water vapor high above Mars. Future bases will recycle every drop.",
+    "nasaFactEmphasis": "Space stations already recycle water, and Mars bases will need to as well.",
+    "guideReaction": "Healing time! The crew feels much better, but power is low."
+   },
+   "choiceB": {
+    "buttonLabel": "Launch a storm balloon",
+    "description": "Spend power and energy to launch a balloon that studies the storm.",
+    "outcomeText": "Your balloon sends great storm data to NASA. It also strains the crew and power.",
+    "nasaComparisonTitle": "Orbiters Help Mars Talk to Earth",
+    "nasaRealDecision": "In 2018, NASA's Mars orbiter watched the storm grow. It also relays rover radio to Earth.",
+    "nasaFactEmphasis": "Radio messages take about 22 minutes to cross space.",
+    "guideReaction": "Great science! Hmm, it wore everyone out. Rest helps next time."
+   },
+   "choiceC": {
+    "buttonLabel": "Wire up a pump bypass",
+    "description": "Tired engineers crawl through tunnels to join rover pumps to the reactor.",
+    "outcomeText": "The bypass steadies reactor power. The tight tunnels leave bruises and tired muscles.",
+    "nasaComparisonTitle": "Never Waste Water on Mars",
+    "nasaRealDecision": "In 2018, the storm lifted water vapor high above Mars. Future bases will recycle every drop.",
+    "nasaFactEmphasis": "Space stations already recycle water, and Mars bases will need to as well.",
+    "guideReaction": "Clever fix! Hmm, crawling tunnels hurts. Take care of your crew."
+   }
+  },
+  {
+   "nodeId": "DAY_8D",
+   "title": "Sol 8: Sky Maps and Fuel",
+   "nasaFactBanner": "2018 LESSON: Sky maps from orbit help crews plan solar recovery and protect fuel.",
+   "storyText": "A <b><color=#5CE1E6><u><link=\\\"2018_mro_relay\\\">relay satellite</link></u></color></b> sends you clearing-sky maps. Radio takes about <b><color=#5CE1E6><u><link=\\\"2018_radio_delay\\\">22 minutes</link></u></color></b> to reach Earth. Chillers that <b><color=#5CE1E6><u><link=\\\"2018_fuel_cooling\\\">keep rocket fuel cold</link></u></color></b> now compete with base repairs.",
+   "guideTip": "Satellites circle Mars and take pictures from above. They show where the sky is clearing!",
+   "novaHint": "Fuel, power, and crew all need care. What will you protect first?",
+   "consequences": [
+    {
+     "checkFlag": "SOL7_ORBITAL_SCAN",
+     "text": "Sol 7's scan found thin clouds over Ares Base (0% Electricity Conserved!)."
+    },
+    {
+     "checkFlag": "SOL7_ICE_MELT",
+     "text": "Melted ice keeps heaters running (-4% Power) and flasks full (+5% Crew Health)."
+    },
+    {
+     "checkFlag": "SOL6_DRONE_PING",
+     "text": "Your drone map helps field checks (0% Electricity Conserved!), but needs focus (-2% Crew Health)."
+    },
+    {
+     "checkFlag": "SOL7C_LAB_SEAL",
+     "text": "Sealing the dusty lab helps breathing (+3% Crew Health), but uses power (-3% Power)."
+    }
+   ],
+   "choiceA": {
+    "buttonLabel": "Aim panels at sunny gaps",
+    "description": "Astronauts go out to tilt solar wings toward sunny spots.",
+    "outcomeText": "Tilted towers catch the returning sun right away. The dusty wind chills the crew.",
+    "nasaComparisonTitle": "Clearing Dust Off Solar Panels",
+    "nasaRealDecision": "Mars storms fade slowly. Sunlight returns, but dust can still cling to panels.",
+    "nasaFactEmphasis": "Panels make power only when sunlight gets through and the glass is clean.",
+    "guideReaction": "Smart aiming! More power, but brrr, the crew is cold."
+   },
+   "choiceB": {
+    "buttonLabel": "Boost water and rest",
+    "description": "Leave the towers alone and clean water and warm bunks.",
+    "outcomeText": "Fresh water and cozy bunks rebuild energy. The power gauge dips down.",
+    "nasaComparisonTitle": "Never Waste Water on Mars",
+    "nasaRealDecision": "In 2018, the storm lifted water vapor high above Mars. Future bases will recycle every drop.",
+    "nasaFactEmphasis": "Space stations already recycle water, and Mars bases will need to as well.",
+    "guideReaction": "Yum, clean water! The crew feels good, and power dips."
+   },
+   "choiceC": {
+    "buttonLabel": "Link up with the orbiter",
+    "description": "Spend dish power on recovery plans and video letters from Earth.",
+    "outcomeText": "Seeing smiling families brightens the whole base. Smart checklists are ready too.",
+    "nasaComparisonTitle": "Orbiters Help Mars Talk to Earth",
+    "nasaRealDecision": "In 2018, NASA's Mars orbiter watched the storm grow. It also relays rover radio to Earth.",
+    "nasaFactEmphasis": "Radio messages take about 22 minutes to cross space.",
+    "guideReaction": "Hello, Earth! Happy faces boost the crew, and power dips."
+   }
+  },
+  {
+   "nodeId": "DAY_9A",
+   "title": "Sol 9: Prepare the Rocket",
+   "nasaFactBanner": "2018 LESSON: In July 2018, NASA listened daily for Opportunity as skies brightened.",
+   "storyText": "Warm golden light returns! <b><color=#5CE1E6><u><link=\\\"2018_opportunity_panels\\\">Opportunity</link></u></color></b> stayed silent in 2018, but you can power <b><color=#5CE1E6><u><link=\\\"2018_moxie_oxygen\\\">MOXIE oxygen makers</link></u></color></b>. Chillers can again <b><color=#5CE1E6><u><link=\\\"2018_fuel_cooling\\\">keep rocket fuel cold</link></u></color></b> for the trip home.",
+   "guideTip": "MOXIE makes oxygen from Mars air. Power from sunshine lets it run again!",
+   "novaHint": "Sunshine is back. Think about what your crew and rocket need most.",
+   "consequences": [
+    {
+     "checkFlag": "SOL8_SWEPT_ARRAYS",
+     "text": "Sweeping Wing 1 gives bright morning power (+3% Electricity), but sore crew need rest (-4% Crew Health)."
+    },
+    {
+     "checkFlag": "SOL4_COMFORT_HEAT",
+     "text": "Warm kitchens use steady power (-3% Power), but well-fed astronauts stay strong (+4% Crew Health)."
+    },
+    {
+     "checkFlag": "SOL7_ICE_MELT",
+     "text": "Clean water from Sol 7 keeps everyone ready for pre-launch checks (+4% Crew Health)."
+    },
+    {
+     "checkFlag": "SOL8B_HUMIDITY_SLEEP",
+     "text": "Good sleep made the crew stronger (+5% Crew Health), but used some power (-4% Power)."
+    },
+    {
+     "checkFlag": "SOL8D_REANGLE_SOLAR",
+     "text": "Tilted towers catch extra morning power (+3% Electricity), but tired the crew (-3% Crew Health)."
+    }
+   ],
+   "choiceA": {
+    "buttonLabel": "Refill air and water",
+    "description": "Use solar power to split water ice into oxygen and clean water.",
+    "outcomeText": "Fresh oxygen and clean water fill Ares Base. Your crew is ready for Sol 10!",
+    "nasaComparisonTitle": "Never Waste Water on Mars",
+    "nasaRealDecision": "In 2018, the storm lifted water vapor high above Mars. Future bases will recycle every drop.",
+    "nasaFactEmphasis": "Space stations already recycle water, and Mars bases will need to as well.",
+    "guideReaction": "Deep breaths! The crew is strong, and power is lower."
+   },
+   "choiceB": {
+    "buttonLabel": "Test the rocket chillers",
+    "description": "The crew works overtime to test the fuel chillers and power.",
+    "outcomeText": "The chillers run smoothly and power climbs. Long checklists tire the astronauts.",
+    "nasaComparisonTitle": "Keeping Rocket Fuel Cold",
+    "nasaRealDecision": "Mars return rockets may use liquid fuel that must stay very cold. Cooling takes steady power.",
+    "nasaFactEmphasis": "Liquid oxygen boils away if it gets warm, so rockets need cooling.",
+    "guideReaction": "Chill, rocket, chill! More power, but the crew is tired."
+   },
+   "choiceC": {
+    "buttonLabel": "Reconnect far ridge panels",
+    "description": "A team crosses the dunes to reconnect backup solar cables.",
+    "outcomeText": "Extra panels send steady power home. Trudging in bulky suits tires everyone.",
+    "nasaComparisonTitle": "Clearing Dust Off Solar Panels",
+    "nasaRealDecision": "Mars storms fade slowly. Sunlight returns, but dust can still cling to panels.",
+    "nasaFactEmphasis": "Panels make power only when sunlight gets through and the glass is clean.",
+    "guideReaction": "Long hike, big reward! More power, and sleepy legs."
+   }
+  },
+  {
+   "nodeId": "DAY_9B",
+   "title": "Sol 9: Clear Skies, Cold Nights",
+   "nasaFactBanner": "2018 LESSON: As dust settled in July 2018, Mars nights got very cold again.",
+   "storyText": "Without dust to <b><color=#5CE1E6><u><link=\\\"2018_warm_nights\\\">hold in heat</link></u></color></b>, nights fall to -90°F again! Mars has <b><color=#5CE1E6><u><link=\\\"2018_thin_air\\\">very thin air</link></u></color></b>, so frost builds on radiators. Your <b><color=#5CE1E6><u><link=\\\"2018_airlock_suits\\\">airlock suits</link></u></color></b> help with outside jobs.",
+   "guideTip": "Thin air can't hold much heat. That is why Mars gets so cold at night!",
+   "novaHint": "Cold nights ask a lot from people and machines. Plan for both.",
+   "consequences": [
+    {
+     "checkFlag": "SOL3_COLD_CORRIDORS",
+     "text": "Sealed corridors since Sol 3 save power (0% Electricity Conserved!), but icy doors stiffen joints (-4% Crew Health)."
+    },
+    {
+     "checkFlag": "SOL6_RADIO_SILENCE",
+     "text": "Radio silence kept batteries full (0% Electricity Conserved!), but the crew feels lonely (-4% Crew Health)."
+    },
+    {
+     "checkFlag": "SOL7_SHAKER_PULSE",
+     "text": "Shaken panels give crisp morning power (+3% Electricity), but vibration bothers sleep (-3% Crew Health)."
+    },
+    {
+     "checkFlag": "SOL8A_CELL_BALANCE",
+     "text": "Rest steadied the crew (+4% Crew Health), but dusty panels slowed charging (-3% Power)."
+    },
+    {
+     "checkFlag": "SOL8B_SHAKER_PULSE",
+     "text": "Shaken panels raised charging (+3% Electricity), but the buzzing hurt sleep (-3% Crew Health)."
+    },
+    {
+     "checkFlag": "SOL8C_SICK_BAY",
+     "text": "Sick-bay care lifted weak crew (+5% Crew Health), but drained power overnight (-4% Power)."
+    }
+   ],
+   "choiceA": {
+    "buttonLabel": "Chip frost off radiators",
+    "description": "Suited astronauts go out in the -90°F evening to scrape ice from radiators.",
+    "outcomeText": "Clean radiators cool better and save power. The frosty work leaves the crew worn out.",
+    "nasaComparisonTitle": "Never Waste Water on Mars",
+    "nasaRealDecision": "In 2018, the storm lifted water vapor high above Mars. Future bases will recycle every drop.",
+    "nasaFactEmphasis": "Space stations already recycle water, and Mars bases will need to as well.",
+    "guideReaction": "Chip, chip! Radiators work better, but the crew is freezing."
+   },
+   "choiceB": {
+    "buttonLabel": "Give medical checkups",
+    "description": "Run the heaters high while doctors check all four astronauts.",
+    "outcomeText": "Warm checkups lift everyone's health. The battery meters drop down.",
+    "nasaComparisonTitle": "Growing Fresh Food in Space",
+    "nasaRealDecision": "Astronauts on the space station grow salad plants under colorful LED lights.",
+    "nasaFactEmphasis": "Fresh plants give vitamins and cheer, but grow lights use steady power.",
+    "guideReaction": "Doctor time! Healthy crew, lower power. A fair trade."
+   },
+   "choiceC": {
+    "buttonLabel": "Balance batteries all night",
+    "description": "Heaters melt ice slowly while the crew balances power circuits.",
+    "outcomeText": "Careful work saves reserve power. Missing sleep leaves the crew weary before Sol 10.",
+    "nasaComparisonTitle": "Never Waste Water on Mars",
+    "nasaRealDecision": "In 2018, the storm lifted water vapor high above Mars. Future bases will recycle every drop.",
+    "nasaFactEmphasis": "Space stations already recycle water, and Mars bases will need to as well.",
+    "guideReaction": "Good teamwork! Power is steadier, but everyone needs sleep."
+   }
+  },
+  {
+   "nodeId": "DAY_9C",
+   "title": "Sol 9: Survival Mode",
+   "nasaFactBanner": "2018 LESSON: After big storms, NASA checks spacecraft health before a full restart.",
+   "storyText": "A <b><color=#5CE1E6><u><link=\\\"2018_radio_delay\\\">22-minute radio delay</link></u></color></b> can't stop good news! A <b><color=#5CE1E6><u><link=\\\"2018_mro_relay\\\">relay satellite</link></u></color></b> brings alerts from Mission Control. One Sol is left: help the crew, send science, or seal the <b><color=#5CE1E6><u><link=\\\"2018_fission_power\\\">reactor</link></u></color></b> bay.",
+   "guideTip": "Mission Control is on Earth. The relay satellite carries their messages to you.",
+   "novaHint": "One Sol is left. Think about what you can't get back later.",
+   "consequences": [
+    {
+     "checkFlag": "SOL8_AUX_BYPASS",
+     "text": "The Sol 8 bypass leaks power (-5% Power) and hums by the bunks (-3% Crew Health)."
+    },
+    {
+     "checkFlag": "SOL5_SKIPPED_SCRUB",
+     "text": "Dust from Sol 5 still irritates dry throats in the shelter (-5% Crew Health)."
+    },
+    {
+     "checkFlag": "SOL8_ROVER_CLEANING",
+     "text": "Rover-cleaned panels give bonus daylight power (+3% Electricity), but screens tire eyes (-2% Crew Health)."
+    },
+    {
+     "checkFlag": "SOL8C_STORM_BALLOON",
+     "text": "The storm balloon gave great sky timing (0% Electricity Conserved!), but tired the crew (-4% Crew Health)."
+    },
+    {
+     "checkFlag": "SOL8D_WATER_REST",
+     "text": "Clean water and rest steadied everyone (+4% Crew Health), but power dropped (-4% Power)."
+    }
+   ],
+   "choiceA": {
+    "buttonLabel": "Clean the airlocks",
+    "description": "Spend battery power on cabin cleaning, warm water, and medical rest.",
+    "outcomeText": "Cabin air turns spotless and the crew rallies. Battery reserves dip very low.",
+    "nasaComparisonTitle": "Keeping Mars Dust Outside",
+    "nasaRealDecision": "NASA is testing dust shields and suit doors that keep sticky Mars dust outside.",
+    "nasaFactEmphasis": "Mars dust clings like static and can harm lungs indoors.",
+    "guideReaction": "Sparkly clean! The crew is strong, but power is quite low."
+   },
+   "choiceB": {
+    "buttonLabel": "Send storm science home",
+    "description": "Spend power and focus to upload your storm data and lock the latches.",
+    "outcomeText": "Earth gets every bit of your storm data. The base and crew feel stretched.",
+    "nasaComparisonTitle": "Orbiters Help Mars Talk to Earth",
+    "nasaRealDecision": "In 2018, NASA's Mars orbiter watched the storm grow. It also relays rover radio to Earth.",
+    "nasaFactEmphasis": "Radio messages take about 22 minutes to cross space.",
+    "guideReaction": "Science sent! Hmm, you are running low. Rest helps."
+   },
+   "choiceC": {
+    "buttonLabel": "Close the emergency doors",
+    "description": "Seal the outer doors to keep heat in and save power.",
+    "outcomeText": "Sealed doors stop wasted power. Sleeping side by side tires the crew.",
+    "nasaComparisonTitle": "Nuclear Power Works in the Dark",
+    "nasaRealDecision": "Opportunity ran on solar power and went quiet. Curiosity kept going on nuclear power.",
+    "nasaFactEmphasis": "A nuclear core can make electricity even when the sky is dark.",
+    "guideReaction": "Snug and safe! Power is saved, but it is a squeeze."
+   }
+  },
+  {
+   "nodeId": "DAY_9D",
+   "title": "Sol 9: Rovers and Greenhouse",
+   "nasaFactBanner": "2018 LESSON: Clearing dust fast helps solar and nuclear bases bounce back.",
+   "storyText": "Your rovers are ready, so you need not wait for <b><color=#5CE1E6><u><link=\\\"2018_cleaning_events\\\">dust devils to clean</link></u></color></b> panels. Tune the solar fields, restart <b><color=#5CE1E6><u><link=\\\"2018_greenhouse_crops\\\">greenhouse plants</link></u></color></b> and <b><color=#5CE1E6><u><link=\\\"2018_water_loss\\\">water recycling</link></u></color></b>, or charge the rocket.",
+   "guideTip": "A greenhouse gives fresh food. Recycling water means no drop is wasted!",
+   "novaHint": "You have a strong team. Think about which job helps the most.",
+   "consequences": [
+    {
+     "checkFlag": "SOL8_ROVER_CLEANING",
+     "text": "Cleared arrays give strong morning power (+3% Electricity), but cleaning rover plugs tires the crew (-3% Crew Health)."
+    },
+    {
+     "checkFlag": "SOL8_MRO_LINKUP",
+     "text": "Smart checklists from Sol 8 trim wasted power (0% Electricity Conserved!)."
+    },
+    {
+     "checkFlag": "SOL6_ROVER_GRID",
+     "text": "Linked rover batteries share power (0% Electricity Conserved!), but heavy cables need care (-2% Crew Health)."
+    },
+    {
+     "checkFlag": "SOL8A_RADIATOR_REWIRE",
+     "text": "Scraped radiators help heat flow (0% Electricity Conserved!), but cold aches linger (-3% Crew Health)."
+    },
+    {
+     "checkFlag": "SOL8_AUX_BYPASS",
+     "text": "Your bypass kept the reactor on (0% Electricity Conserved!), but loud pumps rattled bunks (-4% Crew Health)."
+    }
+   ],
+   "choiceA": {
+    "buttonLabel": "Tune the solar fields",
+    "description": "Line up solar trackers and turn on dust shields before dawn.",
+    "outcomeText": "Every solar wing locks onto the bright Sun. The heavy outdoor work strains the crew.",
+    "nasaComparisonTitle": "Clearing Dust Off Solar Panels",
+    "nasaRealDecision": "Mars storms fade slowly. Sunlight returns, but dust can still cling to panels.",
+    "nasaFactEmphasis": "Panels make power only when sunlight gets through and the glass is clean.",
+    "guideReaction": "Sun, here we come! Power is up, and the crew is tired."
+   },
+   "choiceB": {
+    "buttonLabel": "Restart plants and water",
+    "description": "Use daylight power to flush water tanks and light the veggie racks.",
+    "outcomeText": "Green sprouts and fresh water lift the crew fast. It costs a fair bit of power.",
+    "nasaComparisonTitle": "Growing Fresh Food in Space",
+    "nasaRealDecision": "Astronauts on the space station grow salad plants under colorful LED lights.",
+    "nasaFactEmphasis": "Fresh plants give vitamins and cheer, but grow lights use steady power.",
+    "guideReaction": "Yum, fresh veggies! The crew feels great, and power dips."
+   },
+   "choiceC": {
+    "buttonLabel": "Charge the rocket batteries",
+    "description": "Send extra rover and core power into the return rocket overnight.",
+    "outcomeText": "The rocket batteries fill up safely. Night checks cut the crew's sleep.",
+    "nasaComparisonTitle": "Nuclear Power Works in the Dark",
+    "nasaRealDecision": "Opportunity ran on solar power and went quiet. Curiosity kept going on nuclear power.",
+    "nasaFactEmphasis": "A nuclear core can make electricity even when the sky is dark.",
+    "guideReaction": "Rocket charged! Power is up, but sleepy astronauts need rest."
+   }
+  },
+  {
+   "nodeId": "DAY_10A",
+   "title": "Sol 10: Dawn After the Storm",
+   "nasaFactBanner": "2018 LESSON: Mars storms fade slowly over weeks, so teamwork matters at the end.",
+   "storyText": "Sunlight floods Ares Base on your tenth <b><color=#5CE1E6><u><link=\\\"2018_sol_length\\\">Martian Sol</link></u></color></b>! Your <b><color=#5CE1E6><u><link=\\\"2018_fission_power\\\">nuclear power core</link></u></color></b> hums beside the solar wings. One last choice: keep <b><color=#5CE1E6><u><link=\\\"2018_fuel_cooling\\\">rocket fuel cold</link></u></color></b> or help the crew.",
+   "guideTip": "Ten Sols! The storm is nearly over, and your base made it. Wow!",
+   "novaHint": "This is your final push. Think about what gets everyone home strong.",
+   "consequences": [
+    {
+     "checkFlag": "SOL9A_ELECTROLYSIS",
+     "text": "Refilled water and oxygen keep everyone alert (+4% Crew Health), but used power (-3% Power)."
+    },
+    {
+     "checkFlag": "SOL9B_RADIATOR_CHIP",
+     "text": "Clear radiators work better (0% Electricity Conserved!), but the cold work left crews sore (-3% Crew Health)."
+    },
+    {
+     "checkFlag": "SOL9D_SOLAR_CALIB",
+     "text": "Tuned solar trackers catch strong sunlight (+3% Electricity), but long walks tired the crew (-3% Crew Health)."
+    }
+   ],
+   "choiceA": {
+    "buttonLabel": "Lock in rocket power",
+    "description": "The crew inspects outside to max the battery vaults and rocket chillers.",
+    "outcomeText": "Chillers and batteries glow green, ready for liftoff! Your astronauts finish tired but proud.",
+    "nasaComparisonTitle": "Keeping Rocket Fuel Cold",
+    "nasaRealDecision": "Mars return rockets may use liquid fuel that must stay very cold. Cooling takes steady power.",
+    "nasaFactEmphasis": "Liquid oxygen boils away if it gets warm, so rockets need cooling.",
+    "guideReaction": "Rocket ready! The crew is worn out, but so proud."
+   },
+   "choiceB": {
+    "buttonLabel": "Light up the greenhouse feast",
+    "description": "Use leftover power for plant lights and a warm crew meal.",
+    "outcomeText": "Astronauts cheer around glowing green sprouts. Power dips, but spirits soar!",
+    "nasaComparisonTitle": "Growing Fresh Food in Space",
+    "nasaRealDecision": "Astronauts on the space station grow salad plants under colorful LED lights.",
+    "nasaFactEmphasis": "Fresh plants give vitamins and cheer, but grow lights use steady power.",
+    "guideReaction": "Feast time! Cheers all around, and a happy crew!"
+   },
+   "choiceC": {
+    "buttonLabel": "Link the core and solar grid",
+    "description": "Astronauts test cables joining rover panels to the nuclear power bus.",
+    "outcomeText": "Nuclear and solar lines give rock-steady power. Long suit shifts tire the crew.",
+    "nasaComparisonTitle": "Nuclear Power Works in the Dark",
+    "nasaRealDecision": "Opportunity ran on solar power and went quiet. Curiosity kept going on nuclear power.",
+    "nasaFactEmphasis": "A nuclear core can make electricity even when the sky is dark.",
+    "guideReaction": "Team power! Steady and strong, with one tired crew."
+   }
+  },
+  {
+   "nodeId": "DAY_10B",
+   "title": "Sol 10: The Final Check",
+   "nasaFactBanner": "2018 LESSON: Opportunity went silent in 2018, so power reserves decide survival.",
+   "storyText": "Skies glow gold again. <b><color=#5CE1E6><u><link=\\\"2018_opportunity_panels\\\">Opportunity</link></u></color></b> ran out of power with no <b><color=#5CE1E6><u><link=\\\"2018_cleaning_events\\\">dust-devil cleaning</link></u></color></b>. Finish checking your crew and the lines that <b><color=#5CE1E6><u><link=\\\"2018_fuel_cooling\\\">keep rocket fuel cold</link></u></color></b>!",
+   "guideTip": "Opportunity's batteries ran low, so it went quiet. Yours are still going!",
+   "novaHint": "The finish line is close. Pick the check that makes your base strongest.",
+   "consequences": [
+    {
+     "checkFlag": "SOL9_FUEL_CHILL_TEST",
+     "text": "Tested chillers locked the power buses (0% Electricity Conserved!), but overtime tired the crew (-3% Crew Health)."
+    },
+    {
+     "checkFlag": "SOL9B_MED_EXAMS",
+     "text": "Checkups and rest boosted readiness (+5% Crew Health), but trimmed the battery (-4% Power)."
+    },
+    {
+     "checkFlag": "SOL9C_SANITIZE_LOCKS",
+     "text": "Clean airlocks cleared storm dust (+4% Crew Health), but filters use power (-3% Power)."
+    }
+   ],
+   "choiceA": {
+    "buttonLabel": "Clean inverters, fill batteries",
+    "description": "Suit up one last time to reset and clean outside solar inverters.",
+    "outcomeText": "Clean solar power refills the grid and the meters surge! The crew is spent at the finish line.",
+    "nasaComparisonTitle": "Clearing Dust Off Solar Panels",
+    "nasaRealDecision": "Mars storms fade slowly. Sunlight returns, but dust can still cling to panels.",
+    "nasaFactEmphasis": "Panels make power only when sunlight gets through and the glass is clean.",
+    "guideReaction": "Power surge! Meters are up, and the crew is very tired."
+   },
+   "choiceB": {
+    "buttonLabel": "Warm up the medical wing",
+    "description": "Use power indoors to clear dust from vents and check the crew.",
+    "outcomeText": "Medical monitors flash healthy green for all four astronauts. Power gauges dip a little.",
+    "nasaComparisonTitle": "Keeping Mars Dust Outside",
+    "nasaRealDecision": "NASA is testing dust shields and suit doors that keep sticky Mars dust outside.",
+    "nasaFactEmphasis": "Mars dust clings like static and can harm lungs indoors.",
+    "guideReaction": "Green lights for all four! Healthy crew, ready to go home!"
+   },
+   "choiceC": {
+    "buttonLabel": "Check the rocket fuel tanks",
+    "description": "Warm the cabin while automatic checks inspect the return fuel tanks.",
+    "outcomeText": "The crew relaxes while the rocket gets checked. Battery bars look a bit lighter.",
+    "nasaComparisonTitle": "Keeping Rocket Fuel Cold",
+    "nasaRealDecision": "Mars return rockets may use liquid fuel that must stay very cold. Cooling takes steady power.",
+    "nasaFactEmphasis": "Liquid oxygen boils away if it gets warm, so rockets need cooling.",
+    "guideReaction": "Rocket checked! Relaxed crew, a bit less power."
+   }
+  },
+  {
+   "nodeId": "DAY_10C",
+   "title": "Sol 10: The Rescue Moment",
+   "nasaFactBanner": "2018 LESSON: Early warnings in 2018 showed why power must never hit zero.",
+   "storyText": "Satellites spotted <b><color=#5CE1E6><u><link=\\\"2018_mro_warning\\\">a small dust storm</link></u></color></b> early, but your base runs low. Make one last trade with your <b><color=#5CE1E6><u><link=\\\"2018_airlock_suits\\\">airlock suits</link></u></color></b>. Radio replies take <b><color=#5CE1E6><u><link=\\\"2018_radio_delay\\\">22 minutes</link></u></color></b>, so decide now!",
+   "guideTip": "Warnings help! Satellites saw the 2018 storm start long before it covered Mars.",
+   "novaHint": "Your reserves are low. Think about what keeps the crew safe and hopeful.",
+   "consequences": [
+    {
+     "checkFlag": "SOL9C_STORM_UPLOAD",
+     "text": "Uploading storm science drained batteries (-3% Power), but NASA's cheers lifted spirits (+2% Crew Health)."
+    },
+    {
+     "checkFlag": "SOL9D_GREENHOUSE_WATER",
+     "text": "Fresh greens and mineral water renewed strength (+5% Crew Health), but power dipped (-4% Power)."
+    }
+   ],
+   "choiceA": {
+    "buttonLabel": "Surge the life support",
+    "description": "Pour leftover battery power into oxygen masks and warm blankets.",
+    "outcomeText": "Every astronaut breathes easy until the skies clear. The machines get less power.",
+    "nasaComparisonTitle": "Making Oxygen on Mars",
+    "nasaRealDecision": "NASA's MOXIE made oxygen from Mars air on the Perseverance rover.",
+    "nasaFactEmphasis": "Mars air is mostly carbon dioxide, and MOXIE turns some into oxygen.",
+    "guideReaction": "Breathe easy! The crew is safe, and the base is low."
+   },
+   "choiceB": {
+    "buttonLabel": "Send a launch beacon",
+    "description": "Turn off cabin heat to save electronics and signal the orbiter.",
+    "outcomeText": "Your beacon reaches the satellites! The chilly astronauts snuggle into sleep pods.",
+    "nasaComparisonTitle": "Orbiters Help Mars Talk to Earth",
+    "nasaRealDecision": "In 2018, NASA's Mars orbiter watched the storm grow. It also relays rover radio to Earth.",
+    "nasaFactEmphasis": "Radio messages take about 22 minutes to cross space.",
+    "guideReaction": "Signal sent! Brrr, the crew is cold, but power is saved."
+   },
+   "choiceC": {
+    "buttonLabel": "Zap dust in the dawn light",
+    "description": "Pulse dust shields so the morning sun can charge Ares Base.",
+    "outcomeText": "Clean glass drinks in the dawn sunlight! The long control shifts tire the crew.",
+    "nasaComparisonTitle": "Clearing Dust Off Solar Panels",
+    "nasaRealDecision": "Mars storms fade slowly. Sunlight returns, but dust can still cling to panels.",
+    "nasaFactEmphasis": "Panels make power only when sunlight gets through and the glass is clean.",
+    "guideReaction": "Dawn power! Panels glow, and the crew has earned a nap."
+   }
+  },
+  {
+   "nodeId": "DAY_10D",
+   "title": "Sol 10: Ready for Liftoff",
+   "nasaFactBanner": "2018 LESSON: Nuclear plus solar power helps Mars crews finish storms ready to fly.",
+   "storyText": "<b><color=#5CE1E6><u><link=\\\"2018_curiosity_mmrtg\\\">Curiosity kept going</link></u></color></b> through 2018's dust, and your base shines too! Skies are sunny again. Send power to launch, or restore <b><color=#5CE1E6><u><link=\\\"2018_greenhouse_crops\\\">greenhouse plants</link></u></color></b> and <b><color=#5CE1E6><u><link=\\\"2018_water_loss\\\">water recycling</link></u></color></b>.",
+   "guideTip": "Two power sources made your base strong. Sun and nuclear are great teammates!",
+   "novaHint": "Liftoff is near. Think about what your crew needs for a hopeful finish.",
+   "consequences": [
+    {
+     "checkFlag": "SOL9A_RIDGE_PANELS",
+     "text": "Ridge panels bring crisp morning power (+3% Electricity), but the dune hike tired the crew (-3% Crew Health)."
+    },
+    {
+     "checkFlag": "SOL9B_DOUBLE_SHIFTS",
+     "text": "Double shifts balanced the batteries (0% Electricity Conserved!), but wore down the crew (-4% Crew Health)."
+    },
+    {
+     "checkFlag": "SOL9_EMERGENCY_SEAL",
+     "text": "Emergency seals kept backup power (0% Electricity Conserved!), but cramped the crew (-4% Crew Health)."
+    },
+    {
+     "checkFlag": "SOL9D_CAPACITORS",
+     "text": "Charged rocket capacitors steadied launch systems (0% Electricity Conserved!), but cost sleep (-3% Crew Health)."
+    }
+   ],
+   "choiceA": {
+    "buttonLabel": "Send surplus to launch",
+    "description": "The crew checks cables outside to push extra power into launch batteries.",
+    "outcomeText": "Launch batteries leap to high voltage, ready for liftoff! The crew is drained but cheering.",
+    "nasaComparisonTitle": "Clearing Dust Off Solar Panels",
+    "nasaRealDecision": "Mars storms fade slowly. Sunlight returns, but dust can still cling to panels.",
+    "nasaFactEmphasis": "Panels make power only when sunlight gets through and the glass is clean.",
+    "guideReaction": "Launch ready! Power is high, and one very proud crew!"
+   },
+   "choiceB": {
+    "buttonLabel": "Open greenhouse and living deck",
+    "description": "Use daylight power for fresh veggies, clean water, and a rest shift.",
+    "outcomeText": "Bright grow-lights and clean water lift every spirit. Mission Control is about to log your score!",
+    "nasaComparisonTitle": "Growing Fresh Food in Space",
+    "nasaRealDecision": "Astronauts on the space station grow salad plants under colorful LED lights.",
+    "nasaFactEmphasis": "Fresh plants give vitamins and cheer, but grow lights use steady power.",
+    "guideReaction": "Fresh and happy! A hopeful crew is ready for home!"
+   },
+   "choiceC": {
+    "buttonLabel": "Top off fuel, then debrief",
+    "description": "Warm the crew quarters during the last automatic fuel checks.",
+    "outcomeText": "The crew rests easy during final checks. Battery storage dips gently.",
+    "nasaComparisonTitle": "Keeping Rocket Fuel Cold",
+    "nasaRealDecision": "Mars return rockets may use liquid fuel that must stay very cold. Cooling takes steady power.",
+    "nasaFactEmphasis": "Liquid oxygen boils away if it gets warm, so rockets need cooling.",
+    "guideReaction": "Cozy finish! Rested crew, and power only dips a little."
+   }
+  }
+ ]
+}

@@ -4,7 +4,7 @@ using UnityEngine;
 
 /// <summary>
 /// Controls the Ares Base 10-Sol mission loop: title screen, 3-part 2018->2038 NASA briefing,
-/// 25-node branching decisions with stateful consequences, instant cause-and-effect outcomes,
+/// 36-node 3-option branching decisions with stateful consequences, instant cause-and-effect outcomes,
 /// Sol 10 ending evaluation, and real 2018 NASA science comparison.
 /// </summary>
 public class GameManager : MonoBehaviour
@@ -26,8 +26,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private string resourceName = DefaultResourcePath;
 
     [Header("Fallback Starting Telemetry (overridden by JSON startingStats)")]
-    [SerializeField] private int startingPower = 75;
-    [SerializeField] private int startingIntegrity = 75;
+    [SerializeField] private int startingPower = 90;
+    [SerializeField] private int startingIntegrity = 85;
 #pragma warning disable 0414
     [SerializeField] private int startingScience = 0;
 #pragma warning restore 0414
@@ -129,7 +129,7 @@ public class GameManager : MonoBehaviour
             missionUI.ApplyAtmosphere(State.skyColorHex, 0.15f);
             string title = !string.IsNullOrEmpty(missionData?.gameTitle)
                 ? missionData.gameTitle
-                : "Red Planet Blackout: The 2018 Mars Storm";
+                : "Ares Sols: 2038";
             missionUI.ShowTitlePanel(title);
         }
     }
@@ -225,7 +225,7 @@ public class GameManager : MonoBehaviour
             return;
         }
 
-        State.ApplyChoice(choice);
+        State.ApplyChoice(choice, currentNode);
         phase = GameFlowPhase.ChoiceOutcome;
 
         if (State.IsEarlyLoss())
@@ -270,12 +270,15 @@ public class GameManager : MonoBehaviour
 
         if (phase == GameFlowPhase.EndingSummary)
         {
-            if (missionData?.realLifeComparison != null
+            bool hasChoiceHistory = State != null && State.choiceHistory != null && State.choiceHistory.Count > 0;
+            bool hasFallbackCards = missionData?.realLifeComparison != null
                 && missionData.realLifeComparison.cards != null
-                && missionData.realLifeComparison.cards.Count > 0)
+                && missionData.realLifeComparison.cards.Count > 0;
+
+            if (hasChoiceHistory || hasFallbackCards)
             {
                 phase = GameFlowPhase.RealLifeComparison;
-                missionUI?.ShowComparisonPanel(State, missionData.realLifeComparison);
+                missionUI?.ShowComparisonPanel(State, missionData?.realLifeComparison);
                 return;
             }
 

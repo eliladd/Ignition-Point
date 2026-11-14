@@ -26,6 +26,19 @@ public static class Palette
     public static readonly Color NasaBoxSurface   = FromHex("#132C3D");
     public static readonly Color BarTrack         = FromHex("#0A0E14");
 
+    // Interactive & funky Mars Mission Console accents
+    public static readonly Color FunkyCyan        = FromHex("#00F5D4");
+    public static readonly Color FunkyGold        = FromHex("#FFD166");
+    public static readonly Color FunkyCoral       = FromHex("#FF5E7E");
+    public static readonly Color FunkyPurple      = FromHex("#9B5DE5");
+    public static readonly Color FunkyBlue        = FromHex("#00BBF9");
+    public static readonly Color FunkyMint        = FromHex("#06D6A0");
+
+    public static readonly Color CardSurfaceOption1 = FromHex("#15283E");
+    public static readonly Color CardSurfaceOption2 = FromHex("#241F3D");
+    public static readonly Color CardSurfaceOption3 = FromHex("#143336");
+    public static readonly Color CardSurfaceHud     = FromHex("#182538");
+
     public static Color FromHex(string hex)
     {
         if (ColorUtility.TryParseHtmlString(hex, out Color c))

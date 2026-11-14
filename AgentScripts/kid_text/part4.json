@@ -1,0 +1,190 @@
+{
+ "introScreens": [
+  {
+   "screenNumber": 1,
+   "headline": "What Happened on Mars in 2018",
+   "bodyText": "In 2018, NASA saw <b><color=#5CE1E6><u><link=\"2018_mro_warning\">a small dust storm</link></u></color></b> on Mars. It grew around the planet, <b><color=#5CE1E6><u><link=\"2018_storm_height\">more than 37 miles high</link></u></color></b>! So <b><color=#5CE1E6><u><link=\"2018_noon_blackout\">noon turned pitch black</link></u></color></b>. <b><color=#5CE1E6><u><link=\"2018_opportunity_panels\">Solar-powered Opportunity</link></u></color></b> lost power. <b><color=#5CE1E6><u><link=\"2018_curiosity_mmrtg\">Curiosity kept working</link></u></color></b> on nuclear power.",
+   "guideLine": "Hi, I'm Pip! Captain Nova is our commander. She'll give you hints. Let's go!"
+  },
+  {
+   "screenNumber": 2,
+   "headline": "NASA's Next Big Step: Moon to Mars",
+   "bodyText": "Astronauts on Mars will need power all <b><color=#5CE1E6><u><link=\"2018_sol_length\">Martian Sol</link></u></color></b>. It runs <b><color=#5CE1E6><u><link=\"2018_moxie_oxygen\">oxygen makers</link></u></color></b>, heat, and <b><color=#5CE1E6><u><link=\"2018_fuel_cooling\">cold rocket fuel</link></u></color></b>. Big storms return, so NASA is building <b><color=#5CE1E6><u><link=\"2018_fission_power\">nuclear fission power</link></u></color></b>. Bases won't need sunlight alone.",
+   "guideLine": "Did you know? Real bases will need power day and night. That's your job soon!"
+  },
+  {
+   "screenNumber": 3,
+   "headline": "May 2038: What Would You Do?",
+   "bodyText": "It is May 2038 at Ares Base. A giant <b><color=#5CE1E6><u><link=\"2018_pede_declaration\">Planet-Encircling Dust Event</link></u></color></b> hits. Mars has <b><color=#5CE1E6><u><link=\"2018_thin_air\">very thin air</link></u></color></b> and a <b><color=#5CE1E6><u><link=\"2018_radio_delay\">22-minute radio delay</link></u></color></b>. Turning gear off saves energy. Only sunlight or nuclear power makes more!",
+   "guideLine": "Whoa, a giant storm is coming! Your crew needs you. Ready to lead?"
+  }
+ ],
+ "kidGlossary": [
+  {
+   "id": "2018_mro_warning",
+   "headline": "Spotted From Mars Orbit in 2018",
+   "simpleDefinition": "On May 30, 2018, a NASA orbiter photographed a small dust cloud. Within days it grew into a storm around the whole planet. Weather cameras in space give early warning.",
+   "termMeaning": "A dust storm starts when the Sun heats thin air. The air lifts red dust into spinning clouds. Clouds can grow and join."
+  },
+  {
+   "id": "2018_storm_height",
+   "headline": "The Storm Rose 37 Miles High",
+   "simpleDefinition": "Winds lifted red dust more than 37 miles into the sky. That is seven times higher than airplanes fly on Earth. The dust even hid Mars's giant volcanoes from space cameras.",
+   "termMeaning": "37 miles is about seven times higher than airplanes fly. The dust went far above normal clouds."
+  },
+  {
+   "id": "2018_opportunity_panels",
+   "headline": "Why Opportunity Went Quiet",
+   "simpleDefinition": "Opportunity explored Mars for over 14 years using solar panels. In 2018, dust blocked 97% of sunlight. Its batteries ran out in the cold dark. NASA called for it many times, but it never answered.",
+   "termMeaning": "Opportunity was a golf-cart-sized rover. Two flat solar wings soaked up sunlight. That charged its batteries."
+  },
+  {
+   "id": "2018_curiosity_mmrtg",
+   "headline": "Curiosity Kept Working",
+   "simpleDefinition": "Curiosity is far across Mars in Gale Crater. It kept doing science during the 2018 storm. It has a sealed nuclear battery. The battery turns heat into electricity without sunlight.",
+   "termMeaning": "Curiosity did not shut down in the storm. It makes electricity from heat. The heat comes from a sealed nuclear battery."
+  },
+  {
+   "id": "2018_sol_length",
+   "headline": "A Sol Is a Mars Day",
+   "simpleDefinition": "One day on Mars is called a Sol. It lasts 24 hours and 39 minutes. That is a bit longer than an Earth day. Mars crews follow Mars time.",
+   "termMeaning": "A Sol is one full day and night on Mars. It is 39 minutes longer than an Earth day."
+  },
+  {
+   "id": "2018_thin_air",
+   "headline": "Mars Air Is Super Thin",
+   "simpleDefinition": "Mars's air is 100 times thinner than Earth's! A 60 mph Martian wind feels like a gentle breeze. It will not knock down a base. But tiny dust still covers panels.",
+   "termMeaning": "Mars has very little air. It is about 1% as thick as Earth's air. Even fast winds push only softly."
+  },
+  {
+   "id": "2018_static_dust",
+   "headline": "Sticky Red Dust",
+   "simpleDefinition": "Martian dust is finer than baby powder. It has static charge. It clings to solar panels like dust on a rubbed balloon. It also sneaks into wheel joints.",
+   "termMeaning": "Martian soil is crushed into fine powder. It holds static electricity. The grains cling to glass, seals, and solar wings."
+  },
+  {
+   "id": "2018_noon_blackout",
+   "headline": "Noon Turned Pitch Black",
+   "simpleDefinition": "On June 10, 2018, dust above Opportunity got super thick. It blocked 97% of sunlight. High noon looked darker than a moonless night on Earth.",
+   "termMeaning": "Dust in the air can get very thick. Then 97% of light is blocked. Even at noon, it looks like midnight."
+  },
+  {
+   "id": "2018_fuel_cooling",
+   "headline": "Rocket Fuel Needs Cool Power",
+   "simpleDefinition": "Future Mars rockets use liquid oxygen and methane fuel. It must stay super cold at -297°F. Electric chillers keep it cold. Without power, the fuel warms up and boils off.",
+   "termMeaning": "Return rockets use fuel chilled below -297°F. If the coolers stop, the icy liquid warms up. Then it boils away as gas."
+  },
+  {
+   "id": "2018_warm_nights",
+   "headline": "Dust Makes a Heat Blanket",
+   "simpleDefinition": "In 2018, NASA found a strange twist. Thick dust made Mars days cooler by blocking sunlight. But nights got warmer! The dust trapped heat like a giant red blanket.",
+   "termMeaning": "Floating dust acts like a blanket over Mars. By day it blocks sunlight. By night it keeps ground heat from escaping."
+  },
+  {
+   "id": "2018_radio_delay",
+   "headline": "Radio Messages Take Time",
+   "simpleDefinition": "Radio signals between Mars and Earth take 6 to 22 minutes one way. Asking a question and hearing back can take up to 44 minutes. Mars crews must think for themselves!",
+   "termMeaning": "Mars and Earth are millions of miles apart. Radio messages take up to 22 minutes one way. You can't chat with Mission Control live."
+  },
+  {
+   "id": "2018_pede_declaration",
+   "headline": "A Storm Around the Whole Planet",
+   "simpleDefinition": "On June 20, 2018, NASA called the storm a Planet-Encircling Dust Event. One big orange dust cloud wrapped all the way around Mars.",
+   "termMeaning": "This storm gets huge. Dust wraps around every side of Mars."
+  },
+  {
+   "id": "2018_cleaning_events",
+   "headline": "Dust Devils Clean Panels",
+   "simpleDefinition": "Years ago, Spirit and Opportunity sometimes got cleaned by dust devils. These tiny whirlwinds swept their panels clear. But no lucky gust helped Opportunity in 2018.",
+   "termMeaning": "A dust devil is a small spinning whirlwind. It can brush a rover. It sweeps sticky red dust off solar panels."
+  },
+  {
+   "id": "2018_dust_selfie",
+   "headline": "Curiosity's Dusty Storm Selfie",
+   "simpleDefinition": "On June 15, 2018, Curiosity took a selfie in Gale Crater. Thick orange haze hid the far crater rim. Its nuclear power kept its science tools running.",
+   "termMeaning": "Curiosity held out its camera arm for a selfie in Gale Crater. Brown haze hid the faraway mountain rim."
+  },
+  {
+   "id": "2018_fission_power",
+   "headline": "Nuclear Power for Dark Days",
+   "simpleDefinition": "NASA is testing small Fission Surface Power reactors. They make steady electricity day and night. That could protect future explorers during weeks of dusty darkness.",
+   "termMeaning": "Nuclear fission splits atoms inside a sealed core. That makes steady electricity and heat. It works day and night, even in dusty darkness."
+  },
+  {
+   "id": "2018_moxie_oxygen",
+   "headline": "Making Oxygen From Mars Air",
+   "simpleDefinition": "Mars's air is 95% carbon dioxide. A toaster-sized machine called MOXIE flew on Perseverance. It split Martian air into pure oxygen to breathe. It works a bit like a tree!",
+   "termMeaning": "Oxygen generators take carbon dioxide from Mars's air. They split off pure oxygen. Astronauts get clean air to breathe."
+  },
+  {
+   "id": "2018_water_loss",
+   "headline": "Storms Lift Water Into the Sky",
+   "simpleDefinition": "NASA found that giant dust storms warm Mars's thin air. The warm air lifts hidden water vapor about 50 miles up. There, sunlight breaks the water apart. Crews must protect their water!",
+   "termMeaning": "Water vapor is invisible water gas in the air. Dust storms warm the sky. They carry water far up, where sunlight splits it."
+  },
+  {
+   "id": "2018_greenhouse_crops",
+   "headline": "Greenhouses Grow Fresh Food",
+   "simpleDefinition": "NASA designers plan indoor Mars greenhouses with grow lights. Crews could grow fresh food when storms block the Sun. Tasty veggies also lift spirits!",
+   "termMeaning": "Hydroponic plants grow in mineral water instead of soil. Pink and purple LED lights stand in for sunlight."
+  },
+  {
+   "id": "2018_airlock_suits",
+   "headline": "Zapping Dust Off Suits",
+   "simpleDefinition": "Engineers tested wire grids that zap static dust off spacesuits and glass. That keeps sharp Martian dust out of astronaut lungs.",
+   "termMeaning": "An electrostatic dust shield has thin wires in glass or suit fabric. Tiny electric waves push static-clingy dust right off."
+  },
+  {
+   "id": "2018_mro_relay",
+   "headline": "A Sky Tower Above Mars",
+   "simpleDefinition": "NASA's Mars Reconnaissance Orbiter is like a tower in the sky. It takes wide storm photos. It also passes radio signals to Earth, even through dust.",
+   "termMeaning": "An orbital relay is a satellite high above Mars. It spots storms from space. It passes radio messages between astronauts and Earth."
+  }
+ ],
+ "endings": [
+  {
+   "endingId": "ENDING_PERFECT",
+   "headline": "Sol 10: Mission Success!",
+   "storyText": "Sunlight floods Ares Base again! You made smart choices for 10 hard Sols. Your power, fuel, and rocket stayed safe. All four astronauts are healthy. They are ready to keep exploring Mars.",
+   "guideLine": "Hooray! You did it! Smart choices kept everyone safe. You're a real Mars commander!"
+  },
+  {
+   "endingId": "ENDING_LOW_POWER",
+   "headline": "Sol 10: Crew Safe, Fuel Needed",
+   "storyText": "All four astronauts got through the storm healthy! But keeping the crew cozy meant the fuel coolers went off. Now NASA must send a tanker rocket. Then your team can fly home.",
+   "guideLine": "Great job keeping everyone healthy! Next time, remember: rocket fuel needs cool power too."
+  },
+  {
+   "endingId": "ENDING_LOW_HEALTH",
+   "headline": "Sol 10: Base Safe, Crew Tired",
+   "storyText": "Your solar wings, batteries, and return rocket all survived. But rationing, dust, and cold halls wore the crew out. Mission Control orders weeks of rest.",
+   "guideLine": "The base is safe, but your crew needs care. Health matters as much as power!"
+  },
+  {
+   "endingId": "ENDING_OPPORTUNITY_FATE",
+   "headline": "Sol 10: Opportunity's Fate",
+   "storyText": "Like Opportunity in 2018, your base ran too low on reserves. Emergency pods kept the astronauts safe. Then a rescue lander arrived. Future bases need extra safety margins!",
+   "guideLine": "Good try! Real explorers learn from storms. Save extra power and try again!"
+  }
+ ],
+ "realLifeComparison": {
+  "title": "Your 2038 Mission vs. Real 2018 NASA Science",
+  "cards": [
+   {
+    "topic": "Solar Panels vs. Nuclear Power",
+    "whatHappenedInRealLife": "In June 2018, Opportunity lost 97% of its sunlight and could not recharge. Curiosity kept working through the storm. It has a small nuclear battery.",
+    "howItConnectsToGame": "Future Mars bases plan to use solar panels and small nuclear reactors. Your 2038 base needed both to survive!"
+   },
+   {
+    "topic": "The Heat-Blanket Surprise",
+    "whatHappenedInRealLife": "Curiosity's weather tools found a surprise. The 2018 storm made Mars days cooler. But nights got warmer, because dust trapped heat near the ground.",
+    "howItConnectsToGame": "Mid-storm, turning down heaters worked. The floating red dust acted like a giant blanket over Mars."
+   },
+   {
+    "topic": "No Instant Help From Earth",
+    "whatHappenedInRealLife": "Mars is millions of miles away. In 2018, radio messages took 6 to 22 minutes each way. A question and answer could take up to 44 minutes.",
+    "howItConnectsToGame": "Each choice you made mattered for days. Real astronauts must handle problems on their own before Earth even knows!"
+   }
+  ]
+ }
+}

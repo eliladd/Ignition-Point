@@ -95,6 +95,7 @@ public class IntroScreen
     public string headline;
     public string bodyText;
     public string nasaSource;
+    public string guideLine;
 }
 
 [Serializable]
@@ -103,10 +104,25 @@ public class GlossaryEntry
     public string id;
     public string headline;
     public string term;
+    public string termMeaning;
     public string simpleDefinition;
+    public string nasaId;
+    public string imageFile;
+    public string imageCaption;
+    public string nasaSource;
+    public string sourceUrl;
 
     public string EffectiveKey => !string.IsNullOrEmpty(id) ? id : term;
     public string EffectiveTitle => !string.IsNullOrEmpty(headline) ? headline : term;
+}
+
+[Serializable]
+public class NodeConsequence
+{
+    public string checkFlag;
+    public string text;
+    public int powerDelta;
+    public int healthDelta;
 }
 
 [Serializable]
@@ -123,8 +139,14 @@ public class StoryNode
     public string storyText;
     public Choice choiceA;
     public Choice choiceB;
+    public Choice choiceC;
 
-    // Stateful multi-Sol consequence triggered when an earlier decision flag is present.
+    // Multi-flag stateful consequences evaluated when entering this Sol.
+    public List<NodeConsequence> consequences = new List<NodeConsequence>();
+
+    // Legacy single-flag consequence compatibility fields.
+    public string guideTip;
+    public string novaHint;
     public string consequenceCheckFlag;
     public string consequenceText;
     public int consequencePowerDelta;
@@ -145,7 +167,7 @@ public class StoryNode
 
     public List<Choice> GetChoices()
     {
-        List<Choice> result = new List<Choice>(2);
+        List<Choice> result = new List<Choice>(3);
         if (choiceA != null && !string.IsNullOrEmpty(choiceA.EffectiveLabel))
         {
             result.Add(choiceA);
@@ -153,6 +175,10 @@ public class StoryNode
         if (choiceB != null && !string.IsNullOrEmpty(choiceB.EffectiveLabel))
         {
             result.Add(choiceB);
+        }
+        if (choiceC != null && !string.IsNullOrEmpty(choiceC.EffectiveLabel))
+        {
+            result.Add(choiceC);
         }
         if (result.Count > 0)
         {
@@ -169,9 +195,32 @@ public class Choice
     public string description;
     public string subLabel;
     public string outcomeText;
+    public string guideReaction;
     public int powerDelta;
     public int crewHealthDelta;
     public string nextNodeId;
+
+    // Past-decision bonus when an earlier engineering flag unlocks an upgrade.
+    public string bonusIfFlag;
+    public int bonusPowerDelta;
+    public int bonusHealthDelta;
+    public string bonusNote;
+
+    // Dynamically incited HUD subsystem indicator (stays hidden until player triggers this category).
+    public string subsystemCategory;
+    public string subsystemTag;
+    public bool subsystemGood = true;
+
+    // Personalized NASA comparison data and unique NASA image per option.
+    public string nasaComparisonTitle;
+    public string nasaRealDecision;
+    public string nasaFactEmphasis;
+    public string nasaFactId;
+    public string nasaId;
+    public string imageFile;
+    public string imageCaption;
+    public string nasaSource;
+    public string sourceUrl;
 
     // Legacy placeholder compatibility fields.
     public string label;
@@ -191,11 +240,42 @@ public class Choice
 
     private string BuildFallbackSubLabel()
     {
-        string p = powerDelta >= 0 ? $"+{powerDelta}" : powerDelta.ToString();
+        string p = powerDelta > 0
+            ? $"+{powerDelta}% Generated"
+            : powerDelta == 0
+                ? "0% Conserved"
+                : $"{powerDelta}% Power";
         int health = EffectiveCrewHealthDelta;
-        string h = health >= 0 ? $"+{health}" : health.ToString();
-        return $"{p} Power | {h} Crew Health";
+        string h = health > 0 ? $"+{health}% Health" : health == 0 ? "0% Health" : $"{health}% Health";
+        return $"{p} | {h}";
     }
+}
+
+[Serializable]
+public class PlayerChoiceRecord
+{
+    public int sol;
+    public string realDate;
+    public string nodeTitle;
+    public string buttonLabel;
+    public string description;
+    public string outcomeText;
+    public int netPowerDelta;
+    public int netHealthDelta;
+    public int powerAfter;
+    public int healthAfter;
+    public string subsystemCategory;
+    public string subsystemTag;
+    public bool subsystemGood = true;
+    public string nasaComparisonTitle;
+    public string nasaRealDecision;
+    public string nasaFactEmphasis;
+    public string nasaFactId;
+    public string nasaId;
+    public string imageFile;
+    public string imageCaption;
+    public string nasaSource;
+    public string sourceUrl;
 }
 
 [Serializable]
@@ -203,12 +283,18 @@ public class StoryEnding
 {
     public string endingId;
     public string conditionDescription;
+    public string guideLine;
     public int minPower;
     public int minCrewHealth;
-    public string realDate = "July 23, 2018";
+    public string realDate = "July 23, 2038";
     public string headline;
     public string skyColorHex;
     public string storyText;
+    public string nasaId;
+    public string imageFile;
+    public string imageCaption;
+    public string nasaSource;
+    public string sourceUrl;
 }
 
 [Serializable]
