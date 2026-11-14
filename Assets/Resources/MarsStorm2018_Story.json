@@ -1,0 +1,1050 @@
+{
+  "gameTitle": "Red Planet Blackout: Ares Base 2038",
+  "startingStats": {
+    "power": 75,
+    "crewHealth": 75
+  },
+  "introScreens": [
+    {
+      "screenNumber": 1,
+      "headline": "What Really Happened on Mars in 2018",
+      "bodyText": "In late May 2018, a NASA spacecraft orbiting Mars spotted <b><color=#5CE1E6><u><link=\"2018_mro_warning\">a small swirling dust storm</link></u></color></b>. Within three weeks, high-altitude winds whipped it into a monster storm wrapping around the entire planet—rising <b><color=#5CE1E6><u><link=\"2018_storm_height\">more than 37 miles high</link></u></color></b>, seven times higher than an airplane flies on Earth. Dust blocked 97% of the sunlight so noon looked pitch black. <b><color=#5CE1E6><u><link=\"2018_opportunity_panels\">NASA's solar-powered Opportunity rover</link></u></color></b> ran out of battery in the dark and never woke up, while <b><color=#5CE1E6><u><link=\"2018_curiosity_mmrtg\">Curiosity kept working</link></u></color></b> using a small nuclear battery.",
+      "nasaSource": "NASA Mars Reconnaissance Orbiter & Mars Exploration Rover Mission Archives (2018)"
+    },
+    {
+      "screenNumber": 2,
+      "headline": "NASA's Next Big Step: Sending Humans to Mars",
+      "bodyText": "Through the Moon to Mars program, NASA is preparing the first human missions to live and work on the Red Planet. Real astronauts will need nonstop electricity every <b><color=#5CE1E6><u><link=\"2018_sol_length\">Martian Sol</link></u></color></b> to create breathable oxygen, keep living quarters warm in -90°F nights, and <b><color=#5CE1E6><u><link=\"2018_fuel_cooling\">keep liquid rocket fuel cold</link></u></color></b> for their flight home. Because global dust storms erupt every few Mars years, NASA knows human bases cannot survive on solar panels alone.",
+      "nasaSource": "NASA Moon to Mars Architecture & Fission Surface Power Studies"
+    },
+    {
+      "screenNumber": 3,
+      "headline": "Future Mission (2038): What Would You Do?",
+      "bodyText": "Now fast-forward to May 2038. Based on what NASA learned in 2018, if human explorers at Ares Base face a massive 2018-class global dust storm in the future, what would you do? Across 10 challenging Sols, there is always a compromise: protecting Power strains your Crew, and protecting your Crew costs Power—and early choices ripple into later Sols! Watch for <b><color=#5CE1E6><u><link=\"2018_thin_air\">highlighted blue words like this</link></u></color></b> to inspect real 2018 NASA facts at any time.",
+      "nasaSource": "Future 2038 Scenario Built From Real Mars Year 34 (2018) Storm Data"
+    }
+  ],
+  "kidGlossary": [
+    {
+      "id": "2018_mro_warning",
+      "headline": "May 30, 2018: Spotted From Mars Orbit",
+      "term": "a small swirling dust storm",
+      "simpleDefinition": "On May 30, 2018, NASA's Mars Reconnaissance Orbiter photographed a small dust cloud starting near Perseverance Valley. Within days it exploded into a global storm—showing future 2038 crews why orbital satellites give crucial early warning."
+    },
+    {
+      "id": "2018_storm_height",
+      "headline": "2018 Storm Towered 37 Miles High",
+      "term": "more than 37 miles high",
+      "simpleDefinition": "In June 2018, high-altitude winds lifted Martian dust over 37 miles (60 km) into the sky—seven times higher than Earth passenger jets fly—hiding even Mars's tallest volcanoes from space cameras."
+    },
+    {
+      "id": "2018_opportunity_panels",
+      "headline": "Why Opportunity Shut Down in 2018",
+      "term": "NASA's solar-powered Opportunity rover",
+      "simpleDefinition": "Opportunity explored Mars for over 14 years using solar panels. During the June 2018 blackout, sunlight dropped 97%, its batteries went dead in freezing -90°F darkness, and NASA officially declared its mission complete after failing to re-establish contact."
+    },
+    {
+      "id": "2018_curiosity_mmrtg",
+      "headline": "Curiosity's Nuclear Battery (MMRTG)",
+      "term": "Curiosity kept working",
+      "simpleDefinition": "Across the planet from Opportunity, NASA's Curiosity rover never missed a day of science during the 2018 storm because it runs on an MMRTG—a nuclear battery that makes steady electricity from heat instead of sunlight."
+    },
+    {
+      "id": "2018_sol_length",
+      "headline": "A Martian Sol: 24 Hours, 39 Minutes",
+      "term": "Martian Sol",
+      "simpleDefinition": "One day on Mars is called a Sol and lasts 24 hours and 39 minutes. NASA flight controllers on Earth even shifted their sleep schedules to 'Mars Time' during real 2018 rover operations!"
+    },
+    {
+      "id": "2018_thin_air",
+      "headline": "2018 Physics: 100x Thinner Martian Air",
+      "term": "highlighted blue words like this",
+      "simpleDefinition": "Mars has 100 times less air than Earth! During the 2018 storm, even 60 mph winds felt like a gentle breeze—so wind won't knock a habitat over, though fine dust still coats solar panels and airlocks."
+    },
+    {
+      "id": "2018_static_dust",
+      "headline": "2018 Discovery: Static-Cling Dust",
+      "term": "sticky red grit",
+      "simpleDefinition": "Martian dust particles are finer than talcum powder and carry static electric charge. In 2018, this microscopic dust clung tightly to Opportunity's solar panels and threatened moving rover joints."
+    },
+    {
+      "id": "2018_noon_blackout",
+      "headline": "June 10, 2018: Pitch Black at Noon",
+      "term": "97% of normal sunlight",
+      "simpleDefinition": "On June 10, 2018, dust grew so thick above Opportunity that midday on Mars looked darker than a moonlit night on Earth—blocking 97% of the Sun's energy."
+    },
+    {
+      "id": "2018_fuel_cooling",
+      "headline": "Why Rocket Fuel Must Stay Cryogenic",
+      "term": "keep liquid rocket fuel cold",
+      "simpleDefinition": "For human Mars return rockets, NASA plans to store super-cold liquid oxygen and methane propellant. Without nonstop electrical coolers, heat leaks in and causes fuel to boil off before astronauts can launch home."
+    },
+    {
+      "id": "2018_warm_nights",
+      "headline": "The 2018 Heat-Blanket Surprise",
+      "term": "trapping heat near the ground",
+      "simpleDefinition": "Curiosity's REMS weather station proved a strange 2018 twist: while dust storms made Martian days cooler by blocking sunlight, nights got WARMER because the suspended dust acted like a giant blanket trapping surface heat!"
+    },
+    {
+      "id": "2018_radio_delay",
+      "headline": "Up to 44-Minute Earth Radio Delay",
+      "term": "22-minute radio delay",
+      "simpleDefinition": "Depending on how far apart Earth and Mars are in their orbits, NASA radio signals take 6 to 22 minutes one way—up to 44 minutes just to ask Mission Control a question and hear back!"
+    },
+    {
+      "id": "2018_pede_declaration",
+      "headline": "June 20, 2018: Planet-Encircling Dust Event",
+      "term": "Planet-Encircling Dust Event",
+      "simpleDefinition": "On June 20, 2018, NASA officially classified the storm as a Planet-Encircling Dust Event (PEDE)—one continuous storm blanketing every longitude of Mars at once."
+    },
+    {
+      "id": "2018_cleaning_events",
+      "headline": "Lucky 'Cleaning Events' on Real Rovers",
+      "term": "dust devils swept panels clean",
+      "simpleDefinition": "In earlier years, NASA's Spirit and Opportunity rovers occasionally got rescued when Martian whirlwinds blew dust off their panels—but in 2018 no lucky wind gust saved Opportunity in time."
+    },
+    {
+      "id": "2018_dust_selfie",
+      "headline": "Curiosity's Famous June 2018 Selfie",
+      "term": "thick haze coated camera lenses",
+      "simpleDefinition": "On June 15, 2018, Curiosity snapped a dusty self-portrait inside Gale Crater showing murky orange skies and fine grit across its deck while its nuclear-powered instruments kept measuring the storm."
+    }
+  ],
+  "storyNodes": [
+    {
+      "nodeId": "DAY_1",
+      "dayNumber": 1,
+      "realDate": "May 30, 2038",
+      "title": "Sol 1: Orbital Storm Alarm",
+      "sunlightBlockedPercent": 10,
+      "skyColorHex": "#C88B5A",
+      "dustParticleIntensity": 0.15,
+      "nasaFactBanner": "2018 LESSON: On May 30, 2018, NASA orbiters spotted a local dust cloud days before it swallowed the planet.",
+      "storyText": "Satellites above Ares Base just spotted <b><color=#5CE1E6><u><link=\"2018_mro_warning\">a small swirling dust storm</link></u></color></b> accelerating toward your landing zone. Right now the sky is clear butterscotch and your solar panels are at peak output every <b><color=#5CE1E6><u><link=\"2018_sol_length\">Martian Sol</link></u></color></b>, while your astronauts are outside finishing a critical ice-drilling test.",
+      "choiceA": {
+        "buttonLabel": "Recall Crew & Overcharge Batteries",
+        "description": "Stop all outdoor drilling immediately, bring everyone inside, and pack maximum charge into the main battery vault.",
+        "subLabel": "+15 Power | -10 Crew Health",
+        "outcomeText": "You scrub the science dig early and top off your backup batteries. The power grid looks strong, though your crew feels frustrated losing weeks of lab work.",
+        "powerDelta": 15,
+        "crewHealthDelta": -10,
+        "setFlag": "SOL1_OVERCHARGED",
+        "nextNodeId": "DAY_2A"
+      },
+      "choiceB": {
+        "buttonLabel": "Finish Drilling & Stockpile Oxygen",
+        "description": "Keep the team outside to finish collecting ice samples while running compressors hard to fill spare oxygen tanks.",
+        "subLabel": "-10 Power | +10 Crew Health",
+        "outcomeText": "The astronauts cheer as they secure priceless ice samples and brim the oxygen tanks, though running pumps hard dips your battery buffer.",
+        "powerDelta": -10,
+        "crewHealthDelta": 10,
+        "setFlag": "SOL1_OXYGEN_STOCK",
+        "nextNodeId": "DAY_2B"
+      }
+    },
+    {
+      "nodeId": "DAY_2A",
+      "dayNumber": 2,
+      "realDate": "June 3, 2038",
+      "title": "Sol 2: Dust Hits the Solar Wings",
+      "sunlightBlockedPercent": 35,
+      "skyColorHex": "#B06338",
+      "dustParticleIntensity": 0.35,
+      "nasaFactBanner": "2018 LESSON: By June 3, 2018, fine dust forced NASA's Opportunity team to halt science operations.",
+      "storyText": "The front edge of the storm reaches Ares Base, climbing <b><color=#5CE1E6><u><link=\"2018_storm_height\">more than 37 miles high</link></u></color></b>! Already <b><color=#5CE1E6><u><link=\"2018_static_dust\">sticky red grit</link></u></color></b> is clinging to your solar arrays. Your batteries are strong from Sol 1, yet indoor oxygen reserves are dropping faster than expected.",
+      "choiceA": {
+        "buttonLabel": "Run Oxygen Makers at Full Power",
+        "description": "Burn stored battery electricity to crack Martian air and ice reserves into fresh breathable oxygen.",
+        "subLabel": "-18 Power | +12 Crew Health",
+        "outcomeText": "Fresh oxygen hisses into the habitat and lifts crew energy, though you watch a painful chunk drain off your Sol 1 battery reserve.",
+        "powerDelta": -18,
+        "crewHealthDelta": 12,
+        "nextNodeId": "DAY_3A"
+      },
+      "choiceB": {
+        "buttonLabel": "Spacewalk to Brush Solar Arrays",
+        "description": "Send astronauts outside in dusty twilight winds to sweep off panels—knowing fine grit can sneak back into the airlock.",
+        "subLabel": "+12 Power | -15 Crew Health",
+        "outcomeText": "Sweeping the panels restores solar charging! Still, ultra-fine dust sneaks past the outer seal and leaves two crew members coughing.",
+        "powerDelta": 12,
+        "crewHealthDelta": -15,
+        "setFlag": "SOL2_DUST_EXPOSURE",
+        "nextNodeId": "DAY_3B"
+      }
+    },
+    {
+      "nodeId": "DAY_2B",
+      "dayNumber": 2,
+      "realDate": "June 3, 2038",
+      "title": "Sol 2: Red Warning on the Grid",
+      "sunlightBlockedPercent": 35,
+      "skyColorHex": "#B06338",
+      "dustParticleIntensity": 0.35,
+      "nasaFactBanner": "2018 LESSON: Martian dust sticks via static electricity—like powder clinging to a balloon.",
+      "storyText": "Gusts sweep <b><color=#5CE1E6><u><link=\"2018_static_dust\">sticky red grit</link></u></color></b> across the landing field while <b><color=#5CE1E6><u><link=\"2018_opportunity_panels\">NASA's solar-powered Opportunity rover</link></u></color></b> taught planners how fast sunlight plunges. Your oxygen tanks are full, yet your main battery warning flashes red.",
+      "choiceA": {
+        "buttonLabel": "Hibernate Greenhouse Crops",
+        "description": "Cut grow-lights to put your fresh vegetable garden into cold dormancy and feed those amps to base heaters.",
+        "subLabel": "+10 Power | -14 Crew Health",
+        "outcomeText": "Turning off the plant bays saves steady power for life support, though losing fresh greens hurts crew nutrition and morale.",
+        "powerDelta": 10,
+        "crewHealthDelta": -14,
+        "setFlag": "SOL2_HIBERNATED_CROPS",
+        "nextNodeId": "DAY_3B"
+      },
+      "choiceB": {
+        "buttonLabel": "Overclock the Backup Nuclear Unit",
+        "description": "Push your compact nuclear generator above normal safe output to keep both heaters and crops glowing.",
+        "subLabel": "+14 Power | -12 Crew Health",
+        "outcomeText": "Electricity surges smoothly into both systems, but safety rules force astronauts to crowd into tight shielding bunks farther from the core.",
+        "powerDelta": 14,
+        "crewHealthDelta": -12,
+        "setFlag": "SOL2_REACTOR_PUSHED",
+        "nextNodeId": "DAY_3C"
+      }
+    },
+    {
+      "nodeId": "DAY_3A",
+      "dayNumber": 3,
+      "realDate": "June 6, 2038",
+      "title": "Sol 3: Sky Turns Deep Rust",
+      "sunlightBlockedPercent": 60,
+      "skyColorHex": "#8C3B1E",
+      "dustParticleIntensity": 0.55,
+      "nasaFactBanner": "2018 LESSON: Because Mars air is 100x thinner than Earth's, 60 mph winds can't break buildings—but dust blocks the Sun.",
+      "consequenceCheckFlag": "SOL1_OVERCHARGED",
+      "consequenceText": "Overcharging batteries on Sol 1 kept spare cells ready (+5% Power), though losing early science still dampens crew morale (-5% Crew Health).",
+      "consequencePowerDelta": 5,
+      "consequenceHealthDelta": -5,
+      "storyText": "Over half the sunlight has vanished, and outside winds ripple dust dunes even in Mars's ultra-thin air (just read why in <b><color=#5CE1E6><u><link=\"2018_thin_air\">highlighted blue words like this</link></u></color></b>). Heating the entire dome is eating power fast.",
+      "choiceA": {
+        "buttonLabel": "Seal Side Labs & Cut Hallway Heat",
+        "description": "Shut off outer science rooms and force everyone to bundle inside two central habitat modules.",
+        "subLabel": "+10 Power | -15 Crew Health",
+        "outcomeText": "Closing half the base cuts power waste sharply, though freezing frost creeps down unheated corridor walls.",
+        "powerDelta": 10,
+        "crewHealthDelta": -15,
+        "setFlag": "SOL3_COLD_HAB",
+        "nextNodeId": "DAY_4A"
+      },
+      "choiceB": {
+        "buttonLabel": "Keep Science Wing Heated",
+        "description": "Spend heavy electricity keeping every workspace warm so astronauts stay active and upbeat.",
+        "subLabel": "-16 Power | +10 Crew Health",
+        "outcomeText": "A warm, bright lab restores crew spirits right before the darkest week—at a serious cost to your reserve batteries.",
+        "powerDelta": -16,
+        "crewHealthDelta": 10,
+        "nextNodeId": "DAY_4B"
+      }
+    },
+    {
+      "nodeId": "DAY_3B",
+      "dayNumber": 3,
+      "realDate": "June 6, 2038",
+      "title": "Sol 3: Twilight Before Blackout",
+      "sunlightBlockedPercent": 60,
+      "skyColorHex": "#8C3B1E",
+      "dustParticleIntensity": 0.55,
+      "nasaFactBanner": "2018 LESSON: High-altitude dust walls cut midday solar output before total blackout even hits.",
+      "consequenceCheckFlag": "SOL2_HIBERNATED_CROPS",
+      "consequenceText": "Hibernating the greenhouse on Sol 2 kept power wires stable, yet missing fresh food and plant oxygen weighs on crew stamina (-6% Crew Health).",
+      "consequencePowerDelta": 0,
+      "consequenceHealthDelta": -6,
+      "storyText": "Dust climbs <b><color=#5CE1E6><u><link=\"2018_storm_height\">more than 37 miles high</link></u></color></b> overhead, turning noon into deep amber dusk. Fine powder sneaks into airlock seams even in thin air—forcing a quick choice before solar output hits zero.",
+      "choiceA": {
+        "buttonLabel": "Install Powered Airlock Dust Curtains",
+        "description": "Run electrostatic air curtains at every door to trap gritty dust before it harms crew lungs.",
+        "subLabel": "-14 Power | +10 Crew Health",
+        "outcomeText": "Static curtains zap drifting grit out of the doorways! Air stays clean, though your remaining battery bars drop noticeably.",
+        "powerDelta": -14,
+        "crewHealthDelta": 10,
+        "nextNodeId": "DAY_4B"
+      },
+      "choiceB": {
+        "buttonLabel": "Reroute Grid Power to Weather Sensors",
+        "description": "Cut interior airlock heaters to boost storm radar and save electrical overhead.",
+        "subLabel": "+12 Power | -14 Crew Health",
+        "outcomeText": "Your weather computers pull crisp storm telemetry and conserve grid watts, though chilly drafts sweep past the crew bunks.",
+        "powerDelta": 12,
+        "crewHealthDelta": -14,
+        "setFlag": "SOL3_HEAVY_LOAD",
+        "nextNodeId": "DAY_4C"
+      }
+    },
+    {
+      "nodeId": "DAY_3C",
+      "dayNumber": 3,
+      "realDate": "June 6, 2038",
+      "title": "Sol 3: Nuclear Core Carrying the Load",
+      "sunlightBlockedPercent": 60,
+      "skyColorHex": "#8C3B1E",
+      "dustParticleIntensity": 0.55,
+      "nasaFactBanner": "2018 LESSON: In 2018, Curiosity's nuclear battery kept running reliably when solar rovers lost contact.",
+      "consequenceCheckFlag": "SOL1_OXYGEN_STOCK",
+      "consequenceText": "Extra oxygen filled on Sol 1 gives your crew stronger breathing endurance (+6% Crew Health), while earlier pump loads slightly drained reserves (-5% Power).",
+      "consequencePowerDelta": -5,
+      "consequenceHealthDelta": 6,
+      "storyText": "Dust blankets the horizon, yet unlike solar-only explorers, <b><color=#5CE1E6><u><link=\"2018_curiosity_mmrtg\">Curiosity kept working</link></u></color></b> thanks to nuclear heat. Your backup fission unit hums loudly—and extra radiator heat builds in the equipment bay.",
+      "choiceA": {
+        "buttonLabel": "Move Crew to Narrow Tunnel Shelters",
+        "description": "Save fan power by sealing hot machinery bays and having astronauts sleep in cramped rock tunnels.",
+        "subLabel": "+8 Power | -12 Crew Health",
+        "outcomeText": "You conserve vital wattage as the blackout nears, though sleeping shoulder-to-shoulder wears out your astronauts.",
+        "powerDelta": 8,
+        "crewHealthDelta": -12,
+        "nextNodeId": "DAY_4B"
+      },
+      "choiceB": {
+        "buttonLabel": "Run High-Speed Core Cooling Fans",
+        "description": "Spend electricity on extra cooling loops so everyone keeps full spacious quarters safely.",
+        "subLabel": "-15 Power | +8 Crew Health",
+        "outcomeText": "The nuclear bay cools smoothly and the crew stays comfortable, yet battery reserves shrink right before the blackout.",
+        "powerDelta": -15,
+        "crewHealthDelta": 8,
+        "setFlag": "SOL3_COOL_REACTOR",
+        "nextNodeId": "DAY_4C"
+      }
+    },
+    {
+      "nodeId": "DAY_4A",
+      "dayNumber": 4,
+      "realDate": "June 10, 2038",
+      "title": "Sol 4: Total Blackout at Noon",
+      "sunlightBlockedPercent": 97,
+      "skyColorHex": "#1A0B08",
+      "dustParticleIntensity": 1.0,
+      "nasaFactBanner": "2018 LESSON: On June 10, 2018, 97% of sunlight vanished over Opportunity—noon became midnight.",
+      "storyText": "Midday looks pitch black! The sky blocks <b><color=#5CE1E6><u><link=\"2018_noon_blackout\">97% of normal sunlight</link></u></color></b>, cutting solar charging to zero. Worse, electric chillers need juice to <b><color=#5CE1E6><u><link=\"2018_fuel_cooling\">keep liquid rocket fuel cold</link></u></color></b> so your flight home doesn't boil away!",
+      "choiceA": {
+        "buttonLabel": "Freeze Rocket Fuel (Dim Cabin Heat)",
+        "description": "Spend precious power on the return rocket chillers while crew members shiver at 50°F inside the hab.",
+        "subLabel": "-20 Power | -8 Crew Health",
+        "outcomeText": "Both power and comfort take a hit during peak blackness, yet your homebound rocket propellant stays safely frozen!",
+        "powerDelta": -20,
+        "crewHealthDelta": -8,
+        "setFlag": "SOL4_SAVED_FUEL",
+        "nextNodeId": "DAY_5A"
+      },
+      "choiceB": {
+        "buttonLabel": "Heat Living Quarters (Throttle Chillers)",
+        "description": "Shut down rocket chillers during the blackout to keep astronauts warm and safe overnight.",
+        "subLabel": "-10 Power | +10 Crew Health",
+        "outcomeText": "Warm air circulates through the hab and shields crew health, though warning gauges show propellant warming in the outer tanks.",
+        "powerDelta": -10,
+        "crewHealthDelta": 10,
+        "setFlag": "SOL4_VENTED_FUEL",
+        "nextNodeId": "DAY_5B"
+      }
+    },
+    {
+      "nodeId": "DAY_4B",
+      "dayNumber": 4,
+      "realDate": "June 10, 2038",
+      "title": "Sol 4: Midnight at Midday",
+      "sunlightBlockedPercent": 97,
+      "skyColorHex": "#1A0B08",
+      "dustParticleIntensity": 1.0,
+      "nasaFactBanner": "2018 LESSON: NASA instruments discovered dust storms make Mars days colder—yet nights actually get WARMER.",
+      "consequenceCheckFlag": "SOL2_DUST_EXPOSURE",
+      "consequenceText": "Fine grit tracked in from your Sol 2 spacewalk keeps irritating dry cabin throats during today's blackout (-6% Crew Health).",
+      "consequencePowerDelta": 0,
+      "consequenceHealthDelta": -6,
+      "storyText": "Even at high noon, <b><color=#5CE1E6><u><link=\"2018_noon_blackout\">97% of normal sunlight</link></u></color></b> is blocked. Then weather sensors flash a surprise NASA saw in 2018: suspended dust is <b><color=#5CE1E6><u><link=\"2018_warm_nights\">trapping heat near the ground</link></u></color></b>, keeping Mars slightly warmer tonight!",
+      "choiceA": {
+        "buttonLabel": "Lower Base Heaters & Wear Parkas",
+        "description": "Use the dust blanket's trapped heat to turn down electric heaters and put everyone in insulated suits.",
+        "subLabel": "+10 Power | -14 Crew Health",
+        "outcomeText": "Using Mars's own heat blanket saves vital watts for later Sols, though wearing heavy parkas indoors exhausts the crew.",
+        "powerDelta": 10,
+        "crewHealthDelta": -14,
+        "nextNodeId": "DAY_5A"
+      },
+      "choiceB": {
+        "buttonLabel": "Splurge Power on Hot Meals & Light",
+        "description": "Run kitchen warmers and full cabin lighting to keep crew strength high through the deepest dark.",
+        "subLabel": "-16 Power | +10 Crew Health",
+        "outcomeText": "Hot stew and bright lights banish the blackout blues, though your battery telemetry ticks sharply downward.",
+        "powerDelta": -16,
+        "crewHealthDelta": 10,
+        "setFlag": "SOL4_COMFORT_HEAT",
+        "nextNodeId": "DAY_5B"
+      }
+    },
+    {
+      "nodeId": "DAY_4C",
+      "dayNumber": 4,
+      "realDate": "June 10, 2038",
+      "title": "Sol 4: Clogged Scrubbers in the Dark",
+      "sunlightBlockedPercent": 97,
+      "skyColorHex": "#1A0B08",
+      "dustParticleIntensity": 1.0,
+      "nasaFactBanner": "2018 LESSON: Curiosity kept its sensors powered during total darkness while dust coated everything outside.",
+      "consequenceCheckFlag": "SOL2_REACTOR_PUSHED",
+      "consequenceText": "Overclocking your nuclear unit back on Sol 2 wore down voltage coils—blackout power routing costs an extra reserve penalty today (-6% Power).",
+      "consequencePowerDelta": -6,
+      "consequenceHealthDelta": 0,
+      "storyText": "While <b><color=#5CE1E6><u><link=\"2018_curiosity_mmrtg\">Curiosity kept working</link></u></color></b> alone in 2018's blackout, your base faces a tougher crisis: <b><color=#5CE1E6><u><link=\"2018_static_dust\">sticky red grit</link></u></color></b> just clogged the main cabin air scrubber filter!",
+      "choiceA": {
+        "buttonLabel": "Throttle Down Systems to Clean Filters",
+        "description": "Cut base amps temporarily while the crew dons oxygen masks and scrubs every dust filter clean.",
+        "subLabel": "-15 Power | +12 Crew Health",
+        "outcomeText": "Breathing masks itch, yet clearing the filters brings crystal-clean cabin air back before anyone gets seriously sick.",
+        "powerDelta": -15,
+        "crewHealthDelta": 12,
+        "nextNodeId": "DAY_5B"
+      },
+      "choiceB": {
+        "buttonLabel": "Bypass Filter Alarm to Guard Power",
+        "description": "Keep your backup generator roaring at peak output and let dust haze linger inside for another Sol.",
+        "subLabel": "+10 Power | -16 Crew Health",
+        "outcomeText": "Your grid stays strongly charged in the pitch dark, yet dusty air leaves astronauts coughing with stinging eyes.",
+        "powerDelta": 10,
+        "crewHealthDelta": -16,
+        "setFlag": "SOL4_CLOGGED_CABIN",
+        "nextNodeId": "DAY_5C"
+      }
+    },
+    {
+      "nodeId": "DAY_5A",
+      "dayNumber": 5,
+      "realDate": "June 14, 2038",
+      "title": "Sol 5: Halfway Through the Gloom",
+      "sunlightBlockedPercent": 94,
+      "skyColorHex": "#240F0A",
+      "dustParticleIntensity": 0.95,
+      "nasaFactBanner": "2018 LESSON: Days after blackout began in 2018, Opportunity slipped into silent low-power fault mode.",
+      "consequenceCheckFlag": "SOL3_COLD_HAB",
+      "consequenceText": "Shutting side rooms since Sol 3 keeps conserving amps (+6% Power), though creeping ice along bulkheads saps crew warmth (-6% Crew Health).",
+      "consequencePowerDelta": 6,
+      "consequenceHealthDelta": -6,
+      "storyText": "Solar power has now been nearly zero for four whole Sols. Today you must decide whether to reinforce pumps that <b><color=#5CE1E6><u><link=\"2018_fuel_cooling\">keep liquid rocket fuel cold</link></u></color></b> or thaw out your crew's frozen medical and gym wing.",
+      "choiceA": {
+        "buttonLabel": "Keep Fuel Coolant Pumps at Peak",
+        "description": "Spend heavy electricity stabilizing outer rocket fuel pipes before frost cracks the valves.",
+        "subLabel": "-16 Power | -6 Crew Health",
+        "outcomeText": "Valves hold tight without leaking rocket propellant, even as cold stiffness drains everyone indoors.",
+        "powerDelta": -16,
+        "crewHealthDelta": -6,
+        "nextNodeId": "DAY_6A"
+      },
+      "choiceB": {
+        "buttonLabel": "Thaw Medical Locker & Gym Gear",
+        "description": "Redirect amps inward to warm crew muscles, run physical checkups, and boost hydration.",
+        "subLabel": "-8 Power | +12 Crew Health",
+        "outcomeText": "Warm water and stretched muscles revive your tired team, though your battery reserve drops lower.",
+        "powerDelta": -8,
+        "crewHealthDelta": 12,
+        "setFlag": "SOL5_CREW_FIRST",
+        "nextNodeId": "DAY_6B"
+      }
+    },
+    {
+      "nodeId": "DAY_5B",
+      "dayNumber": 5,
+      "realDate": "June 14, 2038",
+      "title": "Sol 5: Cabin Fever Under the Blanket",
+      "sunlightBlockedPercent": 94,
+      "skyColorHex": "#240F0A",
+      "dustParticleIntensity": 0.95,
+      "nasaFactBanner": "2018 LESSON: Global Mars dust storms can trap heat near the ground for weeks without breaking.",
+      "consequenceCheckFlag": "SOL4_VENTED_FUEL",
+      "consequenceText": "Turning off rocket chillers on Sol 4 eased electrical draw today (+4% Power), though astronauts worry about having enough fuel to fly home (-4% Crew Health).",
+      "consequencePowerDelta": 4,
+      "consequenceHealthDelta": -4,
+      "storyText": "Outside stays pitch dark even while dust keeps <b><color=#5CE1E6><u><link=\"2018_warm_nights\">trapping heat near the ground</link></u></color></b>. Five Sols of gloomy twilight are testing your crew's sleep cycles and battery reserves alike.",
+      "choiceA": {
+        "buttonLabel": "Enforce Tight Shared Sleep Quarters",
+        "description": "Shut down three bunk heaters completely and rotate all four astronauts in one warm core room.",
+        "subLabel": "+12 Power | -14 Crew Health",
+        "outcomeText": "Consolidating heat hands a vital boost back to your batteries, though crowded bunk shifts cut deep into rest.",
+        "powerDelta": 12,
+        "crewHealthDelta": -14,
+        "nextNodeId": "DAY_6A"
+      },
+      "choiceB": {
+        "buttonLabel": "Keep Daylight-Simulation Lamps Lit",
+        "description": "Spend battery power on sun-lamp therapy and separate bunks so everyone sleeps soundly.",
+        "subLabel": "-14 Power | +10 Crew Health",
+        "outcomeText": "Earth-like daylight bulbs lift morale right away, yet the main power gauge slides downward.",
+        "powerDelta": -14,
+        "crewHealthDelta": 10,
+        "setFlag": "SOL5_LIGHTS_ON",
+        "nextNodeId": "DAY_6B"
+      }
+    },
+    {
+      "nodeId": "DAY_5C",
+      "dayNumber": 5,
+      "realDate": "June 14, 2038",
+      "title": "Sol 5: Dust Haze Inside the Dome",
+      "sunlightBlockedPercent": 94,
+      "skyColorHex": "#240F0A",
+      "dustParticleIntensity": 0.95,
+      "nasaFactBanner": "2018 LESSON: On June 15, 2018, Curiosity took a famous selfie coated in dust inside Gale Crater.",
+      "consequenceCheckFlag": "SOL4_CLOGGED_CABIN",
+      "consequenceText": "Bypassing clogged filters on Sol 4 let fine grit spread into every duct—your astronauts feel weak and short of breath (-6% Crew Health).",
+      "consequencePowerDelta": 0,
+      "consequenceHealthDelta": -6,
+      "storyText": "Just like when <b><color=#5CE1E6><u><link=\"2018_dust_selfie\">thick haze coated camera lenses</link></u></color></b> on Curiosity in 2018, fine dust is dulling your sensors inside and out. Your nuclear unit is holding steady, yet crew lungs need help fast.",
+      "choiceA": {
+        "buttonLabel": "Run Portable High-Drain Air Scrubbers",
+        "description": "Fire up emergency hospital-grade dust vacuums across all habitat rooms.",
+        "subLabel": "-18 Power | +16 Crew Health",
+        "outcomeText": "Loud turbines clear the floating grit within hours—saving your crew's lungs at a steep battery cost.",
+        "powerDelta": -18,
+        "crewHealthDelta": 16,
+        "nextNodeId": "DAY_6B"
+      },
+      "choiceB": {
+        "buttonLabel": "Defrost Outer Cameras Instead",
+        "description": "Save power for exterior storm tracking cameras while issuing dusty filter masks inside.",
+        "subLabel": "+8 Power | -14 Crew Health",
+        "outcomeText": "Your base grid builds strength in the dark, though wearing wet paper masks all Sol wears down your astronauts.",
+        "powerDelta": 8,
+        "crewHealthDelta": -14,
+        "setFlag": "SOL5_SKIPPED_SCRUB",
+        "nextNodeId": "DAY_6C"
+      }
+    },
+    {
+      "nodeId": "DAY_6A",
+      "dayNumber": 6,
+      "realDate": "June 18, 2038",
+      "title": "Sol 6: Alone in Deep Space",
+      "sunlightBlockedPercent": 88,
+      "skyColorHex": "#33150E",
+      "dustParticleIntensity": 0.85,
+      "nasaFactBanner": "2018 LESSON: Mars-Earth radio signals take up to 22 minutes one way—44 minutes for a full reply!",
+      "storyText": "With thick dust blocking communications satellites, every Earth message faces up to a <b><color=#5CE1E6><u><link=\"2018_radio_delay\">22-minute radio delay</link></u></color></b> each way. Mission Control asks for a full storm report while your crew quietly fights homesickness.",
+      "choiceA": {
+        "buttonLabel": "Boost High-Gain Dish to Call Earth",
+        "description": "Beam full engineering data plus personal family audio across millions of miles of space.",
+        "subLabel": "-16 Power | +14 Crew Health",
+        "outcomeText": "Punching a signal through the dust drains big power today, though waiting 40 minutes for family voices to echo back lifts hearts.",
+        "powerDelta": -16,
+        "crewHealthDelta": 14,
+        "setFlag": "SOL6_CALLED_EARTH",
+        "nextNodeId": "DAY_7A"
+      },
+      "choiceB": {
+        "buttonLabel": "Hold Radio Silence & Dim Consoles",
+        "description": "Shut down long-range dish amplifiers completely to hoard every possible watt in the batteries.",
+        "subLabel": "+12 Power | -14 Crew Health",
+        "outcomeText": "Power gauges climb out of the danger zone, though silent speakers leave Ares Base feeling painfully cut off from home.",
+        "powerDelta": 12,
+        "crewHealthDelta": -14,
+        "setFlag": "SOL6_RADIO_SILENCE",
+        "nextNodeId": "DAY_7B"
+      }
+    },
+    {
+      "nodeId": "DAY_6B",
+      "dayNumber": 6,
+      "realDate": "June 18, 2038",
+      "title": "Sol 6: The Waiting Game",
+      "sunlightBlockedPercent": 88,
+      "skyColorHex": "#33150E",
+      "dustParticleIntensity": 0.85,
+      "nasaFactBanner": "2018 LESSON: NASA engineers could only send one-way blind commands across millions of miles during the 2018 storm.",
+      "consequenceCheckFlag": "SOL4_COMFORT_HEAT",
+      "consequenceText": "Hot meals on Sol 4 helped keep astronaut immune strength high (+5% Crew Health), while extra kitchen heat slightly trimmed reserves (-5% Power).",
+      "consequencePowerDelta": -5,
+      "consequenceHealthDelta": 5,
+      "storyText": "Even when <b><color=#5CE1E6><u><link=\"2018_dust_selfie\">thick haze coated camera lenses</link></u></color></b> back in 2018, rovers obeyed Earth commands across a <b><color=#5CE1E6><u><link=\"2018_radio_delay\">22-minute radio delay</link></u></color></b>. Today your dish and rover fleet are both pulling standby power.",
+      "choiceA": {
+        "buttonLabel": "Put Parked Rovers Into Deep Sleep",
+        "description": "Cut rover battery warmers so every electron stays inside the main astronaut habitat.",
+        "subLabel": "+12 Power | -10 Crew Health",
+        "outcomeText": "You pull precious power back into Ares Base, though shutting down backup rovers limits emergency rescue range.",
+        "powerDelta": 12,
+        "crewHealthDelta": -10,
+        "nextNodeId": "DAY_7A"
+      },
+      "choiceB": {
+        "buttonLabel": "Download Earth Music & Video Packets",
+        "description": "Use deep-space antenna amps to stream Earth news and entertainment through the storm.",
+        "subLabel": "-14 Power | +12 Crew Health",
+        "outcomeText": "Crew smiles return over a movie streamed across Mars's orbit, while reserve meters dip lower.",
+        "powerDelta": -14,
+        "crewHealthDelta": 12,
+        "setFlag": "SOL6_CALLED_EARTH",
+        "nextNodeId": "DAY_7B"
+      }
+    },
+    {
+      "nodeId": "DAY_6C",
+      "dayNumber": 6,
+      "realDate": "June 18, 2038",
+      "title": "Sol 6: Strain on the Nuclear Bay",
+      "sunlightBlockedPercent": 88,
+      "skyColorHex": "#33150E",
+      "dustParticleIntensity": 0.85,
+      "nasaFactBanner": "2018 LESSON: Real nuclear power units (MMRTGs) have zero moving parts, whereas future base turbines must guard against wear.",
+      "consequenceCheckFlag": "SOL3_HEAVY_LOAD",
+      "consequenceText": "Heavy sensor loads back on Sol 3 overworked your main voltage bus—fixing corroded contacts eats extra power today (-6% Power).",
+      "consequencePowerDelta": -6,
+      "consequenceHealthDelta": 0,
+      "storyText": "Unlike tiny 2018 batteries where <b><color=#5CE1E6><u><link=\"2018_curiosity_mmrtg\">Curiosity kept working</link></u></color></b> passively, a full human nuclear system runs hot cooling loops—and yours is groaning while two astronauts struggle with dusty lungs.",
+      "choiceA": {
+        "buttonLabel": "Shut Labs for Sick-Bay Care",
+        "description": "Power down research bays and spend stored amps treating tired astronauts with clean mist.",
+        "subLabel": "-16 Power | +16 Crew Health",
+        "outcomeText": "Coughing subsides and heart rates steady, though battery bars dip perilously close to critical.",
+        "powerDelta": -16,
+        "crewHealthDelta": 16,
+        "nextNodeId": "DAY_7B"
+      },
+      "choiceB": {
+        "buttonLabel": "Push Nuclear Loop to Redline",
+        "description": "Refuse to dial back output, squeezing every kilowatt out of the reactor bay right now.",
+        "subLabel": "+12 Power | -14 Crew Health",
+        "outcomeText": "Lights burn bright across Ares Base, yet heat stress and dusty air force one astronaut onto bed rest.",
+        "powerDelta": 12,
+        "crewHealthDelta": -14,
+        "setFlag": "SOL6_REDLINE_CORE",
+        "nextNodeId": "DAY_7C"
+      }
+    },
+    {
+      "nodeId": "DAY_7A",
+      "dayNumber": 7,
+      "realDate": "June 20, 2038",
+      "title": "Sol 7: Planet-Encircling Dust Event",
+      "sunlightBlockedPercent": 78,
+      "skyColorHex": "#4D1E12",
+      "dustParticleIntensity": 0.72,
+      "nasaFactBanner": "2018 LESSON: On June 20, 2018, NASA officially declared a Planet-Encircling Dust Event (PEDE).",
+      "consequenceCheckFlag": "SOL6_CALLED_EARTH",
+      "consequenceText": "Reaching Mission Control on Sol 6 paid off—Earth flight surgeons beamed back breathing and morale coaching (+6% Crew Health).",
+      "consequencePowerDelta": 0,
+      "consequenceHealthDelta": 6,
+      "storyText": "NASA satellites announce the storm has reached peak spread—a full <b><color=#5CE1E6><u><link=\"2018_pede_declaration\">Planet-Encircling Dust Event</link></u></color></b>! Dust finally stops rising, yet food supplies and water boilers need smart trade-offs.",
+      "choiceA": {
+        "buttonLabel": "Serve Cold Ration Bars & Save Water Heat",
+        "description": "Keep kitchen water heaters off and distribute dry emergency ration bricks.",
+        "subLabel": "+10 Power | -12 Crew Health",
+        "outcomeText": "Skipping hot cooking saves steady wattage, though chalky ration bars leave your crew sluggish.",
+        "powerDelta": 10,
+        "crewHealthDelta": -12,
+        "setFlag": "SOL7_RATIONED_FOOD",
+        "nextNodeId": "DAY_8A"
+      },
+      "choiceB": {
+        "buttonLabel": "Cook Hot Soup & Flush Water Heaters",
+        "description": "Spend a strong burst of electricity to give everyone hot nutrition and clean warm water.",
+        "subLabel": "-16 Power | +12 Crew Health",
+        "outcomeText": "Warm broth works wonders for stamina ahead of cleanup Sols, while draining battery reserves again.",
+        "powerDelta": -16,
+        "crewHealthDelta": 12,
+        "nextNodeId": "DAY_8B"
+      }
+    },
+    {
+      "nodeId": "DAY_7B",
+      "dayNumber": 7,
+      "realDate": "June 20, 2038",
+      "title": "Sol 7: Dust Stops Climbing",
+      "sunlightBlockedPercent": 78,
+      "skyColorHex": "#4D1E12",
+      "dustParticleIntensity": 0.72,
+      "nasaFactBanner": "2018 LESSON: On June 20, 2018, dust finally stopped rising—yet heavy skies took weeks to clear.",
+      "consequenceCheckFlag": "SOL6_RADIO_SILENCE",
+      "consequenceText": "Holding radio silence on Sol 6 saved valuable amp-hours (+5% Power), though losing contact with home deepened crew stress (-6% Crew Health).",
+      "consequencePowerDelta": 5,
+      "consequenceHealthDelta": -6,
+      "storyText": "Sky monitors confirm a full <b><color=#5CE1E6><u><link=\"2018_pede_declaration\">Planet-Encircling Dust Event</link></u></color></b>, just like June 20, 2018! Faint orange light begins returning, and you recall how <b><color=#5CE1E6><u><link=\"2018_cleaning_events\">dust devils swept panels clean</link></u></color></b> for older rovers—though yours are still buried.",
+      "choiceA": {
+        "buttonLabel": "Send Crew to Clear Greenhouse Skylights",
+        "description": "Have astronauts step onto the catwalk to sweep dust off upper skylight panels and catch early rays.",
+        "subLabel": "+14 Power | -14 Crew Health",
+        "outcomeText": "Dim orange sunlight pierces into the solar bank right away, though stiff joints ache from heavy spacesuits.",
+        "powerDelta": 14,
+        "crewHealthDelta": -14,
+        "setFlag": "SOL7_DUST_WALK",
+        "nextNodeId": "DAY_8B"
+      },
+      "choiceB": {
+        "buttonLabel": "Stay Sealed & Deep-Clean Water Loops",
+        "description": "Keep everyone indoors while investing electricity into ultra-pure drinking water recovery.",
+        "subLabel": "-12 Power | +10 Crew Health",
+        "outcomeText": "Sparkling clean water refreshes every astronaut, while solar panels stay buried for one more Sol.",
+        "powerDelta": -12,
+        "crewHealthDelta": 10,
+        "nextNodeId": "DAY_8A"
+      }
+    },
+    {
+      "nodeId": "DAY_7C",
+      "dayNumber": 7,
+      "realDate": "June 20, 2038",
+      "title": "Sol 7: Medical Alert in the Gloom",
+      "sunlightBlockedPercent": 78,
+      "skyColorHex": "#4D1E12",
+      "dustParticleIntensity": 0.72,
+      "nasaFactBanner": "2018 LESSON: Astronaut safety limits mean humans cannot simply 'wait it out' like a dormant robot.",
+      "consequenceCheckFlag": "SOL5_SKIPPED_SCRUB",
+      "consequenceText": "Skipping air scrubbing earlier allowed suspended dust to choke cabin vents—astronauts now need supplemental oxygen (-6% Crew Health).",
+      "consequencePowerDelta": 0,
+      "consequenceHealthDelta": -6,
+      "storyText": "Even while <b><color=#5CE1E6><u><link=\"2018_dust_selfie\">thick haze coated camera lenses</link></u></color></b> on Curiosity without hurting a robot, human lungs inside Ares Base are struggling badly! You must spend serious reserves on medical recovery or risk collapse.",
+      "choiceA": {
+        "buttonLabel": "Execute Full Sick-Bay Air Purge",
+        "description": "Burn heavy reserves running medical oxygen concentrators and full habitat air scrubbers.",
+        "subLabel": "-20 Power | +22 Crew Health",
+        "outcomeText": "Emergency medical scrubbers rescue your astronauts cleanly—leaving battery banks nearly emptied.",
+        "powerDelta": -20,
+        "crewHealthDelta": 22,
+        "nextNodeId": "DAY_8B"
+      },
+      "choiceB": {
+        "buttonLabel": "Hold Power & Issue Sealed Oxygen Helmets",
+        "description": "Save electrical reserves and order exhausted crew members to wear heavy helmets indoors.",
+        "subLabel": "+10 Power | -14 Crew Health",
+        "outcomeText": "Your grid holds plenty of charge, yet wearing clunky space helmets around the clock drives crew health toward red alert.",
+        "powerDelta": 10,
+        "crewHealthDelta": -14,
+        "nextNodeId": "DAY_8C"
+      }
+    },
+    {
+      "nodeId": "DAY_8A",
+      "dayNumber": 8,
+      "realDate": "June 28, 2038",
+      "title": "Sol 8: Digging Out the Solar Farm",
+      "sunlightBlockedPercent": 62,
+      "skyColorHex": "#6E2E1A",
+      "dustParticleIntensity": 0.55,
+      "nasaFactBanner": "2018 LESSON: Waiting solely on Martian winds failed Opportunity in 2018—human crews can act directly.",
+      "consequenceCheckFlag": "SOL4_SAVED_FUEL",
+      "consequenceText": "Keeping return rocket propellant frozen since Sol 4 requires extra compressor draw again today (-6% Power), keeping your Earth rocket ready.",
+      "consequencePowerDelta": -6,
+      "consequenceHealthDelta": 0,
+      "storyText": "Dust settles visibly out of the upper sky! NASA once hoped lucky <b><color=#5CE1E6><u><link=\"2018_cleaning_events\">dust devils swept panels clean</link></u></color></b> on 2018 rovers, yet a heavy blanket of red grit still covers your huge solar wings.",
+      "choiceA": {
+        "buttonLabel": "Dispatch Two-Crew Panel Sweeping Team",
+        "description": "Send astronauts outside in cleared dusk light with anti-static brushes to uncover Wing Array 1.",
+        "subLabel": "+18 Power | -14 Crew Health",
+        "outcomeText": "Sunlight pours back onto freshly swept solar glass! Your crew returns exhausted and caked in dust.",
+        "powerDelta": 18,
+        "crewHealthDelta": -14,
+        "setFlag": "SOL8_SWEPT_ARRAYS",
+        "nextNodeId": "DAY_9A"
+      },
+      "choiceB": {
+        "buttonLabel": "Keep Crew Resting & Equalize Cells",
+        "description": "Let tired astronauts recover inside while balancing aging battery cells with remaining nuclear amps.",
+        "subLabel": "-12 Power | +10 Crew Health",
+        "outcomeText": "Rest heals aching backs and eases stress, though leaving panels dusty wastes precious returning sunlight.",
+        "powerDelta": -12,
+        "crewHealthDelta": 10,
+        "nextNodeId": "DAY_9B"
+      }
+    },
+    {
+      "nodeId": "DAY_8B",
+      "dayNumber": 8,
+      "realDate": "June 28, 2038",
+      "title": "Sol 8: Returning Sunlight",
+      "sunlightBlockedPercent": 62,
+      "skyColorHex": "#6E2E1A",
+      "dustParticleIntensity": 0.55,
+      "nasaFactBanner": "2018 LESSON: Solar recovery after a global storm depends on clearing static-charged dust from glass cells.",
+      "consequenceCheckFlag": "SOL7_DUST_WALK",
+      "consequenceText": "Sweeping skylights on Sol 7 already pulls extra midday charge (+5% Power), though your outdoor crew nurses stiff muscles (-5% Crew Health).",
+      "consequencePowerDelta": 5,
+      "consequenceHealthDelta": -5,
+      "storyText": "Now that 60% less sky is choked by storm grit, engineers debate how to shed static dust without hoping that <b><color=#5CE1E6><u><link=\"2018_cleaning_events\">dust devils swept panels clean</link></u></color></b> like in 2018.",
+      "choiceA": {
+        "buttonLabel": "Pulse Electrostatic Panel Shakers",
+        "description": "Fire vibrating frame shakers across the solar arrays—noisy vibrations rock the whole habitat floor.",
+        "subLabel": "+12 Power | -10 Crew Health",
+        "outcomeText": "Clouds of dust slide cleanly off the arrays! Constant metallic rattling frays everyone's sleep indoors.",
+        "powerDelta": 12,
+        "crewHealthDelta": -10,
+        "nextNodeId": "DAY_9B"
+      },
+      "choiceB": {
+        "buttonLabel": "Prioritize Cabin Humidity & Sleep",
+        "description": "Use steady electricity to humidify scratchy cabin air and give astronauts a full unbroken sleep cycle.",
+        "subLabel": "-14 Power | +14 Crew Health",
+        "outcomeText": "Deep restful sleep transforms your team's readiness, while your power reserves shrink closer to low warning.",
+        "powerDelta": -14,
+        "crewHealthDelta": 14,
+        "nextNodeId": "DAY_9A"
+      }
+    },
+    {
+      "nodeId": "DAY_8C",
+      "dayNumber": 8,
+      "realDate": "June 28, 2038",
+      "title": "Sol 8: Cooling Pump Burnout",
+      "sunlightBlockedPercent": 62,
+      "skyColorHex": "#6E2E1A",
+      "dustParticleIntensity": 0.55,
+      "nasaFactBanner": "2018 LESSON: Real space power hardware needs safety margins rather than continuous redline operation.",
+      "consequenceCheckFlag": "SOL6_REDLINE_CORE",
+      "consequenceText": "Pushing the nuclear backup to redline on Sol 6 scorched a pump seal—switching to auxiliary cooling costs power today (-8% Power).",
+      "consequencePowerDelta": -8,
+      "consequenceHealthDelta": 0,
+      "storyText": "Unlike Curiosity's rock-solid passive battery where <b><color=#5CE1E6><u><link=\"2018_curiosity_mmrtg\">Curiosity kept working</link></u></color></b> effortlessly, your overworked cooling loop just blew a gasket—just as the skies begin clearing!",
+      "choiceA": {
+        "buttonLabel": "Enter Emergency Sick-Bay Recovery",
+        "description": "Commit remaining reserve juice to healing exhausted astronauts before launch preparations begin.",
+        "subLabel": "-18 Power | +20 Crew Health",
+        "outcomeText": "Sick bay oxygen restores weakened crew members fast, while pushing base power dangerously low.",
+        "powerDelta": -18,
+        "crewHealthDelta": 20,
+        "nextNodeId": "DAY_9B"
+      },
+      "choiceB": {
+        "buttonLabel": "Launch High-Altitude Storm Balloon",
+        "description": "Spend remaining grid juice launching an atmospheric balloon to save scientific value despite crew fatigue.",
+        "subLabel": "-8 Power | -8 Crew Health",
+        "outcomeText": "Your balloon captures priceless storm-clearing physics data for NASA, while exhausting an already weary crew.",
+        "powerDelta": -8,
+        "crewHealthDelta": -8,
+        "nextNodeId": "DAY_9C"
+      }
+    },
+    {
+      "nodeId": "DAY_9A",
+      "dayNumber": 9,
+      "realDate": "July 10, 2038",
+      "title": "Sol 9: Preparing the Return Rocket",
+      "sunlightBlockedPercent": 38,
+      "skyColorHex": "#9E5933",
+      "dustParticleIntensity": 0.35,
+      "nasaFactBanner": "2018 LESSON: By July 2018, NASA still listened daily for Opportunity's wake-up signal as skies slowly cleared.",
+      "consequenceCheckFlag": "SOL8_SWEPT_ARRAYS",
+      "consequenceText": "Because astronauts swept solar Wing 1 on Sol 8, bright sunlight refills batteries rapidly (+7% Power), though crews need extra rest and electrolytes (-4% Crew Health).",
+      "consequencePowerDelta": 7,
+      "consequenceHealthDelta": -4,
+      "storyText": "The butterscotch sky is brightening fast! Back in 2018, <b><color=#5CE1E6><u><link=\"2018_opportunity_panels\">NASA's solar-powered Opportunity rover</link></u></color></b> never woke up as dust settled—so Ares Base must carefully balance battery recharge and astronaut readiness.",
+      "choiceA": {
+        "buttonLabel": "Refill Water Electrolysis & Air Banks",
+        "description": "Spend incoming solar power splitting ice into fresh drinking water and pure oxygen for the crew.",
+        "subLabel": "-14 Power | +14 Crew Health",
+        "outcomeText": "Crew health bounces back as crisp oxygen and fresh water fill every tap across the base.",
+        "powerDelta": -14,
+        "crewHealthDelta": 14,
+        "nextNodeId": "DAY_10A"
+      },
+      "choiceB": {
+        "buttonLabel": "Chill Return Rocket Pre-Launch Lines",
+        "description": "Work the exhausted crew overtime testing fuel chillers so Ares Base maximizes electrical readiness.",
+        "subLabel": "+14 Power | -12 Crew Health",
+        "outcomeText": "Solar inverters charge rocket systems nicely, though long checklists drain astronaut energy ahead of the final Sol.",
+        "powerDelta": 14,
+        "crewHealthDelta": -12,
+        "nextNodeId": "DAY_10B"
+      }
+    },
+    {
+      "nodeId": "DAY_9B",
+      "dayNumber": 9,
+      "realDate": "July 10, 2038",
+      "title": "Sol 9: Clearing Skies, Hidden Ice",
+      "sunlightBlockedPercent": 38,
+      "skyColorHex": "#9E5933",
+      "dustParticleIntensity": 0.35,
+      "nasaFactBanner": "2018 LESSON: As dust settled in July 2018, Mars cooled rapidly at night without its dust blanket.",
+      "storyText": "With dust dropping away, Mars loses the heat blanket from <b><color=#5CE1E6><u><link=\"2018_warm_nights\">trapping heat near the ground</link></u></color></b>—turning nights freezing -90°F again! Exterior radiator fins need defrosting before Sol 10.",
+      "choiceA": {
+        "buttonLabel": "Spacewalk to Chip Frost Off Radiators",
+        "description": "Send suited astronauts outside in brutal -90°F night chill to clear exterior heat exchangers.",
+        "subLabel": "+12 Power | -12 Crew Health",
+        "outcomeText": "Clean radiator fins boost power efficiency strongly, though icy fingers and frostbite warnings stress the team.",
+        "powerDelta": 12,
+        "crewHealthDelta": -12,
+        "nextNodeId": "DAY_10A"
+      },
+      "choiceB": {
+        "buttonLabel": "Keep Crew Inside for Full Medical Exams",
+        "description": "Spend extra electric heat indoors while doctors check lungs and muscles across all four astronauts.",
+        "subLabel": "-14 Power | +14 Crew Health",
+        "outcomeText": "Full checkups restore astronaut readiness across the board, while your batteries take another clear hit.",
+        "powerDelta": -14,
+        "crewHealthDelta": 14,
+        "nextNodeId": "DAY_10B"
+      }
+    },
+    {
+      "nodeId": "DAY_9C",
+      "dayNumber": 9,
+      "realDate": "July 10, 2038",
+      "title": "Sol 9: Survival Mode Recovery",
+      "sunlightBlockedPercent": 38,
+      "skyColorHex": "#9E5933",
+      "dustParticleIntensity": 0.35,
+      "nasaFactBanner": "2018 LESSON: After long communication gaps, NASA always runs cautious system health diagnostics first.",
+      "storyText": "Even across a shrinking <b><color=#5CE1E6><u><link=\"2018_radio_delay\">22-minute radio delay</link></u></color></b>, Mission Control sees Ares Base's warning lights glowing amber. You have one Sol left before Earth evaluates whether the base survived intact.",
+      "choiceA": {
+        "buttonLabel": "Seal & Sanitize Airlocks for Crew Health",
+        "description": "Pour remaining power into deep cabin cleaning and medical rest for your weary team.",
+        "subLabel": "-16 Power | +16 Crew Health",
+        "outcomeText": "Air clears and exhausted crew members rally, though power meters drop toward emergency minimum.",
+        "powerDelta": -16,
+        "crewHealthDelta": 16,
+        "nextNodeId": "DAY_10B"
+      },
+      "choiceB": {
+        "buttonLabel": "Transmit Storm Telemetry & Brace Pod",
+        "description": "Finish uploading your priceless storm science dataset while locking emergency pod latches.",
+        "subLabel": "-8 Power | -6 Crew Health",
+        "outcomeText": "Mission Control receives full storm science, though pushing on empty leaves both crew and grid strained.",
+        "powerDelta": -8,
+        "crewHealthDelta": -6,
+        "nextNodeId": "DAY_10C"
+      }
+    },
+    {
+      "nodeId": "DAY_10A",
+      "dayNumber": 10,
+      "realDate": "July 20, 2038",
+      "title": "Sol 10: Dawn After the Storm",
+      "sunlightBlockedPercent": 22,
+      "skyColorHex": "#B87448",
+      "dustParticleIntensity": 0.20,
+      "nasaFactBanner": "2018 LESSON: Global storms subside slowly over weeks—final system reboots require strict discipline.",
+      "storyText": "Sunlight pours onto Ares Base for the first clear morning of your 10th <b><color=#5CE1E6><u><link=\"2018_sol_length\">Martian Sol</link></u></color></b>! With one final compromise left, decide where to push your final surge before Earth logs your 2038 storm grade.",
+      "choiceA": {
+        "buttonLabel": "Lock Launch Rocket Power & Charge Vault",
+        "description": "Work the crew hard through a full 12-hour exterior diagnostic to recharge rocket and battery banks.",
+        "subLabel": "+10 Power | -10 Crew Health",
+        "outcomeText": "Fuel chillers and battery vaults lock into green zone—though your astronauts finish soaked in sweat.",
+        "powerDelta": 10,
+        "crewHealthDelta": -10,
+        "nextNodeId": "EVALUATE_ENDING"
+      },
+      "choiceB": {
+        "buttonLabel": "Reboot Greenhouse & Crew Recovery",
+        "description": "Spend remaining battery charge reviving fresh food bays and giving astronauts a restful feast.",
+        "subLabel": "-12 Power | +12 Crew Health",
+        "outcomeText": "Astronauts celebrate the dawn around newly lit green sprouts—at one final cost to electrical storage.",
+        "powerDelta": -12,
+        "crewHealthDelta": 12,
+        "nextNodeId": "EVALUATE_ENDING"
+      }
+    },
+    {
+      "nodeId": "DAY_10B",
+      "dayNumber": 10,
+      "realDate": "July 20, 2038",
+      "title": "Sol 10: Final System Check",
+      "sunlightBlockedPercent": 22,
+      "skyColorHex": "#B87448",
+      "dustParticleIntensity": 0.20,
+      "nasaFactBanner": "2018 LESSON: Opportunity had over 1,000 silent check-ins before NASA closed the mission—reserves decide survival.",
+      "storyText": "Skies match bright butterscotch once more, recalling how <b><color=#5CE1E6><u><link=\"2018_opportunity_panels\">NASA's solar-powered Opportunity rover</link></u></color></b> met its fate when power hit bottom. Make one last careful compromise before final Mission Control review!",
+      "choiceA": {
+        "buttonLabel": "Flush Inverters & Fill Battery Banks",
+        "description": "Order astronauts into gritty spacesuits one last time to reset dusty exterior power inverters.",
+        "subLabel": "+12 Power | -12 Crew Health",
+        "outcomeText": "Main meters climb sharply as clean solar amps refill the grid, draining crew strength at the finish line.",
+        "powerDelta": 12,
+        "crewHealthDelta": -12,
+        "nextNodeId": "EVALUATE_ENDING"
+      },
+      "choiceB": {
+        "buttonLabel": "Warm Medical Wing & Rest Crew",
+        "description": "Use battery power indoors to flush dust from cabin air and stabilize crew vital signs.",
+        "subLabel": "-12 Power | +12 Crew Health",
+        "outcomeText": "Doctor monitors flash steady green across all four astronauts while power gauges dip down.",
+        "powerDelta": -12,
+        "crewHealthDelta": 12,
+        "nextNodeId": "EVALUATE_ENDING"
+      }
+    },
+    {
+      "nodeId": "DAY_10C",
+      "dayNumber": 10,
+      "realDate": "July 20, 2038",
+      "title": "Sol 10: Emergency Rescue Hold",
+      "sunlightBlockedPercent": 22,
+      "skyColorHex": "#B87448",
+      "dustParticleIntensity": 0.20,
+      "nasaFactBanner": "2018 LESSON: Early storm warnings in 2018 showed why reserves cannot dip to zero during blackout weeks.",
+      "storyText": "Even though satellites gave warning back when they spotted <b><color=#5CE1E6><u><link=\"2018_mro_warning\">a small swirling dust storm</link></u></color></b>, Ares Base enters Sol 10 on fumes. Pick what to save in the final hour!",
+      "choiceA": {
+        "buttonLabel": "Run Emergency Life-Support Surge",
+        "description": "Empty remaining battery cells directly into astronaut breathing and thermal blankets.",
+        "subLabel": "-14 Power | +16 Crew Health",
+        "outcomeText": "You keep every astronaut breathing safely until skies clear, sacrificing base machinery reserves.",
+        "powerDelta": -14,
+        "crewHealthDelta": 16,
+        "nextNodeId": "EVALUATE_ENDING"
+      },
+      "choiceB": {
+        "buttonLabel": "Lock Launch Beacon & Reserve Cells",
+        "description": "Cut cabin comforts completely to rescue base electronics and keep orbital beacons transmitting.",
+        "subLabel": "+10 Power | -14 Crew Health",
+        "outcomeText": "Beacons ping cleanly back to Mars orbit, while frozen crews hunker down in emergency sleep pods.",
+        "powerDelta": 10,
+        "crewHealthDelta": -14,
+        "nextNodeId": "EVALUATE_ENDING"
+      }
+    }
+  ],
+  "endings": [
+    {
+      "endingId": "ENDING_PERFECT",
+      "conditionDescription": "Power > 40 AND CrewHealth > 50",
+      "minPower": 41,
+      "minCrewHealth": 51,
+      "realDate": "July 23, 2038",
+      "headline": "Sol 10: Mission Success — The NASA Blueprint!",
+      "skyColorHex": "#D49B6A",
+      "storyText": "Sunlight floods Ares Base once again! Through smart compromises across 10 grueling Sols, your solar arrays, nuclear unit, and return rocket fuel stayed intact—and all four astronauts are healthy and ready to keep exploring Mars."
+    },
+    {
+      "endingId": "ENDING_LOW_POWER",
+      "conditionDescription": "CrewHealth > 50 AND Power <= 40",
+      "minPower": 21,
+      "minCrewHealth": 51,
+      "realDate": "July 23, 2038",
+      "headline": "Sol 10: Safe Crew, Extra Fuel Delivery Needed",
+      "skyColorHex": "#D49B6A",
+      "storyText": "All four astronauts came through the 2038 monster storm healthy! However, protecting crew comfort during the blackout forced fuel coolers offline—so NASA must send an uncrewed tanker rocket before your team can fly home."
+    },
+    {
+      "endingId": "ENDING_LOW_HEALTH",
+      "conditionDescription": "Power > 40 AND CrewHealth <= 50",
+      "minPower": 41,
+      "minCrewHealth": 21,
+      "realDate": "July 23, 2038",
+      "headline": "Sol 10: Base Intact, Exhausted Crew",
+      "skyColorHex": "#D49B6A",
+      "storyText": "Your solar wings, battery banks, and return rocket survived the 10-Sol blackout without a scratch—but constant rationing, dust exposure, and cold corridors pushed the crew to their limit. Mission Control orders weeks of strict medical rest."
+    },
+    {
+      "endingId": "ENDING_OPPORTUNITY_FATE",
+      "conditionDescription": "Power <= 20 OR CrewHealth <= 20",
+      "minPower": 0,
+      "minCrewHealth": 0,
+      "realDate": "July 23, 2038",
+      "headline": "Sol 10: The Opportunity Rover Fate",
+      "skyColorHex": "#D49B6A",
+      "storyText": "Just like NASA's solar-powered Opportunity rover back in 2018, reserves dropped too low during the blackout. Emergency survival pods kept astronauts safe until a rescue lander arrived—proving why future bases need deep safety margins!"
+    }
+  ],
+  "realLifeComparison": {
+    "title": "Compare Your Future 2038 Mission to Real 2018 NASA Science",
+    "cards": [
+      {
+        "topic": "Solar Panels vs. Nuclear Power",
+        "whatHappenedInRealLife": "In June 2018, NASA's solar-powered Opportunity rover lost 97% of its sunlight, couldn't recharge, and froze in the dark after 14 years on Mars. Across the planet, Curiosity kept working right through the storm because it carried a small nuclear battery (an MMRTG).",
+        "howItConnectsToGame": "NASA's future Mars bases plan to combine solar arrays with small nuclear fission reactors—just like your 2038 base needed both to survive 10 Sols!"
+      },
+      {
+        "topic": "The Heat-Blanket Surprise",
+        "whatHappenedInRealLife": "NASA's weather station on Curiosity discovered something surprising: while 2018 dust storms made Mars days cooler by blocking sunlight, they made Mars nights WARMER because dust trapped heat near the ground.",
+        "howItConnectsToGame": "Midway through the storm, dialing down heaters worked because suspended red dust acted like a giant blanket over Mars."
+      },
+      {
+        "topic": "No Instant Help From Earth",
+        "whatHappenedInRealLife": "Because Mars is millions of miles away, radio messages in 2018 took 6 to 22 minutes each way—up to 44 minutes just to ask a question and get an answer.",
+        "howItConnectsToGame": "Every compromise you made had ripple effects days later—just like real astronauts must survive on their own choices before Earth even knows!"
+      }
+    ]
+  }
+}

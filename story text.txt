@@ -1,0 +1,303 @@
+﻿story:
+### Part 1: The Opening Briefing (3 Screens Before Day 1)
+
+
+#### Screen 1: What Really Happened in 2018
+
+
+> *"In late May 2018, a NASA spacecraft orbiting Mars spotted a small swirling dust cloud. Within three weeks, high-altitude winds whipped that cloud into a monster storm that wrapped around the entire planet—rising more than 37 miles into the sky, seven times higher than an airplane flies on Earth.*
+> *Down on the ground, the sky turned from butterscotch to pitch black, blocking 97% of the sunlight. NASA’s solar-powered rover, **Opportunity**, couldn't charge its batteries. It went to sleep in the dark and never woke up. Meanwhile, across the planet, NASA’s **Curiosity** rover kept working right through the storm because it ran on a small nuclear battery instead of sunlight."*
+
+
+#### Screen 2: NASA’s Next Big Step
+
+
+> *"Today, NASA’s Moon to Mars program is designing the first human missions to the Red Planet. Astronauts won't just explore—they will need continuous electricity to make breathable oxygen, keep their living quarters warm in $-90^\circ\text{F}$ nights, and keep fuel cold for their rocket ride home.*
+> *Because a Mars day (called a **Sol**) is 39 minutes longer than an Earth day and global dust storms happen every few Mars years, NASA planners know they cannot rely on sunlight alone."*
+
+
+#### Screen 3: Your Mission
+
+
+> *"Welcome to **Ares Base**, a 4-person human outpost on Mars. You have a hybrid power system: large solar panels paired with a small backup nuclear power unit.*
+> *An orbiting NASA satellite just spotted a massive dust storm heading straight for your base. Over the next **5 Martian Days (Sols)**, every choice you make will protect one system at the cost of another. Keep your crew alive and your base intact—and at the end, see how your decisions compare to real NASA engineering."*
+
+
+---
+
+
+### Part 2: How the 5-Day Branching Tree Works for Your Programmer
+
+
+A pure binary tree across 5 days creates  nodes, which is exhausting to write and animate. Instead, use a **"Diamond Branching Tree"** (11 total story nodes):
+
+
+* **Day 1** splits into **2 distinct paths** (Path A vs. Path B).
+* **Days 2, 3, and 4** branch dynamically based on your earlier path, converging into key mid-game crises so every choice changes the story without forcing your teammate to build 32 separate screens.
+* **Day 5** resolves into **4 distinct endings** based on the path you took.
+
+
+Track just **2 hidden or visible variables** in Unity:
+
+
+* **Power Reserves** (Starts at `70%`)
+* **Crew Health & Morale** (Starts at `80%`)
+
+
+---
+
+
+### Part 3: The Complete 5-Day Story & Decision Script
+
+
+#### DAY 1 (May 30 — The Satellite Warning)
+
+
+* **Real NASA Fact:** NASA's *Mars Reconnaissance Orbiter* spotted the 2018 storm days before it reached the rovers on the ground.
+* **Story Prompt:** *"Orbiting cameras show a wall of red dust racing toward Ares Base. Right now, the sky is still clear and your solar panels are running at full strength. Your crew is outside finishing an important rock-drilling experiment when the storm alert flashes on your console."*
+* **Choice 1A — Recall the Crew & Overcharge Batteries:** Stop all science immediately, bring the astronauts inside, and pump every bit of sunlight into your backup battery bank.
+* *Effect:* `+20% Power`, `-10% Crew Morale` (Mission science goals are abandoned). **Go to Node 2A.**
+
+
+
+
+* **Choice 1B — Finish the Science & Seal the Greenhouse:** Let the crew finish collecting rare rock samples while running the air-makers at full speed to stockpile extra oxygen before the dust hits.
+* *Effect:* `-10% Power`, `+15% Crew Health/Oxygen`. **Go to Node 2B.**
+
+
+
+
+
+
+
+
+
+
+---
+
+
+#### DAY 2 (June 6 — The Sky Turns Dark Orange)
+
+
+* **Node 2A (From 1A — High Power, Low Oxygen Buffer):**
+* **Story Prompt:** *"The storm arrives. Dust blocks half the sunlight, and fine red grit is already coating your solar panels. Because you shut down early yesterday, your batteries are full—but your oxygen tanks are running low."*
+* **Choice 2A-1 — Run Oxygen Makers at Full Blast:** Drain your stored battery power to turn Martian air and water into breathable oxygen.
+* *Effect:* `-25% Power`, `+15% Crew Health`. **Go to Node 3A.**
+
+
+
+
+* **Choice 2A-2 — Send an Astronaut Outside to Brush the Panels:** Risk a quick spacewalk in howling winds to sweep dust off the solar panels so they keep making electricity.
+* *Effect:* `+10% Power`, `-20% Crew Health` (Astronaut breathes in fine dust in the airlock and suffers fatigue). **Go to Node 3B.**
+
+
+
+
+
+
+
+
+* **Node 2B (From 1B — Full Oxygen Tanks, Low Power):**
+* **Story Prompt:** *"The storm slams into the base. Sunlight drops by 60%, and heavy dust settles onto your solar panels. Your oxygen tanks are full from yesterday, but your battery warning light is blinking red."*
+* **Choice 2B-1 — Switch Off the Greenhouse Lights:** Put your food crops into cold hibernation to save electricity for the habitat heaters.
+* *Effect:* `+10% Power`, `-15% Crew Morale` (Fresh food supply is lost). **Go to Node 3B.**
+
+
+
+
+* **Choice 2B-2 — Push the Nuclear Backup Unit to Maximum:** Run your small nuclear power unit above normal limits to keep both heaters and crops alive.
+* *Effect:* `+15% Power`, `-10% Crew Health` (Crew has to move sleeping quarters farther from the reactor for safety). **Go to Node 3C.**
+
+
+
+
+
+
+
+
+
+
+---
+
+
+#### DAY 3 (June 10 — Total Blackout / Peak Storm)
+
+
+* **Real NASA Fact:** On June 10, 2018, the sky over *Opportunity* became so thick with dust that the midday Sun shrank to a tiny pinprick, cutting sunlight by 97%.
+* **Node 3A (High Oxygen, Low Power):**
+* **Story Prompt:** *"Midday looks like midnight. Sunlight has dropped by 97%. Your solar panels are making almost zero electricity. Meanwhile, the rocket fuel tank for your trip back to Earth needs cooling power so the fuel doesn't boil away into space."*
+* **Choice 3A-1 — Keep the Rocket Fuel Cold:** Spend your remaining battery power on the rocket tank so the crew can still go home at the end of the mission.
+* *Effect:* `-25% Power`, `-10% Crew Health` (Living room heaters drop to $50^\circ\text{F}$). **Go to Node 4A.**
+
+
+
+
+* **Choice 3A-2 — Heat the Living Quarters Instead:** Turn off the rocket fuel coolers to keep the astronauts warm and safe during the darkest night.
+* *Effect:* `-10% Power`, `+10% Crew Health` (Return rocket loses fuel). **Go to Node 4B.**
+
+
+
+
+
+
+
+
+* **Node 3B (Balanced Resources, Stressed Crew):**
+* **Story Prompt:** *"The storm now covers the entire planet. Outside, the sky is pitch black. Inside, the crew notices a strange surprise: even though the Sun is blocked, nighttime temperatures are actually slightly warmer because the thick dust blanket traps heat near the ground."*
+* **Choice 3B-1 — Lower Base Heaters to Save Power:** Take advantage of the dust blanket's trapped heat and put the crew in thermal parkas inside the base.
+* *Effect:* `+15% Power`, `-10% Crew Morale`. **Go to Node 4A.**
+
+
+
+
+* **Choice 3B-2 — Radio Earth for Advice:** Use high-power antennas to send a message to NASA Mission Control—knowing it takes up to 40 minutes for a message to travel to Earth and back.
+* *Effect:* `-15% Power`, `+15% Crew Morale` (Hearing from Earth lifts spirits). **Go to Node 4B.**
+
+
+
+
+
+
+
+
+* **Node 3C (High Power, Overworked Systems):**
+* **Story Prompt:** *"The storm reaches maximum strength. Solar power is dead, and your nuclear backup unit is humming loudly as it carries the entire base alone. An alarm chimes: the air scrubber filter is clogged with ultra-fine Martian dust tracked in through the airlock."*
+* **Choice 3C-1 — Throttle Down the Nuclear Unit to Clean Filters:** Safely power down systems for 6 hours while the crew wears oxygen masks and swaps the clogged filters.
+* *Effect:* `-15% Power`, `+15% Crew Health`. **Go to Node 4B.**
+
+
+
+
+* **Choice 3C-2 — Keep Full Power & Bypass the Filter:** Leave the nuclear unit running at peak output to protect the base's power grid, letting dust build up inside the cabin.
+* *Effect:* `+10% Power`, `-25% Crew Health` (Coughing and eye irritation spread through the crew). **Go to Node 4C.**
+
+
+
+
+
+
+
+
+
+
+---
+
+
+#### DAY 4 (June 20 — The Long Haul)
+
+
+* **Node 4A (High Power Reserve, Cold/Low Fuel Trade-off):**
+* **Story Prompt:** *"The storm has lasted for weeks. Orbiting satellites report that dust is finally stopping its climb into the sky, though the air is still thick and gloomy. Your crew is exhausted from rationing heat and living in the dark."*
+* **Choice 4A-1 — Host a "Movie & Hot Meal" Morale Night:** Spend a burst of battery power to warm the cabin, cook hot food, and connect a video call with families on Earth.
+* *Effect:* `-15% Power`, `+20% Crew Morale`. **Go to Day 5.**
+
+
+
+
+* **Choice 4A-2 — Stay in Strict Hibernation Mode:** Keep lights dimmed and systems on minimum power until the sky officially clears.
+* *Effect:* `+10% Power`, `-15% Crew Morale`. **Go to Day 5.**
+
+
+
+
+
+
+
+
+* **Node 4B (Moderate Power, Good Crew Condition):**
+* **Story Prompt:** *"NASA satellites confirm the storm is starting to fade, though heavy dust still coats your solar panels like a thick winter blanket. Sunlight is slowly returning, but your panels can't catch it until the dust is cleared."*
+* **Choice 4B-1 — Send Two Astronauts Out to Clean the Panels:** Now that the winds have calmed, send a team outside to brush off the solar arrays.
+* *Effect:* `+25% Power`, `-10% Crew Health`. **Go to Day 5.**
+
+
+
+
+* **Choice 4B-2 — Wait for Martian Winds to Blow the Dust Off:** Keep the crew safely inside and hope natural wind gusts clean the panels (just like what occasionally saved NASA's earlier rovers).
+* *Effect:* `+5% Power`, `+10% Crew Health`. **Go to Day 5.**
+
+
+
+
+
+
+
+
+* **Node 4C (High Power, Sick Crew):**
+* **Story Prompt:** *"Your power grid never went down, but breathing dusty cabin air has left two crew members sick and weak. Now that the storm is weakening, you must decide how to use your strong power supply."*
+* **Choice 4C-1 — Run Full Medical & Air-Purifying Systems:** Dedicate all electricity to scrubbing the cabin air clean and warming the medical bay.
+* *Effect:* `-20% Power`, `+25% Crew Health`. **Go to Day 5.**
+
+
+
+
+* **Choice 4C-2 — Launch a Robotic Weather Balloon:** Use your extra power to launch a sensor balloon into the clearing storm to gather priceless NASA science data.
+* *Effect:* `-10% Power`, `-15% Crew Health` (Crew health drops further, but science score maxes out). **Go to Day 5.**
+
+
+
+
+
+
+
+
+
+
+---
+
+
+#### DAY 5 (The Sky Clears — 4 Final Outcomes)
+
+
+When Day 5 loads, the Unity skybox brightens back to butterscotch-blue, and the player gets one of **4 endings** based on their final `Power` and `Crew Health` scores:
+
+
+1. **Ending 1: "Mission Success — The NASA Blueprint" (`Power > 40%` AND `Crew Health > 50%`)**
+* *Story:* *"Sunlight floods Ares Base once again. Your solar panels wake up, your nuclear backup held steady through the darkest days, and all four astronauts are healthy and ready to resume exploring Mars."*
+
+
+
+
+2. **Ending 2: "Safe Crew, Stranded Return" (`Crew Health > 50%` BUT `Power <= 40%`)**
+* *Story:* *"Every astronaut survived the monster storm in great health—but because you had to shut down the rocket fuel coolers during the blackout, Earth will need to send a robotic tanker ship before your crew can fly home."*
+
+
+
+
+3. **Ending 3: "Machines First, Exhausted Crew" (`Power > 40%` BUT `Crew Health <= 50%`)**
+* *Story:* *"Your base and return rocket came through the storm without a scratch, but weeks of cold cabins, dusty air, and isolation pushed your astronauts to their physical limit. Mission Control orders a 3-week medical recovery before any more spacewalks."*
+
+
+
+
+4. **Ending 4: "The Opportunity Fate" (`Power <= 20%` OR `Crew Health <= 20%`)**
+* *Story:* *"Just like NASA's Opportunity rover in 2018, your base ran out of power in the pitch-black storm. Emergency life-support pods kept the crew alive until a rescue lander arrived—proving why future Mars bases cannot survive on solar power alone."*
+
+
+
+
+
+
+---
+
+
+### Part 4: The "Compare to Real Life" End Screen
+
+
+Right after the ending screen, display a **"Compare Your Mission to Real NASA Science"** card with 3 side-by-side takeaways:
+
+
+* **1. Why *Opportunity* Died While *Curiosity* Survived:**
+* *In Real Life:* *Opportunity* depended 100% on solar panels and froze when the 2018 storm blocked 97% of sunlight. *Curiosity* carried a small nuclear power source (an MMRTG) and kept taking photos right through the storm.
+* *For Humans:* NASA’s real Mars mission plans combine **solar arrays with small nuclear fission reactors** so astronauts never lose heat or oxygen during global storms.
+
+
+
+
+* **2. The Heat-Blanket Surprise:**
+* *In Real Life:* NASA’s instruments on Mars proved that while global dust storms make **days cooler** by blocking the Sun, they actually make **nights warmer** by trapping heat near the ground.
+
+
+
+
+* **3. No Instant Help from Earth:**
+* *In Real Life:* Depending on where Earth and Mars are in their orbits, radio messages take **6 to 22 minutes each way**. Just like in your game, Mars astronauts have to make life-saving trade-offs on their own before Mission Control even hears there is a problem.
