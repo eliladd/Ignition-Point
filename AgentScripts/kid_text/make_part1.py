@@ -1,0 +1,598 @@
+"""
+Generates part1.json for Sols 1-4 (12 nodes) following SPEC.md precisely.
+"""
+import json
+
+part1_nodes = [
+  {
+    "nodeId": "DAY_1",
+    "title": "Sol 1: Dust Storm Alarm",
+    "nasaFactBanner": "2018 LESSON: Satellites in space spotted a small storm before it grew huge.",
+    "storyText": "Look out! Orbiting satellites just spotted <b><color=#5CE1E6><u><link=\"2018_mro_warning\">a tiny dust storm</link></u></color></b> heading your way. The sky is bright this <b><color=#5CE1E6><u><link=\"2018_sol_length\">Martian Sol</link></u></color></b> as dust lifts <b><color=#5CE1E6><u><link=\"2018_water_loss\">water vapor</link></u></color></b>.",
+    "guideTip": "Whoa! A Sol is one day on Mars. It is slightly longer than Earth days!",
+    "novaHint": "The storm is coming. Think about saving power before dust blocks sunlight.",
+    "consequences": [],
+    "choiceA": {
+      "buttonLabel": "Call in crew and charge",
+      "description": "Bring astronauts inside and pack solar power into batteries.",
+      "outcomeText": "Batteries fill with power! The crew is safe inside, but stops outdoor work.",
+      "nasaComparisonTitle": "Opportunity Rover Solar Panels",
+      "nasaRealDecision": "Opportunity ran on solar power for 14 years. A giant storm blocked the sun.",
+      "nasaFactEmphasis": "Without power, robots and heaters freeze in the deep Martian cold.",
+      "guideReaction": "Full batteries! Smart move before the sky goes dark."
+    },
+    "choiceB": {
+      "buttonLabel": "Finish drilling for oxygen",
+      "description": "Let the crew collect ice and fill oxygen tanks.",
+      "outcomeText": "Oxygen tanks are full! The drill motors use lots of battery power.",
+      "nasaComparisonTitle": "Nuclear Power on Mars",
+      "nasaRealDecision": "Curiosity used a tiny nuclear battery. It kept rolling right through the storm.",
+      "nasaFactEmphasis": "Nuclear power does not need sunlight to make electricity.",
+      "guideReaction": "Lots of oxygen! Pumps use power, but fresh air is great."
+    },
+    "choiceC": {
+      "buttonLabel": "Turn on electric dust shields",
+      "description": "Bring the crew inside and turn on electric dust shields.",
+      "outcomeText": "Electric shields push dust away from solar panels and airlocks!",
+      "nasaComparisonTitle": "Electric Dust Shields",
+      "nasaRealDecision": "NASA created shields that use static electricity to push away dust.",
+      "nasaFactEmphasis": "Mars dust carries static cling, just like dust on a TV screen.",
+      "guideReaction": "Zap! The electric shields shake the red dust away!"
+    }
+  },
+  {
+    "nodeId": "DAY_2A",
+    "title": "Sol 2: Dust Hits Panels",
+    "nasaFactBanner": "2018 LESSON: In 2018, rising dust forced Opportunity to stop driving.",
+    "storyText": "A giant dust wall towers <b><color=#5CE1E6><u><link=\"2018_storm_height\">more than 37 miles high</link></u></color></b>! <b><color=#5CE1E6><u><link=\"2018_static_dust\">Sticky red grit</link></u></color></b> clings to panels. You must also <b><color=#5CE1E6><u><link=\"2018_fuel_cooling\">keep rocket fuel cold</link></u></color></b>.",
+    "guideTip": "The storm is huge! It is taller than seven Mount Everests stacked up!",
+    "novaHint": "Cold fuel is heavy. Balance rocket coolers with life support power.",
+    "consequences": [
+      {
+        "checkFlag": "SOL1_OVERCHARGED",
+        "text": "Sol 1 extra battery charge helped (+3% Electricity), but missing ice frustrated crew (-3% Crew Health)."
+      }
+    ],
+    "choiceA": {
+      "buttonLabel": "Cool fuel and dim halls",
+      "description": "Chill rocket fuel and dim hallway lights to save power.",
+      "outcomeText": "Rocket fuel stays freezing cold! Hallways are dim, but batteries stay safe.",
+      "nasaComparisonTitle": "Cold Rocket Fuel",
+      "nasaRealDecision": "Rocket fuel must stay colder than winter ice so it does not boil.",
+      "nasaFactEmphasis": "Liquid fuel boils away into gas if tanks get too warm.",
+      "guideReaction": "Brrr! Hallways are chilly, but the escape rocket is safe!"
+    },
+    "choiceB": {
+      "buttonLabel": "Run MOXIE oxygen maker",
+      "description": "Use battery power to make fresh, clean oxygen.",
+      "outcomeText": "Crisp oxygen fills every room! The crew feels great, but batteries drain.",
+      "nasaComparisonTitle": "Making Oxygen on Mars",
+      "nasaRealDecision": "NASA tested MOXIE on Mars. It pulls breathable oxygen right from thin air.",
+      "nasaFactEmphasis": "Mars air is mostly carbon dioxide, which humans cannot breathe.",
+      "guideReaction": "Deep breath! Clean oxygen makes everyone smile and work happily."
+    },
+    "choiceC": {
+      "buttonLabel": "Turn on weather radar",
+      "description": "Power up the dish to track the storm from orbit.",
+      "outcomeText": "Clear radar maps show the storm! Running the dish heater uses power.",
+      "nasaComparisonTitle": "Watching Storms From Space",
+      "nasaRealDecision": "Orbiting satellites tracked the 2018 dust storm every single day.",
+      "nasaFactEmphasis": "Satellites fly high above storms to guide rovers safely.",
+      "guideReaction": "We see the whole storm! Look at that giant swirling cloud!"
+    }
+  },
+  {
+    "nodeId": "DAY_2B",
+    "title": "Sol 2: Yellow Grid Warning",
+    "nasaFactBanner": "2018 LESSON: Mars dust clings to solar panels like static on clothes.",
+    "storyText": "Dust covers your panels, just like on <b><color=#5CE1E6><u><link=\"2018_opportunity_panels\">Opportunity rover</link></u></color></b>! Oxygen is high, but <b><color=#5CE1E6><u><link=\"2018_greenhouse_crops\">greenhouse crops</link></u></color></b> need light. Red <b><color=#5CE1E6><u><link=\"2018_static_dust\">sticky grit</link></u></color></b> is everywhere.",
+    "guideTip": "Plants in the greenhouse need bright lamps because Mars is dim!",
+    "novaHint": "Plants make food, but need power. Decide how much energy to spend.",
+    "consequences": [
+      {
+        "checkFlag": "SOL1_OXYGEN_STOCK",
+        "text": "Full oxygen tanks from Sol 1 kept crew energized (+5% Crew Health), using power (-4% Power)."
+      }
+    ],
+    "choiceA": {
+      "buttonLabel": "Dim greenhouse plant lights",
+      "description": "Turn off plant grow-lights to save electricity for basic needs.",
+      "outcomeText": "Saving power keeps the base alive! The plants grow slower in the dark.",
+      "nasaComparisonTitle": "Growing Plants on Mars",
+      "nasaRealDecision": "Astronauts will grow fresh greens in space to stay strong and healthy.",
+      "nasaFactEmphasis": "Plants turn light and water into fresh food and clean oxygen.",
+      "guideReaction": "Lights off saves power! The lettuce will take a little nap."
+    },
+    "choiceB": {
+      "buttonLabel": "Keep plant lights glowing",
+      "description": "Spend battery power on bright grow-lights for fresh veggies.",
+      "outcomeText": "Fresh salad lifts everyone's spirits! Battery power drops down lower.",
+      "nasaComparisonTitle": "Fresh Food in Space",
+      "nasaRealDecision": "Astronauts on the space station grow fresh salads under bright LED lights.",
+      "nasaFactEmphasis": "Fresh vitamins keep human minds sharp during long space voyages.",
+      "guideReaction": "Mmm, fresh green snacks! The crew is super happy today."
+    },
+    "choiceC": {
+      "buttonLabel": "Ramp up nuclear reactor",
+      "description": "Turn up the backup nuclear reactor to make steady electricity.",
+      "outcomeText": "The reactor hums with power! It generates electricity without any sun.",
+      "nasaComparisonTitle": "Kilopower Reactor",
+      "nasaRealDecision": "NASA tested small nuclear reactors to power future human Mars bases.",
+      "nasaFactEmphasis": "Nuclear reactors make electricity through day, night, and giant storms.",
+      "guideReaction": "Power surge! The tiny nuclear core makes steady watts in the dark."
+    }
+  },
+  {
+    "nodeId": "DAY_2C",
+    "title": "Sol 2: Dust on Airlocks",
+    "nasaFactBanner": "2018 LESSON: Static electric charge makes Mars dust cling to everything.",
+    "storyText": "Electric shields fight off <b><color=#5CE1E6><u><link=\"2018_static_dust\">sticky red grit</link></u></color></b>. We cannot wait for <b><color=#5CE1E6><u><link=\"2018_cleaning_events\">dust devils</link></u></color></b>! Fine powder drifts toward <b><color=#5CE1E6><u><link=\"2018_airlock_suits\">airlock suit doors</link></u></color></b>.",
+    "guideTip": "Mars dust is like tiny bits of broken glass. Keep it outside!",
+    "novaHint": "Clean airlocks protect human lungs. Balance door shields with power.",
+    "consequences": [
+      {
+        "checkFlag": "SOL1_ROVER_SCOUTS",
+        "text": "Clean Sol 1 dust shields saved gear (+4% Crew Health), using power (-4% Power)."
+      }
+    ],
+    "choiceA": {
+      "buttonLabel": "Shield airlock suit doors",
+      "description": "Power door cleaners so zero dust enters astronaut lungs.",
+      "outcomeText": "Airlocks stay clean and dust-free! The door shields use steady power.",
+      "nasaComparisonTitle": "Keeping Dust Outside",
+      "nasaRealDecision": "NASA designs suits that stay outside the cabin to block poisonous dust.",
+      "nasaFactEmphasis": "Breathing sharp mineral dust can hurt astronaut lungs.",
+      "guideReaction": "Puff! High-voltage zap cleans suits before astronauts step inside."
+    },
+    "choiceB": {
+      "buttonLabel": "Hook reactor to batteries",
+      "description": "Connect nuclear power straight to batteries and dim heaters.",
+      "outcomeText": "Batteries charge steadily! Corridors are chilly, but power is strong.",
+      "nasaComparisonTitle": "Nuclear Power Lines",
+      "nasaRealDecision": "Engineers route nuclear electricity to protect life-support batteries first.",
+      "nasaFactEmphasis": "Nuclear power provides constant electricity without cloudy day drops.",
+      "guideReaction": "Nice connection! Power flows right where we need it most."
+    },
+    "choiceC": {
+      "buttonLabel": "Insulate outer shield boxes",
+      "description": "Send crew outside to add weatherproof shields to electronics.",
+      "outcomeText": "Electronics are safe from grit! The outdoor walk tired the crew.",
+      "nasaComparisonTitle": "Space Spacewalk Repairs",
+      "nasaRealDecision": "Spacewalks on Mars take careful effort because spacesuits are stiff.",
+      "nasaFactEmphasis": "Spacesuit gloves make simple tool work feel like squeezing tennis balls.",
+      "guideReaction": "Good job fixing the box! Those spacesuits are heavy work."
+    }
+  },
+  {
+    "nodeId": "DAY_3A",
+    "title": "Sol 3: Red Dusk Falling",
+    "nasaFactBanner": "2018 LESSON: Dust traps daytime heat, making cold Mars nights warmer.",
+    "storyText": "Dust dims the Sun in <b><color=#5CE1E6><u><link=\"2018_thin_air\">thin Martian air</link></u></color></b>! Dust starts a <b><color=#5CE1E6><u><link=\"2018_warm_nights\">heat blanket</link></u></color></b> at dusk as <b><color=#5CE1E6><u><link=\"2018_moxie_oxygen\">oxygen generators</link></u></color></b> pull power.",
+    "guideTip": "Even in thin air, dust traps warm heat near the ground at night!",
+    "novaHint": "When solar fades, manage your life support and heater watts carefully.",
+    "consequences": [
+      {
+        "checkFlag": "SOL2_CHILLERS_LOCKED",
+        "text": "Locked chillers saved power (0% Electricity Conserved!), but chilly halls gave stiff joints (-4% Crew Health)."
+      },
+      {
+        "checkFlag": "SOL2_CROPS_HIBERNATED",
+        "text": "Sleeping crops saved power (0% Electricity Conserved!), but missing fresh veggies lowers stamina (-5% Crew Health)."
+      },
+      {
+        "checkFlag": "SOL1_OVERCHARGED",
+        "text": "Sol 1 extra battery charge still cushions the power grid (+3% Electricity)."
+      },
+      {
+        "checkFlag": "SOL1_OXYGEN_STOCK",
+        "text": "Reserve oxygen from Sol 1 keeps air fresh (+4% Crew Health), using valve power (-3% Power)."
+      }
+    ],
+    "choiceA": {
+      "buttonLabel": "Seal labs and cut heat",
+      "description": "Close empty side labs and gather the crew in central bunks.",
+      "outcomeText": "Sealing side labs saves big power! Outer halls get icy cold.",
+      "nasaComparisonTitle": "Sealing Module Hatches",
+      "nasaRealDecision": "Astronauts close doors between modules to trap warm air and save power.",
+      "nasaFactEmphasis": "Closing hatches prevents cold drafts from spreading across the station.",
+      "guideReaction": "Hatches sealed tight! Heat stays inside the center habitat."
+    },
+    "choiceB": {
+      "buttonLabel": "Run MOXIE air purge",
+      "description": "Spend battery power to scrub carbon dioxide and pump oxygen.",
+      "outcomeText": "Crisp oxygen fills living rooms! The heavy air pumps use power.",
+      "nasaComparisonTitle": "Scrubbing Space Air",
+      "nasaRealDecision": "Life support systems must scrub carbon dioxide so humans can breathe clean air.",
+      "nasaFactEmphasis": "Without scrubbers, carbon dioxide builds up and makes astronauts sleepy.",
+      "guideReaction": "Ahhh, fresh air! Crisp oxygen helps everyone think clearly."
+    },
+    "choiceC": {
+      "buttonLabel": "Sync orbital storm data",
+      "description": "Download satellite storm maps so astronauts stay safe indoors.",
+      "outcomeText": "Satellites show storm tracks! Downloading radar maps uses modest power.",
+      "nasaComparisonTitle": "Satellite Weather Maps",
+      "nasaRealDecision": "Satellites in high orbit track dust fronts and beam weather maps down.",
+      "nasaFactEmphasis": "Orbiters can see storm fronts hundreds of miles away.",
+      "guideReaction": "Radar locked! Now we know exactly when gusts hit."
+    }
+  },
+  {
+    "nodeId": "DAY_3B",
+    "title": "Sol 3: Sky Dimming Fast",
+    "nasaFactBanner": "2018 LESSON: Mars dust storms can swallow the entire planet in days.",
+    "storyText": "Dusk falls at noon as a <b><color=#5CE1E6><u><link=\"2018_pede_declaration\">planet-wide storm</link></u></color></b> grows! The sky nears <b><color=#5CE1E6><u><link=\"2018_noon_blackout\">noon pitch black</link></u></color></b>. <b><color=#5CE1E6><u><link=\"2018_greenhouse_crops\">Greenhouse crops</link></u></color></b> compete with sensors for power.",
+    "guideTip": "The storm wraps around the whole planet! There is no escape route.",
+    "novaHint": "A whole-planet storm lasts weeks. Pace food, water, and power.",
+    "consequences": [
+      {
+        "checkFlag": "SOL2_MOXIE_BOOST",
+        "text": "Boosted MOXIE oxygen keeps crew sharp (+5% Crew Health), using power (-4% Power)."
+      },
+      {
+        "checkFlag": "SOL2_GREENHOUSE_LIT",
+        "text": "Fresh salad greens boost crew stamina (+5% Crew Health), using power (-4% Power)."
+      },
+      {
+        "checkFlag": "SOL2_SUIT_SEALS",
+        "text": "Electric airlock shields keep dust out of lungs (+4% Crew Health), using power (-3% Power)."
+      },
+      {
+        "checkFlag": "SOL1_ROVER_SCOUTS",
+        "text": "Sol 1 dust shields shook static grit off panels (0% Electricity Conserved!)."
+      }
+    ],
+    "choiceA": {
+      "buttonLabel": "Ration heat and lamps",
+      "description": "Dim cabin lights and heaters to save power before blackout.",
+      "outcomeText": "Saving power protects the batteries! Rooms are chilly and dim.",
+      "nasaComparisonTitle": "Rationing Space Energy",
+      "nasaRealDecision": "Spacecraft turn off non-essential instruments during power emergencies.",
+      "nasaFactEmphasis": "Cutting cabin lights saves precious battery watts for life support.",
+      "guideReaction": "Heaters dimmed! Every saved watt keeps life support alive."
+    },
+    "choiceB": {
+      "buttonLabel": "Keep garden LEDs lit",
+      "description": "Keep bright lights glowing so fresh crops keep growing.",
+      "outcomeText": "Fresh green sprouts lift spirits! The grow-lights draw heavy power.",
+      "nasaComparisonTitle": "Space Farming",
+      "nasaRealDecision": "Astronauts grow fresh salad crops under LED lamps for vitamins.",
+      "nasaFactEmphasis": "Plants provide psychological comfort along with fresh oxygen and nutrition.",
+      "guideReaction": "Yum, crunchy fresh leaves! The crew is smiling big."
+    },
+    "choiceC": {
+      "buttonLabel": "Power storm wind sensors",
+      "description": "Cut crew heaters to power wind radar and study the storm.",
+      "outcomeText": "Sensors track the storm front! Chilly drafts sweep the dorms.",
+      "nasaComparisonTitle": "Studying Mars Storms",
+      "nasaRealDecision": "Scientists track atmospheric pressure to understand how dust storms grow.",
+      "nasaFactEmphasis": "Understanding storm physics helps NASA design safer future habitats.",
+      "guideReaction": "Science data incoming! Fascinating storm measurements today."
+    }
+  },
+  {
+    "nodeId": "DAY_3C",
+    "title": "Sol 3: Nuclear Core Hums",
+    "nasaFactBanner": "2018 LESSON: Nuclear generators keep running right through deep darkness.",
+    "storyText": "Red dusk falls, but just like <b><color=#5CE1E6><u><link=\"2018_curiosity_mmrtg\">Curiosity kept working</link></u></color></b>, your <b><color=#5CE1E6><u><link=\"2018_fission_power\">nuclear power plant</link></u></color></b> hums! You must also <b><color=#5CE1E6><u><link=\"2018_fuel_cooling\">keep rocket fuel cold</link></u></color></b>.",
+    "guideTip": "The nuclear reactor makes electricity inside, even when the sun vanishes!",
+    "novaHint": "Nuclear power is steady. Decide whether to cool equipment or crew.",
+    "consequences": [
+      {
+        "checkFlag": "SOL2_FISSION_BOOST",
+        "text": "Nuclear power gave steady electricity (+3% Electricity), but loud shielding bunks tired crew (-4% Crew Health)."
+      },
+      {
+        "checkFlag": "SOL2_REACTOR_BYPASS",
+        "text": "Direct reactor connection filled batteries (+3% Electricity), but cold galley lowered comfort (-4% Crew Health)."
+      },
+      {
+        "checkFlag": "SOL1_OXYGEN_STOCK",
+        "text": "Oxygen stockpile keeps air easy to breathe (+4% Crew Health), using minor power (-3% Power)."
+      },
+      {
+        "checkFlag": "SOL1_ROVER_SCOUTS",
+        "text": "Sol 1 dust shields shook static grit off panels (0% Electricity Conserved!)."
+      }
+    ],
+    "choiceA": {
+      "buttonLabel": "Camp in tunnel shelters",
+      "description": "Move astronauts into narrow ground tunnels to save fan power.",
+      "outcomeText": "Tunnels save heating power! Tight bunks make sleep uncomfortable.",
+      "nasaComparisonTitle": "Underground Habitats",
+      "nasaRealDecision": "Mars dirt protects astronauts from space radiation and temperature swings.",
+      "nasaFactEmphasis": "Burying habitats under regolith dirt provides natural thermal insulation.",
+      "guideReaction": "Cozy underground! Natural dirt keeps the cold wind away."
+    },
+    "choiceB": {
+      "buttonLabel": "Cool reactor core fans",
+      "description": "Run cooling fans at full speed so crew stays comfortable.",
+      "outcomeText": "The reactor core stays cool and happy! Batteries drop down.",
+      "nasaComparisonTitle": "Reactor Cooling Fans",
+      "nasaRealDecision": "Nuclear systems need radiator fans to dump extra heat safely.",
+      "nasaFactEmphasis": "Radiators pump fluid through fins to radiate heat into space.",
+      "guideReaction": "Cool and steady! The reactor hums smoothly tonight."
+    },
+    "choiceC": {
+      "buttonLabel": "Shield outdoor turbines",
+      "description": "Send crew outside to bolt protective dust covers onto turbines.",
+      "outcomeText": "Turbines are shielded from grit! The dusty outdoor walk tired crew.",
+      "nasaComparisonTitle": "Protecting Radiators",
+      "nasaRealDecision": "Covering mechanical joints keeps fine grit from grinding gears down.",
+      "nasaFactEmphasis": "Sharp Martian dust acts like sandpaper on moving turbine parts.",
+      "guideReaction": "Turbine covers bolted! The cooling fins are safe from grit."
+    }
+  },
+  {
+    "nodeId": "DAY_3D",
+    "title": "Sol 3: Radio Static Haze",
+    "nasaFactBanner": "2018 LESSON: Satellites fly high above storms to relay radio signals.",
+    "storyText": "Dust haze creates a <b><color=#5CE1E6><u><link=\"2018_dust_selfie\">murky sky view</link></u></color></b>! An <b><color=#5CE1E6><u><link=\"2018_mro_relay\">orbital satellite</link></u></color></b> talks across a <b><color=#5CE1E6><u><link=\"2018_radio_delay\">22-minute radio delay</link></u></color></b> as <b><color=#5CE1E6><u><link=\"2018_airlock_suits\">electric shields</link></u></color></b> hum.",
+    "guideTip": "Satellites in space act like cell towers to send radio messages home!",
+    "novaHint": "Earth messages take 22 minutes. Rely on local plans and rovers.",
+    "consequences": [
+      {
+        "checkFlag": "SOL2_MRO_RELAY",
+        "text": "Satellite weather maps boosted crew readiness (+4% Crew Health), using power (-3% Power)."
+      },
+      {
+        "checkFlag": "SOL2_ROVER_BRUSHES",
+        "text": "Cleaned panels kept power flow steady (0% Electricity Conserved!), but dust irritated throats (-4% Crew Health)."
+      },
+      {
+        "checkFlag": "SOL1_OVERCHARGED",
+        "text": "Sol 1 battery vault still cushions the darkening sky (+3% Electricity)."
+      },
+      {
+        "checkFlag": "SOL1_ROVER_SCOUTS",
+        "text": "Sol 1 dust shields continue repelling fine grit outdoors (0% Electricity Conserved!)."
+      }
+    ],
+    "choiceA": {
+      "buttonLabel": "Power down dish to save",
+      "description": "Turn off radio dish heaters to save battery power before blackout.",
+      "outcomeText": "Saving power protects the batteries! We lose live messages from Earth.",
+      "nasaComparisonTitle": "Radio Power Conservation",
+      "nasaRealDecision": "Turning off powerful transmitters saves big wattage during storms.",
+      "nasaFactEmphasis": "High-gain antennas use lots of electricity to beam signals to Earth.",
+      "guideReaction": "Antennas sleeping! That saves lots of power for life support."
+    },
+    "choiceB": {
+      "buttonLabel": "Seal exterior power ducts",
+      "description": "Send crew outside to crimp tight dust sleeves over junction boxes.",
+      "outcomeText": "Junction boxes are sealed from grit! Cold windy work tired the crew.",
+      "nasaComparisonTitle": "Sealing Power Plugs",
+      "nasaRealDecision": "Astronauts wrap wiring boxes with silicone sleeves to stop shorts.",
+      "nasaFactEmphasis": "Dry static dust can cause electrical sparks if it gets inside plugs.",
+      "guideReaction": "Cables sealed tight! No short circuits will happen here."
+    },
+    "choiceC": {
+      "buttonLabel": "Connect rover battery pack",
+      "description": "Plug pressurized rover fuel cells into the habitat filter bus.",
+      "outcomeText": "Rover fuel cells share extra power! Cabin air stays warm and clean.",
+      "nasaComparisonTitle": "Rover Battery Sharing",
+      "nasaRealDecision": "Electric vehicles can feed battery power back into buildings in emergencies.",
+      "nasaFactEmphasis": "Connecting rover batteries gives the habitat extra backup power.",
+      "guideReaction": "Rover connected! Extra power is flowing right into the habitat."
+    }
+  },
+  {
+    "nodeId": "DAY_4A",
+    "title": "Sol 4: Midnight at Noon",
+    "nasaFactBanner": "2018 LESSON: By Sol 4, the 2018 storm blocked 99% of daylight.",
+    "storyText": "Dust blocks <b><color=#5CE1E6><u><link=\"2018_noon_blackout\">97% of normal sunlight</link></u></color></b>, just like on <b><color=#5CE1E6><u><link=\"2018_opportunity_panels\">Opportunity rover</link></u></color></b>! Batteries must fight to <b><color=#5CE1E6><u><link=\"2018_fuel_cooling\">keep rocket fuel cold</link></u></color></b>.",
+    "guideTip": "It is totally black at lunchtime! Solar panels make zero electricity.",
+    "novaHint": "Solar is out. Protect the cold rocket fuel for your flight home.",
+    "consequences": [
+      {
+        "checkFlag": "SOL3_COLD_CORRIDORS",
+        "text": "Sealed corridors save power (0% Electricity Conserved!), but chilly rooms stiffen joints (-4% Crew Health)."
+      },
+      {
+        "checkFlag": "SOL2_CHILLERS_LOCKED",
+        "text": "Pre-locked chillers saved battery voltage (0% Electricity Conserved!), but rationing lowered comfort (-3% Crew Health)."
+      },
+      {
+        "checkFlag": "SOL1_ROVER_SCOUTS",
+        "text": "Sol 1 dust shields stopped electrical short circuits (0% Electricity Conserved!)."
+      },
+      {
+        "checkFlag": "SOL3B_RATION_HEAT",
+        "text": "Rationed heat yesterday saved reserve charge (0% Electricity Conserved!), though cold leaves crew stiff (-3% Crew Health)."
+      },
+      {
+        "checkFlag": "SOL3D_DISH_DOWN",
+        "text": "Powering down the dish conserved electricity (0% Electricity Conserved!), but silence causes loneliness (-3% Crew Health)."
+      }
+    ],
+    "choiceA": {
+      "buttonLabel": "Freeze rocket fuel cold",
+      "description": "Pump power into rocket chillers while crew bundles in coats.",
+      "outcomeText": "Rocket fuel stays safe and frozen! The habitat feels chilly.",
+      "nasaComparisonTitle": "Freezing Rocket Fuel",
+      "nasaRealDecision": "Rocket propellants like liquid methane must stay chilled at -297\u00b0F.",
+      "nasaFactEmphasis": "If tanks warm up, liquid fuel boils into gas and escapes into space.",
+      "guideReaction": "Rocket fuel safe! Our ride back to Earth is protected."
+    },
+    "choiceB": {
+      "buttonLabel": "Heat crew living bunks",
+      "description": "Dial back outdoor fuel chillers so the crew stays warm indoors.",
+      "outcomeText": "Warm air fills the dome! Rocket tank gauges show slight warming.",
+      "nasaComparisonTitle": "Warming Astronauts",
+      "nasaRealDecision": "Keeping astronauts warm prevents hypothermia and maintains mental focus.",
+      "nasaFactEmphasis": "Cold stress lowers human immune defenses and slows reaction times.",
+      "guideReaction": "Nice and warm! Happy astronauts can solve any problem."
+    },
+    "choiceC": {
+      "buttonLabel": "Lock base to beacon mode",
+      "description": "Shut down science rooms and hallway heat to guard battery power.",
+      "outcomeText": "Battery drain stops! Astronauts rest quietly in dim, chilly bunks.",
+      "nasaComparisonTitle": "Low-Power Beacon Mode",
+      "nasaRealDecision": "Deep space probes enter beacon mode to survive power emergencies.",
+      "nasaFactEmphasis": "Beacon mode runs only vital computer clocks and emergency radios.",
+      "guideReaction": "Beacon mode locked! Every single watt is guarded."
+    }
+  },
+  {
+    "nodeId": "DAY_4B",
+    "title": "Sol 4: Storm Peaks Outside",
+    "nasaFactBanner": "2018 LESSON: Dust trapped near the ground acts like an insulating thermal blanket.",
+    "storyText": "Dust blocks <b><color=#5CE1E6><u><link=\"2018_noon_blackout\">97% of normal sunlight</link></u></color></b>! Thick dust acts like a blanket <b><color=#5CE1E6><u><link=\"2018_warm_nights\">trapping heat near ground</link></u></color></b> against <b><color=#5CE1E6><u><link=\"2018_airlock_suits\">airlock suitports</link></u></color></b>.",
+    "guideTip": "The storm is at peak strength! The dust blanket keeps nights warmer.",
+    "novaHint": "This is the darkest day. Keep crew morale strong and grit outside.",
+    "consequences": [
+      {
+        "checkFlag": "SOL3_HYDROPONICS_ON",
+        "text": "Greenhouse plant lights draw steady power (-4% Power), but fresh greens boost stamina (+5% Crew Health)."
+      },
+      {
+        "checkFlag": "SOL3_MOXIE_PURGE",
+        "text": "Clean MOXIE air purge from Sol 3 kept cabin air crisp and sharp (+5% Crew Health)."
+      },
+      {
+        "checkFlag": "SOL2_SUIT_SEALS",
+        "text": "Upgraded suit seals stop fine red powder at the airlock (+4% Crew Health)."
+      },
+      {
+        "checkFlag": "SOL3C_TUNNEL_BUNK",
+        "text": "Tunnel bunks saved power (0% Electricity Conserved!), but tight quarters left muscles cramped (-3% Crew Health)."
+      }
+    ],
+    "choiceA": {
+      "buttonLabel": "Lower heat and wear parkas",
+      "description": "Turn down electric heaters and have everyone wear thick parkas.",
+      "outcomeText": "Thick parkas save power! Working in bulky coats tires the crew.",
+      "nasaComparisonTitle": "Insulated Space Parkas",
+      "nasaRealDecision": "Thermal survival gear keeps astronauts warm when electrical heat is cut.",
+      "nasaFactEmphasis": "Multi-layer insulation traps body heat with reflective silver film.",
+      "guideReaction": "Parkas zipped up! Warm coats save lots of battery power."
+    },
+    "choiceB": {
+      "buttonLabel": "Cook hot dinner and lamps",
+      "description": "Run kitchen stoves and bright lamps for a happy hot dinner.",
+      "outcomeText": "Hot stew lifts everyone's spirits! Kitchen stoves use battery power.",
+      "nasaComparisonTitle": "Hot Stew on Mars",
+      "nasaRealDecision": "Sharing a hot meal boosts team morale during dark space emergencies.",
+      "nasaFactEmphasis": "Warm comfort food keeps astronaut spirits high during long crises.",
+      "guideReaction": "Dinner is served! Hot food makes this dark day bright."
+    },
+    "choiceC": {
+      "buttonLabel": "Seal inner airlock doors",
+      "description": "Pressurize airlock doors so swirling grit cannot enter rooms.",
+      "outcomeText": "Door curtains keep dust out! Running the pumps uses battery power.",
+      "nasaComparisonTitle": "Pressurized Dust Gates",
+      "nasaRealDecision": "Positive air pressure pushes dust outward when airlock doors open.",
+      "nasaFactEmphasis": "Air pressure differences keep fine minerals from floating into cabins.",
+      "guideReaction": "Air curtains on! Not a single speck of dust gets inside."
+    }
+  },
+  {
+    "nodeId": "DAY_4C",
+    "title": "Sol 4: Clogged Air Filters",
+    "nasaFactBanner": "2018 LESSON: Curiosity rolled on nuclear power while dust coated Gale Crater.",
+    "storyText": "<b><color=#5CE1E6><u><link=\"2018_curiosity_mmrtg\">Curiosity rolled safely</link></u></color></b> on nuclear power, but humans breathe air! <b><color=#5CE1E6><u><link=\"2018_static_dust\">Sticky red grit</link></u></color></b> just clogged filters. The <b><color=#5CE1E6><u><link=\"2018_moxie_oxygen\">MOXIE oxygen maker</link></u></color></b> needs airflow.",
+    "guideTip": "Human astronauts breathe air. Robots only need electrical power!",
+    "novaHint": "Clogged filters strain lungs. Clean them now or switch to spares.",
+    "consequences": [
+      {
+        "checkFlag": "SOL3_SENSOR_SURGE",
+        "text": "Storm sensors from Sol 3 still drain backup circuits (-5% Power), though alerts helped (+2% Crew Health)."
+      },
+      {
+        "checkFlag": "SOL3_CORE_COOLING",
+        "text": "Steady reactor cooling kept electronics safe (+3% Crew Health)."
+      },
+      {
+        "checkFlag": "SOL2_REACTOR_BYPASS",
+        "text": "Reactor bypass overheated coils (-5% Power) and was noisy (-3% Crew Health)."
+      },
+      {
+        "checkFlag": "SOL3_DUCT_SEAL",
+        "text": "Sealed power ducts protected cables from dust (0% Electricity Conserved!)."
+      }
+    ],
+    "choiceA": {
+      "buttonLabel": "Scrub clogged main filters",
+      "description": "Wear masks and clean dust out of main cabin air filters.",
+      "outcomeText": "Clean air flows through the dome! Cleaning filters was tiring work.",
+      "nasaComparisonTitle": "Scrubbing Air Filters",
+      "nasaRealDecision": "Space crews clean life support filters regularly to maintain clean air.",
+      "nasaFactEmphasis": "HEPA air filters catch microscopic dust particles before lungs inhale them.",
+      "guideReaction": "Scrub scrub scrub! Clean airflow is back in every room."
+    },
+    "choiceB": {
+      "buttonLabel": "Bypass filter warning",
+      "description": "Keep fans running to save power without stopping to clean.",
+      "outcomeText": "Saving power protects batteries! Hazy cabin air makes crew cough.",
+      "nasaComparisonTitle": "Cabin Air Quality",
+      "nasaRealDecision": "Dust in cabin air causes eye irritation and respiratory coughing.",
+      "nasaFactEmphasis": "Mars mineral dust contains toxic perchlorates that irritate human lungs.",
+      "guideReaction": "Cough cough! Dusty air saves power, but tickles throats."
+    },
+    "choiceC": {
+      "buttonLabel": "Switch to backup scrubbers",
+      "description": "Turn on smaller backup scrubbers and vent dust outside.",
+      "outcomeText": "Backup scrubbers clear the haze! The extra motors draw power.",
+      "nasaComparisonTitle": "Backup Life Support",
+      "nasaRealDecision": "Manned space habitats carry dual backup systems for all vital equipment.",
+      "nasaFactEmphasis": "Redundant backup scrubbers kick in when primary units get clogged.",
+      "guideReaction": "Backup scrubbers online! Fresh air without the tiring scrubbing."
+    }
+  },
+  {
+    "nodeId": "DAY_4D",
+    "title": "Sol 4: Signals in Blackout",
+    "nasaFactBanner": "2018 LESSON: Orbiting satellites stayed high above the dust to relay commands.",
+    "storyText": "Dust clouds tower <b><color=#5CE1E6><u><link=\"2018_storm_height\">more than 37 miles high</link></u></color></b>! An <b><color=#5CE1E6><u><link=\"2018_mro_relay\">MRO relay satellite</link></u></color></b> flies overhead. Balance parked rovers with your <b><color=#5CE1E6><u><link=\"2018_fission_power\">nuclear power plant</link></u></color></b>.",
+    "guideTip": "Satellites fly high in space where there is no dust storm at all!",
+    "novaHint": "Satellites have storm maps from above. Think about connecting.",
+    "consequences": [
+      {
+        "checkFlag": "SOL3_ORBIT_SYNC",
+        "text": "Aligning dishes on Sol 3 saved radio power (0% Electricity Conserved!)."
+      },
+      {
+        "checkFlag": "SOL3_ROVER_GRID",
+        "text": "Rover heaters ate power (-4% Power), but rovers stayed safe (+4% Crew Health)."
+      },
+      {
+        "checkFlag": "SOL2_MRO_RELAY",
+        "text": "Sol 2 satellite link gave clear updates (+2% Crew Health)."
+      },
+      {
+        "checkFlag": "SOL3_TURBINE_SHIELD",
+        "text": "Reactor turbine shields protected power flow (0% Electricity Conserved!)."
+      }
+    ],
+    "choiceA": {
+      "buttonLabel": "Hibernate dish and rovers",
+      "description": "Put outside rovers and antennas to sleep to save power.",
+      "outcomeText": "All watts stay inside the habitat! We lose satellite weather maps.",
+      "nasaComparisonTitle": "Spacecraft Hibernation",
+      "nasaRealDecision": "Probes sleep during deep cold to save battery life for emergencies.",
+      "nasaFactEmphasis": "Hibernating gear draws only tiny trickles of standby electricity.",
+      "guideReaction": "Rovers sleeping! Every watt is saved for life support."
+    },
+    "choiceB": {
+      "buttonLabel": "Plug rovers into the base",
+      "description": "Send crew out to hook rover batteries into the habitat grid.",
+      "outcomeText": "Rover batteries boost base power! Hauling heavy cables tired the crew.",
+      "nasaComparisonTitle": "Sharing Vehicle Power",
+      "nasaRealDecision": "Electric vehicles can send battery power back into buildings in emergencies.",
+      "nasaFactEmphasis": "Connecting rover batteries gives the habitat a giant power bank.",
+      "guideReaction": "Plugged in! The rovers are powering the lights right now."
+    },
+    "choiceC": {
+      "buttonLabel": "Download storm maps and mail",
+      "description": "Power the dish to get new storm maps and notes from Earth.",
+      "outcomeText": "Family letters bring big smiles! The big radio dish uses power.",
+      "nasaComparisonTitle": "Letters From Home",
+      "nasaRealDecision": "Astronauts receive daily voice notes and emails from family on Earth.",
+      "nasaFactEmphasis": "Hearing loved ones is the number one morale booster in space.",
+      "guideReaction": "Letters from Earth! Everyone is smiling and reading warm notes."
+    }
+  }
+]
+
+with open('AgentScripts/kid_text/part1.json', 'w', encoding='utf-8', newline='\n') as f:
+    json.dump({'nodes': part1_nodes}, f, indent=2, ensure_ascii=False)
+print('Wrote part1.json with', len(part1_nodes), 'nodes')

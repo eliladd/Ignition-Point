@@ -232,7 +232,7 @@ public sealed class MissionBaseView : MonoBehaviour
 
         float clampedMin = Mathf.Clamp01(minY);
         float clampedMax = Mathf.Clamp(maxY, clampedMin + 0.05f, 1f);
-        SetAnchors(baseViewportRect, 0.055f, clampedMin, 0.945f, clampedMax);
+        SetAnchors(baseViewportRect, 0.185f, clampedMin, 0.815f, clampedMax);
     }
 
     public void UpdateAtmosphere(string skyColorHex, float dustIntensity)
@@ -611,10 +611,10 @@ public sealed class MissionBaseView : MonoBehaviour
         vpObj.transform.SetParent(transform, false);
 
         baseViewportRect = vpObj.GetComponent<RectTransform>();
-        SetAnchors(baseViewportRect, 0.055f, DefaultMinY, 0.945f, DefaultMaxY);
+        SetAnchors(baseViewportRect, 0.185f, DefaultMinY, 0.815f, DefaultMaxY);
 
         Image vpBg = vpObj.GetComponent<Image>();
-        vpBg.color = new Color(0.05f, 0.07f, 0.11f, 0.88f);
+        vpBg.color = new Color(0f, 0f, 0f, 0f);
         vpBg.raycastTarget = false;
 
         viewportFrameOutline = vpObj.GetComponent<Outline>();
@@ -648,6 +648,9 @@ public sealed class MissionBaseView : MonoBehaviour
         // Martian ground / base pad at Y: 0..0.34
         terrainPadImage = CreateDecorativeImage("MartianTerrainPad", skyLayer.transform, 0f, 0f, 1f, 0.34f, new Color(0.22f, 0.12f, 0.09f, 0.96f));
         CreateDecorativeImage("BaseFoundationApron", skyLayer.transform, 0f, 0f, 1f, 0.20f, new Color(0.11f, 0.13f, 0.17f, 0.92f));
+
+        // Keep the telemetry box transparent so the rotating NASA folder photos/videos show through behind the modules.
+        skyLayer.SetActive(false);
     }
 
     private void BuildDustParticles()

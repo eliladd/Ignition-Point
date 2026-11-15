@@ -95,6 +95,7 @@ public class IntroScreen
     public string headline;
     public string bodyText;
     public string nasaSource;
+    public string sourceUrl;
     public string guideLine;
 }
 
@@ -136,6 +137,7 @@ public class StoryNode
     public string skyColorHex;
     public float dustParticleIntensity;
     public string nasaFactBanner;
+    public string sourceUrl;
     public string storyText;
     public Choice choiceA;
     public Choice choiceB;

@@ -37,6 +37,8 @@ public sealed class MissionAudio : MonoBehaviour
     private AudioClip inciteBadClip;
     private AudioClip moduleInspectClip;
     private AudioClip warningPulseClip;
+    private AudioClip pipBlipClip;
+    private AudioClip novaBlipClip;
 
     private bool isInitialized;
     private float targetDustIntensity = 0.15f;
@@ -193,6 +195,19 @@ public sealed class MissionAudio : MonoBehaviour
     }
 
     /// <summary>
+    /// Plays a short, friendly character voice chirp for Pip or Captain Nova.
+    /// </summary>
+    public void PlayCharacterBlip(bool isPip)
+    {
+        if (IsMuted)
+        {
+            return;
+        }
+
+        PlayOneShotClip(isPip ? pipBlipClip : novaBlipClip, isPip ? 0.35f : 0.40f);
+    }
+
+    /// <summary>
     /// Plays a 120 ms radar scan ping for inspecting base modules or NASA telemetry items.
     /// </summary>
     public void PlayModuleInspect()
@@ -289,6 +304,8 @@ public sealed class MissionAudio : MonoBehaviour
         inciteBadClip = GenerateSequenceClip("Sfx_InciteStrained", 0.180f, new[] { 440f, 349f }, 0.14f);
         moduleInspectClip = GenerateChirpClip("Sfx_ModuleInspect", 0.120f, 980f, 1320f, 4.2f, 0.12f, 0.004f, 0.65f);
         warningPulseClip = GenerateChirpClip("Sfx_WarningPulse", 0.160f, 380f, 380f, 3.2f, 0.18f, 0.012f, 0.60f);
+        pipBlipClip = GenerateChirpClip("Sfx_PipBlip", 0.075f, 1200f, 1750f, 6.0f, 0.10f, 0.003f, 0.50f);
+        novaBlipClip = GenerateChirpClip("Sfx_NovaBlip", 0.090f, 520f, 680f, 5.0f, 0.15f, 0.004f, 0.55f);
 
         windSource = CreateAudioSource("WindSource", windClip, true, IsMuted ? 0f : targetWindVolume);
         reactorSource = CreateAudioSource("ReactorSource", reactorClip, true, 0f);

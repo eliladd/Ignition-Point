@@ -151,6 +151,8 @@ public class MissionUI : MonoBehaviour
     // Procedural audio synthesizer & interactive Ares Base atmospheric cutaway
     private MissionAudio missionAudio;
     private MissionBaseView baseView;
+    private MissionGuide missionGuide;
+    private MissionBackground missionBackground;
 
     public void Initialize(GameManager manager)
     {
@@ -174,6 +176,12 @@ public class MissionUI : MonoBehaviour
         missionAudio = MissionAudio.EnsureInstance(transform);
         RectTransform decisionRect = decisionPanel != null ? decisionPanel.GetComponent<RectTransform>() : null;
         baseView = MissionBaseView.Attach(this, decisionRect, uiFont, missionAudio);
+
+        Transform canvasRoot = titlePanel != null && titlePanel.transform.parent != null
+            ? titlePanel.transform.parent
+            : transform;
+        missionBackground = MissionBackground.Attach(canvasRoot);
+        missionGuide = MissionGuide.Attach(this, canvasRoot, uiFont, missionAudio);
 
         AttachFactLinkHandler(titlePremiseText);
         AttachFactLinkHandler(dilemmaPromptText);
@@ -963,6 +971,7 @@ public class MissionUI : MonoBehaviour
 
         photoZoomOverlay.transform.SetAsLastSibling();
         photoZoomOverlay.SetActive(true);
+        missionGuide?.SetOverlayActive(true);
 
         photoZoomRawImage.texture = tex;
         photoZoomFitter.aspectRatio = aspect;
@@ -1025,6 +1034,7 @@ public class MissionUI : MonoBehaviour
         if (photoZoomOverlay != null)
         {
             photoZoomOverlay.SetActive(false);
+            missionGuide?.SetOverlayActive(false);
         }
     }
 
@@ -1418,12 +1428,14 @@ public class MissionUI : MonoBehaviour
         }
 
         baseView?.UpdateAtmosphere(skyColorHex, dustIntensity);
+        missionBackground?.UpdateTint(skyColor, dustIntensity);
     }
 
     public void ShowTitlePanel(string customTitle = null)
     {
         HideFactPopup();
         SetActivePanel(titlePanel);
+        missionBackground?.ShowForPhaseOrSol(0);
 
         if (badgeLabelText != null)
         {
@@ -1440,9 +1452,10 @@ public class MissionUI : MonoBehaviour
         if (titlePremiseText != null)
         {
             titlePremiseText.text =
-                "In 2018, a planet-wide dust storm tested NASA's rovers on Mars—shutting down solar-powered Opportunity while nuclear-powered Curiosity kept working.\n" +
-                "Jump ahead to 2038 at Ares Base. Across 10 Martian Sols, you must conserve electricity, protect life support, and make real NASA compromises!\n" +
-                "Press Start to inspect the 2018 NASA event before leading your crew.";
+                "A giant dust storm is sweeping across Mars!\n" +
+                "Join Captain Nova and Pip the Science Rover at Ares Base.\n" +
+                "Can you protect your crew, save power, and survive all 10 Sols?\n" +
+                "Tap Start Briefing to launch your mission!";
             titlePremiseText.alignment = TextAlignmentOptions.Center;
         }
 
@@ -1452,6 +1465,7 @@ public class MissionUI : MonoBehaviour
         }
 
         FitTitlePanelToText();
+        missionGuide?.ShowForTitle();
     }
 
     public void ShowIntroScreen(
@@ -1463,6 +1477,7 @@ public class MissionUI : MonoBehaviour
     {
         HideFactPopup();
         SetActivePanel(titlePanel);
+        missionBackground?.ShowForPhaseOrSol(0);
 
         if (screen == null)
         {
@@ -1482,9 +1497,14 @@ public class MissionUI : MonoBehaviour
 
         if (titlePremiseText != null)
         {
-            string sourceLine = !string.IsNullOrEmpty(screen.nasaSource)
-                ? $"\n<size=17><color=#00F5D4>NASA SOURCE: {screen.nasaSource}</color></size>"
-                : string.Empty;
+            string sourceLine = string.Empty;
+            if (!string.IsNullOrEmpty(screen.nasaSource))
+            {
+                string introUrl = !string.IsNullOrEmpty(screen.sourceUrl)
+                    ? screen.sourceUrl
+                    : "https://science.nasa.gov/mission/mars-exploration-rovers/";
+                sourceLine = $"\n<size=17><color=#00F5D4>NASA SOURCE:</color> <link=\"URL:{introUrl}\"><u><color=#FFD166>{screen.nasaSource}</color></u></link></size>";
+            }
 
             titlePremiseText.alignment = TextAlignmentOptions.Left;
             titlePremiseText.text = $"{screen.bodyText}{sourceLine}";
@@ -1497,6 +1517,7 @@ public class MissionUI : MonoBehaviour
         }
 
         FitTitlePanelToText();
+        missionGuide?.ShowForIntro(screen);
     }
 
     private void FitTitlePanelToText()
@@ -1601,19 +1622,25 @@ public class MissionUI : MonoBehaviour
             string dateTag = !string.IsNullOrEmpty(node?.realDate)
                 ? $"  <size=19><color=#00F5D4>[{node.realDate}]</color></size>"
                 : string.Empty;
-            string tipTag = "  <size=14><color=#FFD166>(Click cyan text for word guide & NASA photos)</color></size>";
+            string tipTag = "  <size=14><color=#FFD166>(Tap blue words to explore NASA facts!)</color></size>";
             nodeTitleText.text = node != null ? $"{node.title}{dateTag}{tipTag}" : "ARES BASE DECISION";
         }
 
         if (dilemmaPromptText != null && node != null)
         {
             string consequenceBlock = !string.IsNullOrEmpty(state?.activeConsequenceText)
-                ? $"\n<size=18><color=#FFD166><b>PAST IMPACT:</b> {state.activeConsequenceText}</color></size>"
+                ? $"\n<size=18><color=#FFD166><b>BECAUSE OF YOUR LAST CHOICE:</b> {state.activeConsequenceText}</color></size>"
                 : string.Empty;
 
-            string banner = !string.IsNullOrEmpty(node.nasaFactBanner)
-                ? $"\n<size=17><color=#00F5D4>{node.nasaFactBanner}</color></size>"
-                : string.Empty;
+            string banner = string.Empty;
+            if (!string.IsNullOrEmpty(node.nasaFactBanner))
+            {
+                string lessonUrl = !string.IsNullOrEmpty(node.sourceUrl) ? node.sourceUrl : node.choiceA?.sourceUrl;
+                if (string.IsNullOrEmpty(lessonUrl)) lessonUrl = node.choiceB?.sourceUrl;
+                if (string.IsNullOrEmpty(lessonUrl)) lessonUrl = node.choiceC?.sourceUrl;
+                if (string.IsNullOrEmpty(lessonUrl)) lessonUrl = "https://science.nasa.gov/resource/the-martian-dust-storm-of-june-2018/";
+                banner = $"\n<size=17><color=#00F5D4>{node.nasaFactBanner}</color>  <link=\"URL:{lessonUrl}\"><u><color=#FFD166>[NASA Source]</color></u></link></size>";
+            }
 
             dilemmaPromptText.text = $"{node.EffectiveStoryText}{consequenceBlock}{banner}";
         }
@@ -1621,6 +1648,8 @@ public class MissionUI : MonoBehaviour
         baseView?.ClearChoiceHighlight();
         float choiceMaxY = RebuildHorizontalChoiceCards(state, availableChoices);
         FitDilemmaCardToText(choiceMaxY);
+        missionBackground?.ShowForPhaseOrSol(state != null ? state.sol : 1);
+        missionGuide?.ShowForDecision(state, node);
     }
 
     private float FitDilemmaCardToText(float choiceMaxY = 0.24f)
@@ -1647,14 +1676,14 @@ public class MissionUI : MonoBehaviour
             ? MeasureText(dilemmaPromptText, dilemmaPromptText.text, 0f)
             : new Vector2(900f, 180f);
 
-        float wrapW = Mathf.Clamp(Mathf.Max(titleUn.x, Mathf.Min(bodyUn.x + 14f, 1400f)), 760f, 1460f);
+        float wrapW = Mathf.Clamp(Mathf.Max(titleUn.x, Mathf.Min(bodyUn.x + 14f, 1130f)), 740f, 1140f);
         Vector2 titlePref = nodeTitleText != null ? MeasureText(nodeTitleText, nodeTitleText.text, wrapW) : titleUn;
         Vector2 bodyPref = dilemmaPromptText != null ? MeasureText(dilemmaPromptText, dilemmaPromptText.text, wrapW) : bodyUn;
 
         float totalH = Mathf.Ceil(titlePref.y + bodyPref.y + 42f);
-        if (totalH > maxAllowedH && wrapW < 1680f)
+        if (totalH > maxAllowedH && wrapW < 1140f)
         {
-            wrapW = 1680f;
+            wrapW = 1140f;
             titlePref = nodeTitleText != null ? MeasureText(nodeTitleText, nodeTitleText.text, wrapW) : titleUn;
             bodyPref = dilemmaPromptText != null ? MeasureText(dilemmaPromptText, dilemmaPromptText.text, wrapW) : bodyUn;
             totalH = Mathf.Ceil(titlePref.y + bodyPref.y + 42f);
@@ -1667,12 +1696,14 @@ public class MissionUI : MonoBehaviour
             totalH = Mathf.Ceil(titlePref.y + bodyPref.y + 42f);
         }
 
-        float cardW = Mathf.Clamp(Mathf.Max(titlePref.x, bodyPref.x) + 56f, 760f, 1736f);
+        float cardW = Mathf.Clamp(Mathf.Max(titlePref.x, bodyPref.x) + 56f, 740f, 1200f);
         float cardH = Mathf.Clamp(totalH, Mathf.Min(165f, maxAllowedH), maxAllowedH);
 
         float halfNormW = (cardW / RefCanvasWidth) * 0.5f;
         float maxY = Mathf.Min(maxTopLimitY, minY + cardH / RefCanvasHeight);
-        SetAnchors(dilemmaCardRect, 0.5f - halfNormW, minY, 0.5f + halfNormW, maxY);
+        float leftX = Mathf.Max(0.185f, 0.50f - halfNormW);
+        float rightX = Mathf.Min(0.815f, leftX + (cardW / RefCanvasWidth));
+        SetAnchors(dilemmaCardRect, leftX, minY, rightX, maxY);
 
         baseView?.SetVerticalBand(Mathf.Clamp(maxY + 0.012f, 0.45f, 0.58f), 0.79f);
 
@@ -1702,6 +1733,7 @@ public class MissionUI : MonoBehaviour
         SetActivePanel(outcomePanel);
         ToggleComparisonMode(false);
         UpdateHud(state);
+        missionBackground?.ShowForPhaseOrSol(state != null ? state.sol : 1);
 
         if (outcomeHeaderText != null)
         {
@@ -1742,7 +1774,7 @@ public class MissionUI : MonoBehaviour
         }
         if (nasaScienceTitleText != null)
         {
-            nasaScienceTitleText.text = "REAL NASA ENGINEERING CONNECTION";
+            nasaScienceTitleText.text = "REAL NASA SCIENCE!";
         }
         if (nasaNoteText != null)
         {
@@ -1761,6 +1793,7 @@ public class MissionUI : MonoBehaviour
         }
 
         FitOutcomeOrEndingPanelToText(hasPhoto);
+        missionGuide?.ShowForOutcome(chosenChoice);
     }
 
     public void ShowEndingPanel(GameState state, StoryEnding ending)
@@ -1769,6 +1802,7 @@ public class MissionUI : MonoBehaviour
         SetActivePanel(outcomePanel);
         ToggleComparisonMode(false);
         UpdateHud(state);
+        missionBackground?.ShowForPhaseOrSol(11);
 
         if (outcomeHeaderText != null)
         {
@@ -1814,6 +1848,7 @@ public class MissionUI : MonoBehaviour
         }
 
         FitOutcomeOrEndingPanelToText(hasPhoto);
+        missionGuide?.ShowForEnding(ending);
     }
 
     private void FitOutcomeOrEndingPanelToText(bool hasPhoto)
@@ -1830,7 +1865,7 @@ public class MissionUI : MonoBehaviour
             ? MeasureText(outcomeTelemetryText, outcomeTelemetryText.text, 0f)
             : new Vector2(720f, 24f);
 
-        float rightColumnW = hasPhoto ? 740f : 1140f;
+        float rightColumnW = hasPhoto ? 600f : 1080f;
         Vector2 bodyPref = outcomeBodyText != null
             ? MeasureText(outcomeBodyText, outcomeBodyText.text, rightColumnW - 28f)
             : Vector2.zero;
@@ -1852,14 +1887,14 @@ public class MissionUI : MonoBehaviour
         float usedRightW = Mathf.Max(bodyBoxW, sciBoxW);
         float rightTotalH = bodyBoxH + 14f + sciBoxH;
 
-        float leftPhotoW = hasPhoto ? Mathf.Clamp(470f, 380f, 520f) : 0f;
+        float leftPhotoW = hasPhoto ? 420f : 0f;
         float contentSpanW = hasPhoto ? (leftPhotoW + 24f + usedRightW) : usedRightW;
 
         Vector2 hdrWrapped = outcomeHeaderText != null
-            ? MeasureText(outcomeHeaderText, outcomeHeaderText.text, Mathf.Max(contentSpanW, 820f))
+            ? MeasureText(outcomeHeaderText, outcomeHeaderText.text, Mathf.Max(contentSpanW, 740f))
             : hdrPref;
         Vector2 telWrapped = outcomeTelemetryText != null
-            ? MeasureText(outcomeTelemetryText, outcomeTelemetryText.text, Mathf.Max(contentSpanW, 820f))
+            ? MeasureText(outcomeTelemetryText, outcomeTelemetryText.text, Mathf.Max(contentSpanW, 740f))
             : telPref;
 
         float hdrH = Mathf.Ceil(hdrWrapped.y + 4f);
@@ -1867,7 +1902,7 @@ public class MissionUI : MonoBehaviour
         float minBtnW = nextButtonLabel != null ? Mathf.Ceil(MeasureText(nextButtonLabel, nextButtonLabel.text, 0f).x + 56f) : 220f;
         float btnH = nextButtonLabel != null ? Mathf.Clamp(Mathf.Ceil(MeasureText(nextButtonLabel, nextButtonLabel.text, 0f).y + 20f), 44f, 64f) : 52f;
 
-        float cardW = Mathf.Clamp(Mathf.Ceil(Mathf.Max(contentSpanW, Mathf.Max(hdrWrapped.x, Mathf.Max(telWrapped.x, minBtnW))) + 64f), 820f, 1580f);
+        float cardW = Mathf.Clamp(Mathf.Ceil(Mathf.Max(contentSpanW, Mathf.Max(hdrWrapped.x, Mathf.Max(telWrapped.x, minBtnW))) + 64f), 760f, 1180f);
         float middleH = hasPhoto ? Mathf.Max(rightTotalH, 380f) : rightTotalH;
         float cardH = Mathf.Clamp(Mathf.Ceil(20f + hdrH + 6f + telH + 14f + middleH + 16f + btnH + 20f), 420f, 920f);
 
@@ -2280,6 +2315,16 @@ public class MissionUI : MonoBehaviour
             return;
         }
 
+        if (!string.IsNullOrEmpty(key) && key.StartsWith("URL:", StringComparison.OrdinalIgnoreCase))
+        {
+            string url = key.Substring(4);
+            if (!string.IsNullOrEmpty(url))
+            {
+                Application.OpenURL(url);
+            }
+            return;
+        }
+
         if (factPopupOverlay == null || gameManager == null)
         {
             return;
@@ -2303,6 +2348,7 @@ public class MissionUI : MonoBehaviour
 
         factPopupOverlay.transform.SetAsLastSibling();
         factPopupOverlay.SetActive(true);
+        missionGuide?.SetOverlayActive(true);
 
         if (factPopupTermText != null)
         {
@@ -2425,7 +2471,7 @@ public class MissionUI : MonoBehaviour
         string header = !string.IsNullOrEmpty(nasaSource) ? $"{nasaSource}{idNote}" : $"NASA Archive{idNote}";
         if (!string.IsNullOrEmpty(sourceUrl))
         {
-            return $"\n\n<size=14><color=#FFD166><b>SOURCE:</b></color> <color=#A8B8CC>{header}</color>  " +
+            return $"\n\n<size=14><color=#FFD166><b>SOURCE:</b></color> <link=\"OPEN_URL\"><u><color=#A8B8CC>{header}</color></u></link>  " +
                    $"<link=\"OPEN_URL\"><u><color=#00F5D4>{sourceUrl}</color></u></link></size>";
         }
         return $"\n\n<size=14><color=#FFD166><b>SOURCE:</b></color> <color=#A8B8CC>{header}</color></size>";
@@ -2439,6 +2485,7 @@ public class MissionUI : MonoBehaviour
         if (factPopupOverlay != null)
         {
             factPopupOverlay.SetActive(false);
+            missionGuide?.SetOverlayActive(false);
         }
     }
 
@@ -2990,8 +3037,13 @@ public class MissionUI : MonoBehaviour
                     {
                         missionAudio?.PlayHoverTick();
                     }
+                    missionGuide?.OnChoiceHover(capturedChoice);
                 },
-                () => baseView?.ClearChoiceHighlight());
+                () =>
+                {
+                    baseView?.ClearChoiceHighlight();
+                    missionGuide?.OnChoiceUnhover();
+                });
 
             labels.Add(label);
             layoutElements.Add(layoutElem);
@@ -3210,6 +3262,7 @@ public class MissionUI : MonoBehaviour
         {
             compNextButton.gameObject.SetActive(showComparison);
         }
+        missionGuide?.SetVisible(!showComparison);
     }
 
     private static string FormatPowerActionText(int powerDelta)
